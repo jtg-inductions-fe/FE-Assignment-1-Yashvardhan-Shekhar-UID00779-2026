@@ -23,7 +23,21 @@ function insert() {
     links.forEach((l) => {
         str += `<a class="header_links_link" href="${l.path}">${l.name}</a>`;
     });
-    str += '<button class="header_links_close">X</button>';
+    str += `
+            <button
+                class="header_buttons_button links_button header_buttons_signup"
+                type="button"
+            >
+                Login
+            </button>
+            <button
+                class="header_buttons_button links_button header_buttons_login"
+                type="button"
+            >
+                Signup
+            </button>
+            <button class="header_links_close">x</button>
+            `;
     div.innerHTML = str;
 }
 

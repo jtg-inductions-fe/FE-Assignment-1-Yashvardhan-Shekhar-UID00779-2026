@@ -1,7 +1,9 @@
 .header_buttons_button {
-    padding: 0.8rem 1.3rem;
-    border-radius: 1.3rem;
+    padding: 1rem 1.5rem;
+    border-radius: 1.4rem;
     border: none;
+    font-weight: 500;
+    font-size: 0.95rem;
 }
 .header_buttons_login {
     background-color: #5d50c6;
@@ -13,7 +15,20 @@
 
 @media screen and (max-width: 430px) {
     // tablet
+    .header_links_close {
+        padding: 1rem 1.5rem;
+    }
     .header_buttons {
         display: none;
+    }
+}
+
+@media screen and (min-width: 430px) {
+    // Desktop
+    .links_button {
+        display: none;
+    }
+    .header_links_close {
+        padding: 0.3rem 1.5rem;
     }
 }

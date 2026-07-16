@@ -9,7 +9,7 @@
     display: none;
 }
 
-@media screen and (max-width: 1024px) and (min-width: 430px) {
+@media screen and (max-width: 1023px) and (min-width: 430px) {
     // tablet
 
     .header_links_close {
@@ -29,6 +29,9 @@
         top: 1rem;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
         // border: solid blue 1px;
         padding: 0rem 1rem;
     }
@@ -44,7 +47,7 @@
     }
 
     .header_links_link {
-        padding: 0.5rem 0rem;
+        padding: 1rem 0rem;
     }
 
     .header_links {
@@ -52,6 +55,8 @@
         right: 1rem;
         top: 1rem;
         display: flex;
+        align-items: center;
+        justify-items: center;
         flex-direction: column;
         // border: solid blue 1px;
         padding: 0rem 1rem;
