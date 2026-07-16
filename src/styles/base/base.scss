@@ -1,0 +1,15 @@
+.container {
+    margin: 2rem 5rem;
+}
+
+@media screen and (max-width: 430px) {
+    .container {
+        margin: 1rem 0.5rem;
+    }
+}
+
+@media screen and (min-width: 430px) and (max-width: 1024px) {
+    .container {
+        margin: 1rem 2rem;
+    }
+}

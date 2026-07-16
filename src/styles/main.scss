@@ -1,1 +1,14 @@
-// TODO: Add styles as per the requirement
+@use 'base/base.scss';
+@use 'layout/header.scss';
+@use 'components/buttons.scss';
+@use 'components/links.scss';
+@use 'components/hamburger.scss';
+
+@font-face {
+    font-family: circularstd;
+    src: url(public/assets/circular-std-medium-500.ttf);
+}
+
+html {
+    font-family: circularstd, sans-serif;
+}

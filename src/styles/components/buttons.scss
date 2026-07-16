@@ -1,0 +1,19 @@
+.header_buttons_button {
+    padding: 0.8rem 1.3rem;
+    border-radius: 1.3rem;
+    border: none;
+}
+.header_buttons_login {
+    background-color: #5d50c6;
+    color: white;
+}
+.header_buttons_signup {
+    background-color: #ffffff;
+}
+
+@media screen and (max-width: 430px) {
+    // tablet
+    .header_buttons {
+        display: none;
+    }
+}
