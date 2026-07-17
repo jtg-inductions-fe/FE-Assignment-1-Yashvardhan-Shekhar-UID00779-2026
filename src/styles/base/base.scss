@@ -1,6 +1,6 @@
 // margin for desktop
 .container {
-    margin: 2rem 5rem;
+    margin: 2rem 7rem;
 }
 
 // gradient image
@@ -17,13 +17,13 @@ html {
 // margin for mobile
 @media screen and (max-width: 430px) {
     .container {
-        margin: 1rem 0.5rem;
+        margin: 2.3rem 1.1rem;
     }
 }
 
 // margin for tablet
 @media screen and (min-width: 431px) and (max-width: 1023px) {
     .container {
-        margin: 1rem 2rem;
+        margin: 2.05rem 4.05rem;
     }
 }
