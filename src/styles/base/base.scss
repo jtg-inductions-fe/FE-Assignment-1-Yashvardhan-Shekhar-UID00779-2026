@@ -3,24 +3,24 @@
     margin: 2rem 5rem;
 }
 
-// graadient image
+// gradient image
 html {
+    // height: 100vh;
     background-image: radial-gradient(
         at top left,
-        rgba(255, 115, 72, 0.44) 0%,
-        rgba(255, 255, 255, 0) 100%,
-        rgba(255, 255, 255, 1) 100%,
-        rgba(237, 221, 83, 1) 100%
+        rgba(255, 115, 72, 0.44) 10%,
+        rgb(255, 255, 255) 50%
     );
-    // background-size:120% 100%;
     background-repeat: no-repeat;
 }
+
 // margin for mobile
 @media screen and (max-width: 430px) {
     .container {
         margin: 1rem 0.5rem;
     }
 }
+
 // margin for tablet
 @media screen and (min-width: 431px) and (max-width: 1023px) {
     .container {

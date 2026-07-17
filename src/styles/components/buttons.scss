@@ -1,3 +1,5 @@
+@import '../abstract/variables.scss';
+
 .header_buttons_button {
     padding: 1rem 1.5rem;
     border-radius: 1.4rem;
@@ -8,12 +10,13 @@
 
 // login button
 .header_buttons_login {
-    background-color: #5d50c6;
-    color: white;
+    background-color: $secondary-color;
+    color: $primary-color;
 }
+
 // signup button
 .header_buttons_signup {
-    background-color: #ffffff;
+    background-color: $primary-color;
 }
 
 // for mobile

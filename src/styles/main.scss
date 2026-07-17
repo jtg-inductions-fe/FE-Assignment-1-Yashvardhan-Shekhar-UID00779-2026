@@ -1,16 +1,17 @@
+@use 'abstract/variables.scss';
 @use 'base/base.scss';
 @use 'layout/header.scss';
 @use 'components/buttons.scss';
 @use 'components/links.scss';
 @use 'components/hamburger.scss';
 
-// added font-familyt
+// added font-family
 @font-face {
-    font-family: circularstd;
+    font-family: circular-std;
     src: url(public/assets/circular-std-medium-500.ttf);
 }
 
 html {
-    font-family: circularstd, sans-serif;
+    font-family: circular-std, sans-serif;
     font-weight: 500;
 }
