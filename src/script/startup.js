@@ -17,6 +17,7 @@ let links = [
     },
 ];
 
+// insert links into HTML
 function insert() {
     let str = '';
     let div = document.querySelector('.header_links');

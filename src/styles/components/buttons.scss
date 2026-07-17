@@ -5,16 +5,19 @@
     font-weight: 500;
     font-size: 0.95rem;
 }
+
+// login button
 .header_buttons_login {
     background-color: #5d50c6;
     color: white;
 }
+// signup button
 .header_buttons_signup {
     background-color: #ffffff;
 }
 
+// for mobile
 @media screen and (max-width: 430px) {
-    // tablet
     .header_links_close {
         padding: 1rem 1.5rem;
     }
@@ -23,6 +26,7 @@
     }
 }
 
+// for tablet + desktop
 @media screen and (min-width: 430px) {
     // Desktop
     .links_button {

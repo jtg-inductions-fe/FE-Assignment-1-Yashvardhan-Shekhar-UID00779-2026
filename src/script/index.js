@@ -1,3 +1,4 @@
+// functionality of hamburger
 let toggleHamburger = () => {
     let headerLinks = document.querySelector('.header_links');
     headerLinks.classList.toggle('header_links--none');
