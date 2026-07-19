@@ -1,0 +1,239 @@
+@import '../abstract/variables';
+@import '../abstract/mixins';
+
+.hero_right-section {
+    // border: 1px black solid;
+    height: 80vh;
+}
+
+.hero_right-section_box {
+    width: inherit;
+    @include flexRow;
+    background-image: url('/assets/images/layer.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.hero_right-section_img {
+    z-index: 1;
+}
+
+.hero_right-section_images-left {
+    @include flexColEvenly;
+}
+
+@include mobile {
+    .hero {
+        flex-direction: column-reverse;
+        margin-top: 3.2rem;
+
+        &_left-section {
+            @include flexCol;
+            // border: red solid 1px;
+            max-width: none;
+            height: 50vh;
+        }
+
+        &_right-section {
+            // border: 1px black solid;
+            height: auto;
+        }
+
+        &_right-section_box {
+            justify-content: center;
+            width: 25rem;
+            margin-top: 1rem;
+            padding-top: 2.4rem;
+        }
+
+        &_left-section_top {
+            padding: 0.5rem;
+            color: #f85e9f;
+            background-color: rgba(255, 255, 255, 0.092);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-around;
+            width: 11.5rem;
+            box-shadow:
+                0px 0px 0px 0px rgba(0, 0, 0, 0.07),
+                0px 34px 75px 0px rgba(0, 0, 0, 0.07),
+                0px 137px 137px 0px rgba(0, 0, 0, 0.06),
+                0px 308px 185px 0px rgba(0, 0, 0, 0.04),
+                0px 548px 219px 0px rgba(0, 0, 0, 0.01),
+                0px 856px 240px 0px rgba(0, 0, 0, 0);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        &_left-section_heading {
+            font-size: 2.4rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 1.7rem;
+            line-height: 125%;
+            span {
+                color: $pink;
+            }
+        }
+
+        &_left-section {
+            @include flexColEvenly;
+            margin-top: 2.8rem;
+        }
+
+        &_left-section_description {
+            font-weight: 400;
+            line-height: 160%;
+            font-size: 1rem;
+            margin-top: 1.3rem;
+            text-align: center;
+            color: $grey;
+        }
+    }
+}
+
+@include tablet {
+    .hero {
+        flex-direction: column-reverse;
+        margin-top: 2rem;
+
+        &_right-section {
+            // border: 1px black solid;
+            width: auto;
+            height: auto;
+
+            &_box {
+                width: 75vw;
+                margin-top: 4rem;
+                padding-top: 3rem;
+            }
+        }
+
+        &_left-section {
+            max-width: none;
+            height: 50vh;
+            @include flexColEvenly;
+            margin-top: 4rem;
+
+            &_top {
+                padding: 0.3rem;
+                color: #f85e9f;
+                background-color: rgba(255, 255, 255, 0.092);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                justify-content: space-around;
+                width: 11.5rem;
+                box-shadow:
+                    0px 0px 0px 0px rgba(0, 0, 0, 0.07),
+                    0px 34px 75px 0px rgba(0, 0, 0, 0.07),
+                    0px 137px 137px 0px rgba(0, 0, 0, 0.06),
+                    0px 308px 185px 0px rgba(0, 0, 0, 0.04),
+                    0px 548px 219px 0px rgba(0, 0, 0, 0.01),
+                    0px 856px 240px 0px rgba(0, 0, 0, 0);
+                font-size: 0.9rem;
+                font-weight: 600;
+                letter-spacing: -2%;
+            }
+
+            &_heading {
+                font-size: 3.5rem;
+                font-weight: bold;
+                text-align: center;
+                margin-top: 3.3rem;
+                line-height: 120%;
+                padding: 0 9rem;
+                span {
+                    color: $pink;
+                }
+            }
+
+            &_description {
+                font-weight: 400;
+                line-height: 160%;
+                font-size: 1rem;
+                margin-top: 3.5rem;
+                text-align: center;
+                color: $grey;
+            }
+        }
+    }
+}
+
+@include desktop {
+    .hero {
+        @include flexRow;
+        align-items: normal;
+        margin-top: 3.6rem;
+
+        &_right-section {
+            height: 80vh;
+
+            &_box {
+                width: 32.3rem;
+                @include flexRow;
+                background-image: url('/assets/images/layer.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            &_img {
+                z-index: 1;
+            }
+
+            &_images-left {
+                margin-top: 2rem;
+                @include flexColEvenly;
+            }
+        }
+
+        &_left-section {
+            max-width: none;
+            // height: 50vh;
+            @include flexColEvenly;
+            align-items: start;
+            margin-top: 1rem;
+
+            &_top {
+                padding: 0.3rem;
+                color: #f85e9f;
+                background-color: rgba(255, 255, 255, 0.092);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                justify-content: space-around;
+                // width: 11.5rem;
+                box-shadow:
+                    0px 0px 0px 0px rgba(0, 0, 0, 0.07),
+                    0px 34px 75px 0px rgba(0, 0, 0, 0.07),
+                    0px 137px 137px 0px rgba(0, 0, 0, 0.06),
+                    0px 308px 185px 0px rgba(0, 0, 0, 0.04),
+                    0px 548px 219px 0px rgba(0, 0, 0, 0.01),
+                    0px 856px 240px 0px rgba(0, 0, 0, 0);
+                font-size: 0.6rem;
+                font-weight: 600;
+                letter-spacing: -2%;
+            }
+
+            &_heading {
+                font-size: 2.8rem;
+                font-weight: bold;
+                // margin-top: 3.3rem;
+                line-height: 120%;
+                span {
+                    color: $pink;
+                }
+            }
+
+            &_description {
+                font-weight: 400;
+                line-height: 160%;
+                font-size: 0.82rem;
+                margin-top: 3.5rem;
+                text-align: center;
+                color: $grey;
+            }
+        }
+    }
+}
