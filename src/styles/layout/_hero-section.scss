@@ -373,6 +373,10 @@
                 margin-top: 1rem;
                 @include flexRow;
             }
+
+            &_buttons {
+                @include flexRow;
+            }
         }
     }
 <<<<<<< HEAD
