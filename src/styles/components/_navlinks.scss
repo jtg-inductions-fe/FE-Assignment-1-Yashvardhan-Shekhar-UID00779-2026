@@ -65,6 +65,101 @@
         color: rgba(25, 24, 37, 0.5019607843);
         text-decoration: none;
         padding: 0.3rem 1rem;
+    }
+}
+// header link styling
+
+.header_links_link {
+    color: #19182580;
+    text-decoration: none;
+    padding: 0.3rem 2rem;
+    font: 1.2rem;
+}
+// close button
+.header_links_close {
+    display: none;
+}
+
+// links for tablet
+@include tablet {
+    .header_links_close {
+        display: unset;
+        margin-bottom: 0.5rem;
+        border: none;
+        font-size: 2rem;
+        color: $secondary-color;
+        background-color: rgba(255, 0, 0, 0);
+    }
+
+    .header_links_link {
+        padding: 0.5rem 0rem;
+    }
+
+    .header_links {
+        @include flexCol;
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        padding: 1rem 1rem;
+
+        background-color: rgba(255, 255, 255, 0.265);
+        border: 0.2rem solid $secondary-color;
+        border-radius: 2rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        line-height: 2rem;
+        color: $primary-color;
+    }
+}
+
+// for mobile
+@include mobile {
+    .header_links_close {
+        display: unset;
+        border: none;
+        background-color: white;
+        font-size: 2rem;
+        color: $secondary-color;
+        background-color: rgba(255, 0, 0, 0);
+    }
+
+    .header_links_link {
+        padding: 0;
+    }
+
+    .header_links_link {
+        padding: 1rem 0rem;
+        &_button {
+            cursor: pointer;
+        }
+    }
+
+    .header_links {
+        @include flexCol;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        padding: 1rem 1rem;
+
+        background-color: rgba(255, 255, 255, 0.639);
+        border: 0.2rem solid $secondary-color;
+        border-radius: 2rem;
+        font-size: 1rem;
+        font-weight: bold;
+        line-height: 1rem;
+        color: $primary-color;
+        z-index: 3;
+    }
+}
+
+// header link default display to none
+.header_links--none {
+    display: none;
+}
+
+// header links visible on desktop
+@include desktop {
+    .header_links_link {
         font-size: 0.6rem;
         font-weight: bold;
     }
