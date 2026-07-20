@@ -1,0 +1,42 @@
+@import '../abstract/mixins';
+@import '../abstract/variables';
+
+@include mobile {
+    .travel-point {
+        @include flexCol;
+
+        &__image {
+            margin: 7.5rem 0 0 -0.1rem;
+            width: 99vw;
+        }
+
+        &__right {
+            @include flexColStart;
+
+            &__top {
+                color: $pink;
+                font-size: 1rem;
+                margin: 2.6rem 0 0 0.9rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 20%;
+            }
+
+            &__heading {
+                text-align: center;
+                font-size: 2rem;
+                font-weight: bold;
+                width: 90vw;
+                margin-top: 1.3rem;
+                line-height: 110%;
+            }
+
+            &__description {
+                margin: 2.4rem 1rem 1rem 1rem;
+                text-align: center;
+                line-height: 160%;
+                font-weight: 400;
+            }
+        }
+    }
+}
