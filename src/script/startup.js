@@ -32,6 +32,20 @@ function insert() {
             </div>
             `;
     div.innerHTML = str;
+
+    // inserting hading and description
+    let heading = document.querySelector('.hero_left-section_heading');
+    heading.innerHTML = `Travel <span>top destination</span> of the world`;
+    let description = document.querySelector('.hero_left-section_description');
+    description.innerHTML = `we always make our customer happy by providing <br /> as many choices as possible`;
+
+    // inserting images
+    let img = document.querySelector('.image-1');
+    img.src = `assets/images/Rectangle 1.png`;
+    img = document.querySelector('.image-2');
+    img.src = `assets/images/Rectangle 2.png`;
+    img = document.querySelector('.image-3');
+    img.src = `assets/images/Rectangle 3.png`;
 }
 
 // setTimeout(insert, 1000);

@@ -34,6 +34,7 @@
     }
 }
 
+<<<<<<< HEAD
 // mobile
 .hero {
     display: flex;
@@ -74,6 +75,94 @@
 .description {
     &--header {
         margin-top: 1.3rem;
+=======
+.hero_right-section_box {
+    width: inherit;
+    @include flexRow;
+    background-image: url('/assets/images/layer.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.hero_right-section_img {
+    z-index: 1;
+}
+
+.hero_right-section_images-left {
+    @include flexColEvenly;
+}
+
+@include mobile {
+    .hero {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 3.2rem;
+
+        &_left-section {
+            @include flexCol;
+            // border: red solid 1px;
+            max-width: none;
+            height: 50vh;
+        }
+
+        &_right-section {
+            // border: 1px black solid;
+            height: auto;
+        }
+
+        &_right-section_box {
+            justify-content: center;
+            width: 25rem;
+            margin-top: 1rem;
+            padding-top: 2.4rem;
+        }
+
+        &_left-section_top {
+            padding: 0.5rem;
+            color: #f85e9f;
+            background-color: rgba(255, 255, 255, 0.092);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-around;
+            width: 11.5rem;
+            box-shadow:
+                0px 0px 0px 0px rgba(0, 0, 0, 0.07),
+                0px 34px 75px 0px rgba(0, 0, 0, 0.07),
+                0px 137px 137px 0px rgba(0, 0, 0, 0.06),
+                0px 308px 185px 0px rgba(0, 0, 0, 0.04),
+                0px 548px 219px 0px rgba(0, 0, 0, 0.01),
+                0px 856px 240px 0px rgba(0, 0, 0, 0);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        &_left-section_heading {
+            font-size: 2.4rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 1.7rem;
+            line-height: 125%;
+            span {
+                color: $pink;
+            }
+        }
+
+        &_left-section {
+            @include flexColEvenly;
+            margin-top: 2.8rem;
+        }
+
+        &_left-section_description {
+            font-weight: 400;
+            line-height: 160%;
+            font-size: 1rem;
+            margin-top: 1.3rem;
+            text-align: center;
+            color: $grey;
+        }
+>>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
     }
 }
 
@@ -83,6 +172,7 @@
         flex-direction: column-reverse;
         margin-top: 2rem;
 
+<<<<<<< HEAD
         &__triangle {
             display: unset;
             left: 3.8dvw;
@@ -99,6 +189,67 @@
                 margin-top: 3.3rem;
                 padding-top: 2.9rem;
                 gap: 0;
+=======
+        &_right-section {
+            // border: 1px black solid;
+            @include flexCol;
+            width: auto;
+            height: auto;
+
+            &_box {
+                width: 75vw;
+                margin-top: 4rem;
+                padding-top: 3rem;
+            }
+        }
+
+        &_left-section {
+            max-width: none;
+            height: 50vh;
+            @include flexColEvenly;
+            margin-top: 4.7rem;
+
+            &_top {
+                padding: 0.3rem;
+                color: #f85e9f;
+                background-color: rgba(255, 255, 255, 0.092);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                justify-content: space-around;
+                width: 11.5rem;
+                box-shadow:
+                    0px 0px 0px 0px rgba(0, 0, 0, 0.07),
+                    0px 34px 75px 0px rgba(0, 0, 0, 0.07),
+                    0px 137px 137px 0px rgba(0, 0, 0, 0.06),
+                    0px 308px 185px 0px rgba(0, 0, 0, 0.04),
+                    0px 548px 219px 0px rgba(0, 0, 0, 0.01),
+                    0px 856px 240px 0px rgba(0, 0, 0, 0);
+                font-size: 0.9rem;
+                font-weight: 600;
+                letter-spacing: -2%;
+            }
+
+            &_heading {
+                font-size: 3.5rem;
+                font-weight: bold;
+                text-align: center;
+                margin-top: 3.3rem;
+                line-height: 120%;
+                padding: 0 9rem;
+                span {
+                    color: $pink;
+                }
+            }
+
+            &_description {
+                font-weight: 400;
+                line-height: 160%;
+                font-size: 1.1rem;
+                margin-top: 2.5rem;
+                text-align: center;
+                color: $grey;
+>>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
             }
         }
 
@@ -153,7 +304,12 @@
         &__left-section {
             max-width: none;
             // height: 50vh;
+<<<<<<< HEAD
             @include flex-col-between;
+=======
+            @include flexColEvenly;
+            justify-content: start;
+>>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
             align-items: start;
             margin: 3.1rem 0 0 0.5rem;
 
@@ -165,11 +321,41 @@
                 width: 7rem;
                 border-radius: 2rem;
                 font-size: 0.6rem;
+<<<<<<< HEAD
             }
 
             &__buttons {
                 margin-top: 1rem;
                 @include flex-row-start;
+=======
+                font-weight: 600;
+                letter-spacing: -2%;
+                padding-left: 1.2rem;
+                width: 7rem;
+                border-radius: 2rem;
+            }
+
+            &_heading {
+                font-size: 2.8rem;
+                font-weight: bold;
+                line-height: 123%;
+                margin-top: 2.3rem;
+                span {
+                    color: $pink;
+                }
+            }
+
+            &_description {
+                font-weight: 400;
+                line-height: 147%;
+                font-size: 0.82rem;
+                margin: 1.8rem 0 1.5rem 0;
+                color: $grey;
+>>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
+            }
+
+            &_buttons {
+                @include flexRow;
             }
         }
     }
