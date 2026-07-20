@@ -1,8 +1,14 @@
 @import '../abstract/mixins';
 
+<<<<<<< HEAD
 .msg-icon,
 .friend-icon,
 .location-icon {
+=======
+.hero_right-section_img_msg,
+.hero_right-section_img_friend,
+.hero_right-section_img_location {
+>>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
     position: absolute;
     z-index: 2;
 }
@@ -77,6 +83,52 @@
         left: 72.8%;
         height: 22.8%;
     }
+
+    .hero_right-section_img_msg {
+        top: 10.8rem;
+        left: 0.8rem;
+        height: 5.5rem;
+    }
+
+    .hero_right-section_img_friend {
+        top: 20.7rem;
+        left: 14.2rem;
+        height: 5.5rem;
+    }
+
+    .hero_right-section_img_location {
+        top: 15.5rem;
+        left: 17.9rem;
+        height: 5.5rem;
+    }
+}
+
+@include tablet {
+    .image-3,
+    .image-2,
+    .image-1 {
+        max-width: 17rem;
+        padding: 0.5rem;
+        width: auto;
+        align-self: center;
+        padding-right: 1.5rem;
+        padding-top: 1.7rem;
+    }
+
+    .hero_right-section_img_msg {
+        top: 21.4rem;
+        left: 1.5rem;
+    }
+
+    .hero_right-section_img_friend {
+        top: 40.7rem;
+        left: 27.6rem;
+    }
+
+    .hero_right-section_img_location {
+        top: 30.6rem;
+        left: 35rem;
+    }
 }
 
 @include desktop {
@@ -97,6 +149,7 @@
         padding-top: 3rem;
     }
 
+<<<<<<< HEAD
     .msg-icon {
         top: 46.6%;
         left: 3%;
@@ -113,5 +166,20 @@
         top: 66.4%;
         left: 71.8%;
         height: 22.3%;
+=======
+    .hero_right-section_img_msg {
+        top: 14.1rem;
+        left: 1.2rem;
+    }
+
+    .hero_right-section_img_friend {
+        top: 27rem;
+        left: 18.6rem;
+    }
+
+    .hero_right-section_img_location {
+        top: 20.3rem;
+        left: 23.5rem;
+>>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
     }
 }
