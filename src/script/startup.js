@@ -25,19 +25,17 @@ function insert() {
         str += `<a class="header_links_link" href="${l.path}">${l.name}</a>`;
     });
     str += `
-            <button
-                class="header_buttons_button links_button header_buttons_signup"
-                type="button"
+            <a
+                class=" links_button header_links_link"
             >
                 Login
-            </button>
-            <button
-                class="header_buttons_button links_button header_buttons_login"
-                type="button"
+            </a>
+            <a
+                class=" links_button header_links_link"
             >
                 Signup
-            </button>
-            <button class="header_links_close">x</button>
+            </a>
+            <button class="header_links_close">&#10005;</button>
             `;
     div.innerHTML = str;
 }

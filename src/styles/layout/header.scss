@@ -2,6 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &_burger {
+        button {
+            background-color: unset;
+            border: unset;
+        }
+    }
 }
 
 // to show logo in the middle for tablet
