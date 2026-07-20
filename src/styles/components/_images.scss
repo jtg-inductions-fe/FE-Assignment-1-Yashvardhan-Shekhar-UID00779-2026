@@ -169,6 +169,52 @@
         top: 27.1rem;
         left: 31rem;
     }
+
+    .hero_right-section_img_msg {
+        top: 10.8rem;
+        left: 0.8rem;
+        height: 5.5rem;
+    }
+
+    .hero_right-section_img_friend {
+        top: 20.7rem;
+        left: 14.2rem;
+        height: 5.5rem;
+    }
+
+    .hero_right-section_img_location {
+        top: 15.5rem;
+        left: 17.9rem;
+        height: 5.5rem;
+    }
+}
+
+@include tablet {
+    .image-3,
+    .image-2,
+    .image-1 {
+        max-width: 17rem;
+        padding: 0.5rem;
+        width: auto;
+        align-self: center;
+        padding-right: 1.5rem;
+        padding-top: 1.7rem;
+    }
+
+    .hero_right-section_img_msg {
+        top: 21.4rem;
+        left: 1.5rem;
+    }
+
+    .hero_right-section_img_friend {
+        top: 40.7rem;
+        left: 27.6rem;
+    }
+
+    .hero_right-section_img_location {
+        top: 30.6rem;
+        left: 35rem;
+    }
 }
 
 @include desktop {
