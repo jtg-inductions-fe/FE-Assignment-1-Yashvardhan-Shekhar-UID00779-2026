@@ -1,0 +1,62 @@
+// mixins.scss
+
+@mixin flexRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexCol {
+    @include flexRow;
+    flex-direction: column;
+}
+
+@mixin flexRowEvenly {
+    @include flexRow;
+    justify-content: space-evenly;
+}
+
+@mixin flexColEvenly {
+    @include flexCol;
+    justify-content: space-evenly;
+}
+
+@mixin flexRowAround {
+    @include flexRow;
+    justify-content: space-around;
+}
+
+@mixin flexColAround {
+    @include flexCol;
+    justify-content: space-around;
+}
+
+@mixin flexColStart {
+    @include flexCol;
+    justify-content: start;
+}
+
+@mixin flexRowStart {
+    @include flexRow;
+    justify-content: start;
+}
+
+// media query mixin
+
+@mixin mobile {
+    @media (max-width: 430px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 431px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1025px) {
+        @content;
+    }
+}

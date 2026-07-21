@@ -1,9 +1,11 @@
+@import '../abstract/mixins';
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    &_burger {
+    &__burger {
         button {
             background-color: unset;
             border: unset;
@@ -12,8 +14,15 @@
 }
 
 // to show logo in the middle for tablet
-@media screen and (min-width: 431px) and (max-width: 1023px) {
-    .header_logo {
+@include tablet {
+    .header__logo {
         padding-left: 11rem;
+    }
+}
+
+@include desktop {
+    .header__logo {
+        padding: 0.3rem;
+        margin: 0.2rem;
     }
 }

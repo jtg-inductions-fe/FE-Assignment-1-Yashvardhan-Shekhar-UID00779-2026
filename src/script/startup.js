@@ -19,15 +19,17 @@ let links = [
 
 // insert links into HTML
 function insert() {
-    let str = '';
-    let div = document.querySelector('.header_links');
+    let str =
+        ' <div class="top"> <button class="header__close-btn">&#10006;</button> ';
+    let div = document.querySelector('.header__links');
     links.forEach((l) => {
-        str += `<a class="header_links_link" href="${l.path}">${l.name}</a>`;
+        str += `<a class="header__link" href="${l.path}">${l.name}</a>`;
     });
-    str += `
-            <a class="header_links_link header_links_link_button links_button" href="Login"">Log in</a>
-            <a class="header_links_link header_links_link_button links_button" href="signup"">Sign up</a>
-            <button class="header_links_close">&#10006;</button>
+    str += ` </div>
+            <div class="bottom">
+            <a class="header__link header__link--button links__button login-btn" href="Login"">Log in</a>
+            <a class="header__link header__link--button links__button" href="signup"">Sign up</a>
+            </div>
             `;
     div.innerHTML = str;
 }

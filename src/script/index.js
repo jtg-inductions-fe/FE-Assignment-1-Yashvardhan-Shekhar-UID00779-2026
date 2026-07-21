@@ -1,14 +1,14 @@
 // functionality of hamburger
 let toggleHamburger = () => {
-    let headerLinks = document.querySelector('.header_links');
-    headerLinks.classList.toggle('header_links--none');
+    let headerLinks = document.querySelector('.header__links');
+    headerLinks.classList.toggle('header__links--none');
 
-    let headerBurger = document.querySelector('.header_burger');
-    headerBurger.classList.toggle('header_burger--none');
+    let headerBurger = document.querySelector('.header__burger');
+    headerBurger.classList.toggle('header__burger--none');
 };
 
-let closeBtn = document.querySelector('.header_links_close');
-closeBtn.addEventListener('click', toggleHamburger);
+let closeBtn = document.querySelector('.header__close-btn');
+let hamburgerBtn = document.querySelector('.header__burger');
 
-let hamburgerBtn = document.querySelector('.header_burger');
 hamburgerBtn.addEventListener('click', toggleHamburger);
+closeBtn.addEventListener('click', toggleHamburger);

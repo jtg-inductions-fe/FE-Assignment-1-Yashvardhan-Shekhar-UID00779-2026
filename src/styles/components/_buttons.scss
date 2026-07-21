@@ -1,0 +1,82 @@
+@import '../abstract/variables';
+@import '../abstract/mixins';
+
+.button {
+    padding: 0.9rem 2rem;
+    border-radius: 1.4rem;
+    border: none;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 13px;
+    line-height: 120%;
+}
+
+// Header buttons
+.header {
+    &__button {
+        &--login {
+            background-color: $secondary-color;
+            color: $primary-color;
+        }
+
+        &--signup {
+            background-color: $primary-color;
+        }
+    }
+}
+
+// for mobile
+@include mobile {
+    .header {
+        &__close-btn {
+            // Formerly .header_links_close
+            padding: 1rem 1.5rem;
+        }
+
+        &__burger {
+            button {
+                padding: 0.9rem 0.3rem;
+            }
+        }
+
+        &__buttons {
+            display: none;
+        }
+    }
+}
+
+@include tablet {
+    .button {
+        padding: 0.9rem 2rem;
+    }
+
+    .header {
+        &__burger {
+            button {
+                padding: 0.9rem 0.3rem;
+            }
+        }
+    }
+}
+
+// for tablet + desktop
+@media screen and (min-width: 431px) {
+    .links__button {
+        display: none;
+    }
+    .header__close-btn {
+        padding: 0.3rem 1.5rem;
+    }
+}
+
+@include desktop {
+    .button {
+        padding: 0.7rem 1.4rem;
+        border-radius: 1.4rem;
+        border: none;
+        font-weight: 700;
+        font-style: bold;
+        font-size: 13px;
+        line-height: 120%;
+    }
+}
