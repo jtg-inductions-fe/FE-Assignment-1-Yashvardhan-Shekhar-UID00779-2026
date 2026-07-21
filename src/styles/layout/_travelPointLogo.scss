@@ -25,3 +25,9 @@
         }
     }
 }
+@include desktop {
+    .travel-point-logo {
+        margin-top: 8rem;
+        justify-content: space-between;
+    }
+}
