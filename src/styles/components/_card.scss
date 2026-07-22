@@ -50,27 +50,25 @@ $lightgrey: rgba(25, 24, 37, 0.1);
 }
 @include desktop {
     .travel-point__right__cards {
-        @include flexRowEvenly;
+        @include flexRow;
+        justify-content: space-between;
         flex-wrap: wrap;
-        margin-top: 2rem;
+        margin-top: 2.9rem;
+        height: 14.5rem;
 
         &__card {
-            // width: 100%;
-            max-width: 25rem;
-            // min-width: 27rem;
-            // height: 9rem;
             border: 1px solid $lightgrey;
             border-radius: 1.5rem;
-            @include flexColEvenly;
-
-            margin: 0.2rem;
-            width: 7rem;
-            height: 3rem;
-            padding: 1rem 0.5rem;
+            @include flexCol;
+            justify-content: space-between;
+            margin: 0;
+            width: 38%;
+            height: 3.2rem;
+            padding: 1rem;
 
             &__data {
                 color: $orange;
-                font-size: 0.8rem;
+                font-size: 1.4rem;
                 font-weight: 900;
             }
             &__text {

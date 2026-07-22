@@ -46,12 +46,14 @@
         @include flexCol;
 
         &__image {
-            margin: 7.5rem 0 0 -0.1rem;
+            margin: 4rem 0 0 -0.1rem;
             width: 99vw;
         }
 
         &__right {
-            @include flexColStart;
+            height: 41.2rem;
+            margin-top: 2.5rem;
+            @include flexColEvenly;
 
             &__top {
                 color: $pink;
@@ -87,12 +89,10 @@
         align-items: unset;
 
         &__image {
-            margin: 5.7rem 0 0 -5rem;
+            margin: 1.7rem 0 0 -5rem;
         }
 
         &__right {
-            margin-top: 4rem;
-
             &__top {
                 color: $pink;
                 font-size: 1rem;

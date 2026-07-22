@@ -7,7 +7,7 @@
 
 @include mobile {
     .travel-point-logo {
-        margin-top: 4rem;
+        margin-top: 3rem;
         img {
             height: 1.3rem;
             margin: 0.8rem 0;
@@ -27,7 +27,7 @@
 }
 @include desktop {
     .travel-point-logo {
-        margin-top: 8rem;
+        margin: 4rem 0rem;
         justify-content: space-between;
     }
 }
