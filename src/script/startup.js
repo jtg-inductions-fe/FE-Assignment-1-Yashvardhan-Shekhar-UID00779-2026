@@ -58,9 +58,9 @@ function insertNavLinks() {
     div.innerHTML = str;
 
     // inserting hading and description
-    let heading = document.querySelector('.hero_left-section_heading');
+    let heading = document.querySelector('.heading');
     heading.innerHTML = `Travel <span>top destination</span> of the world`;
-    let description = document.querySelector('.hero_left-section_description');
+    let description = document.querySelector('.description');
     description.innerHTML = `we always make our customer happy by providing <br /> as many choices as possible`;
 
     // inserting images
