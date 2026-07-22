@@ -217,20 +217,4 @@
             }
         }
     }
-    .hero_left-section_buttons_get-started {
-        background-color: $secondary-color;
-        color: $primary-color;
-        box-shadow: 1px;
-        border-radius: 2rem;
-        margin-right: 1rem;
-    }
-
-    // hero section get started
-    .hero_left-section_buttons_watch-demo {
-        display: inline-flex;
-        align-items: center;
-        padding: 0.8rem 0.7rem;
-        width: 7rem;
-        justify-content: space-evenly;
-    }
 }
