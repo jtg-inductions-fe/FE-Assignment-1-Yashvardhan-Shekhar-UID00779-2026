@@ -84,13 +84,14 @@
 @include desktop {
     .travel-point {
         @include flexRow;
+        align-items: unset;
 
         &__image {
             margin: 5.7rem 0 0 -5rem;
         }
 
         &__right {
-            align-items: start;
+            margin-top: 4rem;
 
             &__top {
                 color: $pink;

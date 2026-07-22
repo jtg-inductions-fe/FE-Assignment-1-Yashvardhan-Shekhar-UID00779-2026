@@ -61,8 +61,12 @@ $lightgrey: rgba(25, 24, 37, 0.1);
             // height: 9rem;
             border: 1px solid $lightgrey;
             border-radius: 1.5rem;
-            margin: 1.3rem 0;
             @include flexColEvenly;
+
+            margin: 0.2rem;
+            width: 7rem;
+            height: 3rem;
+            padding: 1rem 0.5rem;
 
             &__data {
                 color: $orange;
