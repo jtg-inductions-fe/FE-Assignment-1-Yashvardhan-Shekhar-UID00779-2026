@@ -66,6 +66,17 @@
         text-decoration: none;
         padding: 0.3rem 1rem;
     }
+}
+// header link styling
+
+.header {
+    &__link {
+        color: rgba(25, 24, 37, 0.5019607843);
+        text-decoration: none;
+        padding: 0.3rem 1rem;
+        font-size: 0.6rem;
+        font-weight: bold;
+    }
 
     &__close-btn {
         display: unset;
