@@ -6,7 +6,7 @@
         @include flexCol;
 
         &__image {
-            margin: 7.5rem 0 0 -0.1rem;
+            margin: 6.3rem 0 0 -0.1rem;
             width: 99vw;
         }
 
@@ -32,7 +32,7 @@
             }
 
             &__description {
-                margin: 2.4rem 1rem 1rem 1rem;
+                margin: 0.8rem 1rem 0rem 1rem;
                 text-align: center;
                 line-height: 160%;
                 font-weight: 400;
@@ -51,14 +51,14 @@
         }
 
         &__right {
-            height: 41.2rem;
+            height: 35.2rem;
             margin-top: 2.5rem;
             @include flexColEvenly;
 
             &__top {
                 color: $pink;
                 font-size: 1.5rem;
-                margin: 2.6rem 0 0 0.9rem;
+                // margin: 2.6rem 0 0 0.9rem;
                 font-weight: 700;
                 text-transform: uppercase;
                 letter-spacing: 20%;
@@ -69,11 +69,11 @@
                 font-size: 2.6rem;
                 font-weight: bold;
                 width: 90vw;
-                margin-top: 1.4rem;
+                // margin-top: 1.4rem;
             }
 
             &__description {
-                margin: 2rem 1.9rem 1rem 1.9rem;
+                // margin: 2rem 1.9rem 1rem 1.9rem;
                 text-align: center;
                 line-height: 160%;
                 font-weight: 400;
