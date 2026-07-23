@@ -79,7 +79,7 @@
 .hero_right-section_box {
     width: inherit;
     @include flexRow;
-    background-image: url('/assets/images/layer.png');
+    background-image: url('/assets/images/layer.svg');
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
@@ -113,26 +113,18 @@
 
         &_right-section_box {
             justify-content: center;
-            width: 25rem;
-            margin-top: 1rem;
-            padding-top: 2.4rem;
+            margin-top: -1rem;
+            padding-top: 2.1rem;
         }
 
         &_left-section_top {
             padding: 0.5rem;
             color: #f85e9f;
             background-color: rgba(255, 255, 255, 0.092);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            justify-content: space-around;
+            @include flexRowAround;
             width: 11.5rem;
             box-shadow:
                 0px 0px 0px 0px rgba(0, 0, 0, 0.07),
-                0px 34px 75px 0px rgba(0, 0, 0, 0.07),
-                0px 137px 137px 0px rgba(0, 0, 0, 0.06),
-                0px 308px 185px 0px rgba(0, 0, 0, 0.04),
-                0px 548px 219px 0px rgba(0, 0, 0, 0.01),
                 0px 856px 240px 0px rgba(0, 0, 0, 0);
             font-size: 0.9rem;
             font-weight: 600;
@@ -200,19 +192,15 @@
 
             &_box {
                 width: 75vw;
-                margin-top: 3.3rem;
-                padding-top: 3rem;
+                margin-top: 2.3rem;
+                padding-top: 2.3rem;
             }
         }
 
         &_left-section {
             max-width: none;
             height: 54.8vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            justify-content: space-evenly;
+            @include flexColEvenly;
             margin-top: 1.6rem;
 
             &_top {
@@ -226,10 +214,6 @@
                 width: 11.5rem;
                 box-shadow:
                     0px 0px 0px 0px rgba(0, 0, 0, 0.07),
-                    0px 34px 75px 0px rgba(0, 0, 0, 0.07),
-                    0px 137px 137px 0px rgba(0, 0, 0, 0.06),
-                    0px 308px 185px 0px rgba(0, 0, 0, 0.04),
-                    0px 548px 219px 0px rgba(0, 0, 0, 0.01),
                     0px 856px 240px 0px rgba(0, 0, 0, 0);
                 font-size: 0.9rem;
                 font-weight: 600;
@@ -280,7 +264,7 @@
         font-weight: bold;
         text-align: center;
         line-height: 120%;
-        padding: 0 9rem;
+        padding: 0 6rem;
         span {
             color: $pink;
         }
@@ -331,21 +315,37 @@
             max-width: none;
             // height: 50vh;
 <<<<<<< HEAD
+<<<<<<< HEAD
             @include flex-col-between;
 =======
             @include flexColEvenly;
             justify-content: start;
 >>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
+=======
+            @include flexColBetween;
+>>>>>>> 6936c4b ([YS_A1_02]: Fixed hero section PR reviews)
             align-items: start;
             margin: 3.1rem 0 0 0.5rem;
+            height: 61vh;
 
             &__top {
                 padding: 0.6rem 1.2rem;
                 color: $pink;
                 background-color: rgba(255, 255, 255, 0.092);
+<<<<<<< HEAD
                 @include flex-row-around;
                 width: 7rem;
                 border-radius: 2rem;
+=======
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                justify-content: space-around;
+                // width: 11.5rem;
+                box-shadow:
+                    0px 0px 0px 0px rgba(0, 0, 0, 0.07),
+                    0px 856px 240px 0px rgba(0, 0, 0, 0);
+>>>>>>> 6936c4b ([YS_A1_02]: Fixed hero section PR reviews)
                 font-size: 0.6rem;
 <<<<<<< HEAD
             }

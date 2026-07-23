@@ -16,8 +16,14 @@
 @include mobile {
     .image-1,
     .image-2,
+<<<<<<< HEAD
     .image-3 {
         width: 8.7rem;
+=======
+    .image-1 {
+        max-width: 9rem;
+        width: 7.7rem;
+>>>>>>> 6936c4b ([YS_A1_02]: Fixed hero section PR reviews)
         align-self: center;
     }
 
@@ -32,6 +38,11 @@
 
     .image-3 {
         max-width: 11rem;
+<<<<<<< HEAD
+=======
+        width: 7.5rem;
+        align-self: center;
+>>>>>>> 6936c4b ([YS_A1_02]: Fixed hero section PR reviews)
         margin-right: 0.5rem;
     }
 
@@ -85,21 +96,21 @@
     }
 
     .hero_right-section_img_msg {
-        top: 10.8rem;
-        left: 0.8rem;
-        height: 5.5rem;
+        top: 9.6rem;
+        left: 0.9rem;
+        height: 5.2rem;
     }
 
     .hero_right-section_img_friend {
-        top: 20.7rem;
-        left: 14.2rem;
-        height: 5.5rem;
+        top: 18.5rem;
+        left: 13.05rem;
+        height: 4.7rem;
     }
 
     .hero_right-section_img_location {
-        top: 15.5rem;
-        left: 17.9rem;
-        height: 5.5rem;
+        top: 13.8rem;
+        left: 16.3rem;
+        height: 4.8rem;
     }
 }
 
@@ -116,18 +127,18 @@
     }
 
     .hero_right-section_img_msg {
-        top: 21.4rem;
-        left: 1.5rem;
+        top: 18.9rem;
+        left: 1.3rem;
     }
 
     .hero_right-section_img_friend {
-        top: 40.7rem;
-        left: 27.6rem;
+        top: 36.1rem;
+        left: 24.5rem;
     }
 
     .hero_right-section_img_location {
-        top: 30.6rem;
-        left: 35rem;
+        top: 27.1rem;
+        left: 31rem;
     }
 }
 

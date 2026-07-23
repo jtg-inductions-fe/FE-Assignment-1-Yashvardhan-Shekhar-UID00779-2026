@@ -39,6 +39,7 @@
     justify-content: space-around;
 }
 
+<<<<<<< HEAD
 /// Flexbox column layout with space-between alignment.
 @mixin flex-col-between {
     @include flex-col;
@@ -54,6 +55,20 @@
 /// Flexbox column layout aligned to start.
 @mixin flex-col-start {
     @include flex-col;
+=======
+@mixin flexColBetween {
+    @include flexCol;
+    justify-content: space-between;
+}
+
+@mixin flexRowBetween {
+    @include flexRow;
+    justify-content: space-between;
+}
+
+@mixin flexColStart {
+    @include flexCol;
+>>>>>>> 6936c4b ([YS_A1_02]: Fixed hero section PR reviews)
     justify-content: start;
 }
 
