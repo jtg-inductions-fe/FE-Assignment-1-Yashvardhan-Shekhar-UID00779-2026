@@ -1,11 +1,11 @@
 let links = [
     {
-        name: 'home',
+        name: 'Home',
         path: '/home',
     },
     {
         name: 'Discover',
-        path: '/Discover',
+        path: '/discover',
     },
     {
         name: 'Special Deals',
