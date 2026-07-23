@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Circular-Std';
+    src:
+        url('.../public/assets/fonts/CircularStd-Book.woff2') format('woff2'),
+        url('.../public/assets/fonts/CircularStd-Book.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circular-Std';
+    src:
+        url('.../public/assets/fonts/CircularStd-Bold.woff2') format('woff2'),
+        url('.../public/assets/fonts/CircularStd-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('.../public/assets/fonts/Inter-Regular.woff2') format('woff2');
+    src: url('.../public/assets/fonts/Inter_18pt-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    font-family: circular-std, sans-serif;
+}
+
+a,
+button {
+    font-size: 0.6rem;
+    font-weight: 700;
+    line-height: 120%;
+}

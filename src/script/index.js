@@ -7,8 +7,13 @@ let toggleHamburger = () => {
     headerBurger.classList.toggle('header__burger--none');
 };
 
-let closeBtn = document.querySelector('.header__close-btn');
+let closeBtn = document.querySelector('.header__links');
 let hamburgerBtn = document.querySelector('.header__burger');
 
 hamburgerBtn.addEventListener('click', toggleHamburger);
-closeBtn.addEventListener('click', toggleHamburger);
+
+closeBtn.addEventListener('click', (e) => {
+    if (e.target.matches('.header__close-btn')) {
+        toggleHamburger();
+    }
+});
