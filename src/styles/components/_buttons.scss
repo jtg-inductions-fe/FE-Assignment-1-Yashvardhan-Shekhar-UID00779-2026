@@ -21,8 +21,28 @@
         }
     }
 
+<<<<<<< HEAD
     &__burger button {
         padding: 0.9rem 0.3rem;
+=======
+// for mobile
+@include mobile {
+    .header {
+        &__close-btn {
+            // Formerly .header_links_close
+            padding: 1rem 1.5rem;
+        }
+
+        &__burger {
+            button {
+                padding: 0.9rem 0.3rem;
+            }
+        }
+
+        &__buttons {
+            display: none;
+        }
+>>>>>>> 6936c4b ([YS_A1_02]: Fixed hero section PR reviews)
     }
 
     // hero section get started
@@ -33,7 +53,7 @@
             color: $primary-color;
             box-shadow: 1px;
             padding: 1.5rem;
-            margin-top: 2rem;
+            margin-top: 0.9rem;
             width: 92vw;
             border-radius: 2rem;
         }
@@ -55,7 +75,12 @@
 
 @include tablet {
     .button {
+<<<<<<< HEAD
         font-size: 1rem;
+=======
+        padding: 0.9rem 2rem;
+        font-size: 0.7rem;
+>>>>>>> 6936c4b ([YS_A1_02]: Fixed hero section PR reviews)
     }
 
     .header {
