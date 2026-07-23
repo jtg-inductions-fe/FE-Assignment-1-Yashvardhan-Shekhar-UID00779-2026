@@ -1,0 +1,99 @@
+@import '../abstract/mixins';
+@import '../abstract/variables';
+
+.splide {
+    &__slide {
+        @include flexColEvenly;
+        justify-content: space-between;
+    }
+
+    &__arrow {
+        padding: 2rem;
+        border: 1px solid $lightgrey;
+        border-radius: 2rem;
+        i {
+            color: black;
+        }
+    }
+
+    &__arrow:hover {
+        background-color: $secondary-color;
+        i {
+            color: $primary-color;
+        }
+    }
+    &__pagination {
+        &__page {
+            padding: 10px;
+        }
+
+        li button.is-active {
+            transform: unset;
+            background: $pink;
+        }
+    }
+}
+
+@include mobile {
+    .splide {
+        &__pagination {
+            top: 110%;
+        }
+        padding: 1.45rem;
+        margin-top: 2.5rem;
+
+        &__slide {
+            height: 27rem;
+        }
+
+        &__arrow {
+            top: 17.75%;
+        }
+    }
+}
+
+@include tablet {
+    .splide {
+        &__pagination {
+            top: 105.6%;
+        }
+
+        padding: 2rem;
+        margin-top: 1.3rem;
+
+        &__slide {
+            height: 24.6rem;
+        }
+
+        &__arrow {
+            top: 41.25%;
+            padding: 2.6rem;
+            border-radius: 50%;
+
+            &--next {
+                right: 7.5rem;
+            }
+            &--prev {
+                left: 7.5rem;
+            }
+        }
+    }
+}
+@include desktop {
+    .splide {
+        &__pagination {
+            top: 105.6%;
+        }
+
+        padding: 1.45rem;
+        margin-top: 0.5rem;
+
+        &__slide {
+            height: 16.8rem;
+        }
+
+        &__arrow {
+            top: 44%;
+        }
+    }
+}

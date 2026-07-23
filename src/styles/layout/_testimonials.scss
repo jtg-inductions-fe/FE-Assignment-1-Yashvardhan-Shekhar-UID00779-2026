@@ -1,0 +1,48 @@
+@import '../abstract/mixins';
+@import '../abstract/variables';
+
+.testimonials {
+    @include flexCol;
+}
+
+@include mobile {
+    .testimonials {
+        margin: 2.8rem 0 7rem 0;
+    }
+    .name {
+        font-size: 1.55rem;
+        font-weight: bolder;
+        span {
+            color: $orange;
+            font-weight: bold;
+        }
+    }
+
+    .rating {
+        font-size: 1.95rem;
+    }
+}
+
+@include tablet {
+    .testimonials {
+        margin: 1rem 0 5rem 0;
+    }
+    .name {
+        font-size: 1.55rem;
+        font-weight: bolder;
+        span {
+            color: $orange;
+            font-weight: bold;
+        }
+    }
+
+    .rating {
+        font-size: 1.95rem;
+    }
+}
+
+@include desktop {
+    .testimonials {
+        margin: 3.4rem 0 4rem 0;
+    }
+}

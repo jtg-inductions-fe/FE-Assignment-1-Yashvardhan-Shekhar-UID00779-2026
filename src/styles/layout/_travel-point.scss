@@ -88,7 +88,7 @@
             &__heading {
                 font-size: 2.6rem;
                 width: 90vw;
-                // margin-top: 1.4rem;
+                margin-top: 1.4rem;
             }
 
             &__description {
@@ -154,5 +154,12 @@
 >>>>>>> c5fefb9 ([YS_A1_03]: Fixed incemental changes)
             }
         }
+    }
+    .description--travel-point {
+        margin-top: 1rem;
+        line-height: 160%;
+        font-weight: 400;
+        letter-spacing: 8%;
+        font-size: 0.7rem;
     }
 }

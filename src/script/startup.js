@@ -126,4 +126,16 @@ insertStats();
 // insert data into the HTML page
 >>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
 insert();
+<<<<<<< HEAD
 >>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
+=======
+
+import Splide from '@splidejs/splide';
+
+var splide = new Splide('.splide', {
+    type: 'fade',
+    rewind: true,
+});
+
+splide.mount();
+>>>>>>> 2e6748e ([YS_A1_04]: Testimonial Section added carousel)
