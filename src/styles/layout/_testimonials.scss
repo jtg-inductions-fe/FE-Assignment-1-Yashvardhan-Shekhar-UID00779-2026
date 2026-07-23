@@ -2,12 +2,25 @@
 @import '../abstract/variables';
 
 .testimonials {
+    position: relative;
     @include flexCol;
+    // background-image: url(/assets/images/pink-gradient.svg);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: 0%;
+    .background {
+        position: absolute;
+        top: -17rem;
+        width: 100vw;
+    }
 }
 
 @include mobile {
     .testimonials {
         margin: 2.8rem 0 7rem 0;
+        .background {
+            display: none;
+        }
     }
     .name {
         font-size: 1.55rem;
