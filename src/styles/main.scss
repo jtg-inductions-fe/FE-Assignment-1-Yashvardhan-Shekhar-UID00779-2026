@@ -1,8 +1,10 @@
 @use 'base/reset';
 @use 'abstract/variables';
+@use 'abstract/typography';
 @use 'base/base';
 @use 'layout/header';
 @use 'components/buttons';
 @use 'components/links';
 @use 'components/hamburger';
-@use 'abstract/typography';
+@use 'layout/hero-section';
+@use 'components/images';
