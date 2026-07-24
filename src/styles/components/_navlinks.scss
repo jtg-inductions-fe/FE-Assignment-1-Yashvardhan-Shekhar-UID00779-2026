@@ -56,8 +56,6 @@
         color: rgba(25, 24, 37, 0.5019607843);
         text-decoration: none;
         padding: 0.3rem 1rem;
-        font-size: 0.6rem;
-        font-weight: bold;
     }
 
     &__close-btn {
@@ -134,7 +132,11 @@
         }
 
         &__link {
+<<<<<<< HEAD:src/styles/components/_navlinks.scss
             color: variables.$link;
+=======
+            color: $link;
+>>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach):src/styles/components/_links.scss
             padding: 0.3rem 1rem;
             font-size: 0.6rem;
             font-weight: bold;

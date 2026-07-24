@@ -2,6 +2,7 @@
 @use '../abstract/mixins' as *;
 
 // global
+<<<<<<< HEAD
 .hero {
     &__triangle {
         position: absolute;
@@ -32,6 +33,11 @@
     .heading span {
         color: $pink;
     }
+=======
+.hero_right-section {
+    // border: 1px black solid;
+    height: 80vh;
+>>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
 }
 
 <<<<<<< HEAD
@@ -93,70 +99,60 @@
     @include flexColEvenly;
 }
 
-@include mobile {
-    .hero {
-        display: flex;
-        flex-direction: column-reverse;
-        margin-top: 3.2rem;
+// mobile
+.hero {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 3.2rem;
 
-        &_left-section {
-            @include flexCol;
-            // border: red solid 1px;
-            max-width: none;
-            height: 50vh;
-        }
-
-        &_right-section {
-            // border: 1px black solid;
-            height: auto;
-        }
-
-        &_right-section_box {
-            justify-content: center;
-            margin-top: -1rem;
-            padding-top: 2.1rem;
-        }
-
-        &_left-section_top {
-            padding: 0.5rem;
-            color: #f85e9f;
-            background-color: rgba(255, 255, 255, 0.092);
-            @include flexRowAround;
-            width: 11.5rem;
-            box-shadow:
-                0px 0px 0px 0px rgba(0, 0, 0, 0.07),
-                0px 856px 240px 0px rgba(0, 0, 0, 0);
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        &_left-section {
-            @include flexColEvenly;
-            margin-top: 2.8rem;
-        }
-    }
-    .heading {
-        font-size: 2.4rem;
-        font-weight: bold;
-        text-align: center;
-        margin-top: 1.7rem;
-        line-height: 125%;
-        span {
-            color: $pink;
-        }
+    &_left-section {
+        @include flexCol;
+        max-width: none;
+        height: 65vh;
     }
 
-    .description {
-        font-weight: 400;
-        line-height: 160%;
-        font-size: 1rem;
-        text-align: center;
-        color: $grey;
+    &_right-section {
+        height: auto;
+    }
 
+<<<<<<< HEAD
         &--header {
             margin-top: 1.3rem;
         }
 >>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
+=======
+    &_right-section_box {
+        justify-content: center;
+        margin-top: -0.3rem;
+        padding-top: 2.1rem;
+    }
+
+    &_left-section_top {
+        padding: 0.5rem;
+        color: #f85e9f;
+        background-color: rgba(255, 255, 255, 0.092);
+        @include flexRowAround;
+        width: 11.5rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    &_left-section {
+        @include flexColEvenly;
+        margin-top: 2.8rem;
+    }
+}
+.heading {
+    margin-top: 1.7rem;
+    span {
+        color: $pink;
+    }
+}
+
+.description {
+    &--header {
+        margin-top: 1.3rem;
+>>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
     }
 }
 
@@ -185,7 +181,6 @@
                 gap: 0;
 =======
         &_right-section {
-            // border: 1px black solid;
             @include flexCol;
             width: auto;
             height: auto;
@@ -200,24 +195,10 @@
         &_left-section {
             max-width: none;
             height: 54.8vh;
-            @include flexColEvenly;
             margin-top: 1.6rem;
 
             &_top {
                 padding: 0.3rem;
-                color: #f85e9f;
-                background-color: rgba(255, 255, 255, 0.092);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                justify-content: space-around;
-                width: 11.5rem;
-                box-shadow:
-                    0px 0px 0px 0px rgba(0, 0, 0, 0.07),
-                    0px 856px 240px 0px rgba(0, 0, 0, 0);
-                font-size: 0.9rem;
-                font-weight: 600;
-                letter-spacing: -2%;
             }
 <<<<<<< HEAD
 
@@ -261,20 +242,10 @@
     }
     .heading {
         font-size: 3.5rem;
-        font-weight: bold;
-        text-align: center;
-        line-height: 120%;
         padding: 0 6rem;
-        span {
-            color: $pink;
-        }
     }
     .description {
-        font-weight: 400;
-        line-height: 160%;
         font-size: 1.1rem;
-        text-align: center;
-        color: $grey;
     }
 }
 
@@ -294,7 +265,11 @@
             &__box {
                 width: 32.3rem;
                 padding-top: 0;
+<<<<<<< HEAD
                 @include flex-row;
+=======
+                @include flexRow;
+>>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
                 background-image: url('/assets/images/layer.svg');
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -326,8 +301,9 @@
 >>>>>>> 6936c4b ([YS_A1_02]: Fixed hero section PR reviews)
             align-items: start;
             margin: 3.1rem 0 0 0.5rem;
-            height: 61vh;
+            height: 66dvh;
 
+<<<<<<< HEAD
             &__top {
                 padding: 0.6rem 1.2rem;
                 color: $pink;
@@ -356,6 +332,16 @@
 =======
                 font-weight: 600;
                 letter-spacing: -2%;
+=======
+            &_top {
+                padding: 0.3rem;
+                color: $pink;
+                background-color: rgba(255, 255, 255, 0.092);
+                @include flexRowAround;
+                width: 11.5rem;
+
+                font-size: 0.6rem;
+>>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
                 padding-left: 1.2rem;
                 width: 7rem;
                 border-radius: 2rem;
@@ -384,6 +370,7 @@
 =======
 >>>>>>> 2596f70 ([YS_A1_02]: Rebased with Header section and updated BEM)
             &_buttons {
+                margin-top: 1rem;
                 @include flexRow;
             }
         }
@@ -394,19 +381,11 @@
         text-align: start;
 =======
     .heading {
-        font-size: 2.8rem;
-        font-weight: bold;
-        line-height: 123%;
-        margin-top: 2.3rem;
-        span {
-            color: $pink;
-        }
+        text-align: start;
     }
     .description {
-        font-weight: 400;
-        line-height: 147%;
+        text-align: start;
         font-size: 0.82rem;
-        color: $grey;
 
 >>>>>>> 2596f70 ([YS_A1_02]: Rebased with Header section and updated BEM)
         &--header {
