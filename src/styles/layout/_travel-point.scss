@@ -1,42 +1,40 @@
 @import '../abstract/mixins';
 @import '../abstract/variables';
 
-@include mobile {
-    .travel-point {
-        @include flexCol;
+.travel-point {
+    @include flexCol;
 
-        &__image {
-            margin: 6.3rem 0 0 -0.1rem;
-            width: 99vw;
+    &__image {
+        margin: 6.3rem 0 0 -0.1rem;
+        width: 99vw;
+    }
+
+    &__right {
+        @include flexColStart;
+
+        &__top {
+            color: $pink;
+            font-size: 1rem;
+            margin: 2.6rem 0 0 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 20%;
         }
 
-        &__right {
-            @include flexColStart;
+        &__heading {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            width: 90vw;
+            margin-top: 1.3rem;
+            line-height: 110%;
+        }
 
-            &__top {
-                color: $pink;
-                font-size: 1rem;
-                margin: 2.6rem 0 0 0.9rem;
-                font-weight: 700;
-                text-transform: uppercase;
-                letter-spacing: 20%;
-            }
-
-            &__heading {
-                text-align: center;
-                font-size: 2rem;
-                font-weight: bold;
-                width: 90vw;
-                margin-top: 1.3rem;
-                line-height: 110%;
-            }
-
-            &__description {
-                margin: 0.8rem 1rem 0rem 1rem;
-                text-align: center;
-                line-height: 160%;
-                font-weight: 400;
-            }
+        &__description {
+            margin: 0.8rem 1rem 0rem 1rem;
+            text-align: center;
+            line-height: 160%;
+            font-weight: 400;
         }
     }
 }
@@ -108,6 +106,7 @@
                 margin-top: 1.1rem;
                 letter-spacing: 1%;
                 line-height: 120%;
+                width: auto;
             }
 
             &__description {
