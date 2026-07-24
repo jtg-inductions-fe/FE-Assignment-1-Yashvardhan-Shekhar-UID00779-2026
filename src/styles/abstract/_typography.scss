@@ -21,23 +21,75 @@
 
 @font-face {
     font-family: 'Inter';
+<<<<<<< HEAD
     src:
         url('assets/fonts/Inter-Regular.woff2') format('woff2'),
         url('assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
+=======
+    src: url('assets/fonts/Inter-Regular.woff2') format('woff2');
+    src: url('assets/fonts/Inter_18pt-Regular.ttf') format('ttf');
+>>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
     font-weight: 400;
     font-style: normal;
 }
 
+<<<<<<< HEAD
 /// Hero Main Heading (H1)
 .text-hero-heading {
     font-size: 2.7rem;
     font-weight: 700;
     line-height: 125%;
+=======
+html {
+    font-family: circular-Std, sans-serif;
+}
+
+button,
+a {
+    font-size: 0.6rem;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+a {
+    color: $link;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+// hero section heading
+h1 {
+    font-size: 2.7rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0.7rem;
+    line-height: 125%;
+    span {
+        color: $pink;
+    }
+}
+
+p {
+    font-weight: 400;
+    line-height: 160%;
+    font-size: 1rem;
+>>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
     text-align: center;
 
+<<<<<<< HEAD
     @include tablet {
         font-size: 3.5rem;
     }
+=======
+.top {
+    color: $pink;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 20%;
+}
+>>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
 
     @include desktop {
         text-align: start;
