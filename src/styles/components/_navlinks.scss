@@ -48,6 +48,7 @@
         text-decoration: none;
         padding: 0.3rem 1rem;
     }
+<<<<<<< HEAD:src/styles/components/_navlinks.scss
 }
 // header link styling
 
@@ -163,6 +164,8 @@
         font-size: 0.6rem;
         font-weight: bold;
     }
+=======
+>>>>>>> a1596ee ([YS_A1_03]: Fixed incemental changes):src/styles/components/_links.scss
 
     &__close-btn {
         display: unset;
@@ -216,6 +219,10 @@
                 justify-content: unset;
                 align-items: start;
             }
+
+            &__bottom {
+                display: none;
+            }
         }
     }
 }
@@ -250,6 +257,10 @@
             &__top,
             &__bottom {
                 all: initial;
+            }
+
+            &__bottom {
+                display: none;
             }
 
             &s--none {
