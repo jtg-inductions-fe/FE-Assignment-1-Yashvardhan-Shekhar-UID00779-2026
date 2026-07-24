@@ -1,16 +1,46 @@
 @import '../abstract/mixins';
+@import '../abstract/variables';
 
+// for mobile
 .header {
-    &__link {
-        color: rgba(25, 24, 37, 0.5019607843);
-        text-decoration: none;
-        padding: 0.3rem 1rem;
-        // font-size: 0.6rem;
-        // font-weight: bold;
+    &__links {
+        @include flexCol;
+        justify-content: space-between;
+        position: absolute;
+        padding: 2rem;
+        z-index: 5;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100dvh;
+        width: 50dvw;
+        background: $header-background;
+        box-sizing: border-box;
     }
 
     &__close-btn {
-        display: none;
+        display: unset;
+        margin-bottom: 0.5rem;
+        border: none;
+        font-size: 2rem; // for x (cross btn)
+        height: 2rem;
+        background-color: $transparent;
+        font-weight: 100;
+        color: $primary-color;
+        margin: -2rem 1rem 1rem 6.5rem;
+    }
+
+    &__link {
+        color: $primary-color;
+        padding: 1rem 0rem;
+
+        &__top,
+        &__bottom {
+            @include flexCol;
+            justify-content: unset;
+            align-items: start;
+            width: 40vw;
+        }
     }
 }
 
@@ -27,87 +57,32 @@
             left: 0;
             top: 0;
             bottom: 0;
-            height: 100dvh;
-            width: 25vw;
-            background: rgba(0, 0, 0, 0.683);
+            width: 25dvw;
         }
 
         &__close-btn {
-            display: unset;
-            margin-bottom: 0.5rem;
+            margin: 0 0 0.5rem 0;
             padding: 1rem;
-            border: none;
-            height: 2rem;
-            background-color: rgba(0, 0, 0, 0);
-            font-size: 2rem;
-            font-weight: 100;
-            color: white;
+            color: $primary-color;
             position: absolute;
             top: 1rem;
             right: 1rem;
         }
 
         &__link {
-            color: white;
+            color: $primary-color;
             padding: 1rem 0rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-    }
 
-    .top {
-        @include flexCol;
-        justify-content: unset;
-        align-items: start;
+            &__top {
+                @include flexCol;
+                justify-content: unset;
+                align-items: start;
+            }
+        }
     }
 }
 
-@include mobile {
-    .header {
-        &__links {
-            @include flexCol;
-            justify-content: space-between;
-            position: absolute;
-            padding: 2rem;
-            z-index: 5;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            height: 100dvh;
-            width: 50vw;
-            background: rgba(0, 0, 0, 0.683);
-            box-sizing: border-box;
-        }
-
-        &__close-btn {
-            display: unset;
-            margin-bottom: 0.5rem;
-            border: none;
-            font-size: 2rem;
-            height: 2rem;
-            background-color: rgba(0, 0, 0, 0);
-            font-weight: 100;
-            color: white;
-            margin: -2rem 1rem 1rem 6.5rem;
-        }
-
-        &__link {
-            color: white;
-            padding: 1rem 0rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-    }
-
-    .top,
-    .bottom {
-        @include flexCol;
-        justify-content: unset;
-        align-items: start;
-        width: 40vw;
-    }
-}
-
+// to hide buttons from the page
 .header {
     &__links--none {
         display: none;
@@ -115,7 +90,29 @@
 }
 
 @include desktop {
-    .header__links--none {
-        display: unset;
+    .header {
+        &__links {
+            all: initial;
+        }
+
+        &__close-btn {
+            display: none;
+        }
+
+        &__link {
+            &__top,
+            &__bottom {
+                all: initial;
+            }
+
+            color: $link;
+            padding: 0.3rem 1rem;
+            font-size: 0.6rem;
+            font-weight: bold;
+
+            &s--none {
+                display: unset;
+            }
+        }
     }
 }

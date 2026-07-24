@@ -9,7 +9,7 @@ let links = [
     },
     {
         name: 'Special Deals',
-        path: '/specialdeals',
+        path: '/specialDeals',
     },
     {
         name: 'Contact',
@@ -20,15 +20,15 @@ let links = [
 // insert links into HTML
 function insert() {
     let str =
-        ' <div class="top"> <button class="header__close-btn">&#10006;</button> ';
+        ' <div class="header__link__top"> <button class="header__close-btn">&#10006;</button> ';
     let div = document.querySelector('.header__links');
     links.forEach((l) => {
         str += `<a class="header__link" href="${l.path}">${l.name}</a>`;
     });
     str += ` </div>
-            <div class="bottom">
-            <a class="header__link header__link--button links__button login-btn" href="Login"">Log in</a>
-            <a class="header__link header__link--button links__button" href="signup"">Sign up</a>
+            <div class="header__link__bottom">
+            <a class="header__link header__link--button links__button login-btn" href="Login">Log in</a>
+            <a class="header__link header__link--button links__button" href="signup">Sign up</a>
             </div>
             `;
     div.innerHTML = str;

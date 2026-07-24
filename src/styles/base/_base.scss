@@ -2,11 +2,6 @@
 
 @import '../abstract/mixins';
 
-// margin for desktop
-.container {
-    margin: 2rem 7rem;
-}
-
 // gradient image
 html {
     // height: 100vh;
@@ -20,9 +15,6 @@ html {
 
 // margin for mobile
 @include mobile {
-    .html {
-        font-size: 18px;
-    }
     .container {
         margin: 1.8rem 0.6rem;
     }
@@ -30,9 +22,6 @@ html {
 
 // margin for tablet
 @include tablet {
-    .html {
-        font-size: 18px;
-    }
     .container {
         margin: 1.3rem 3.6rem;
     }
@@ -41,7 +30,7 @@ html {
 // for tablet
 @include desktop {
     html {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
     .container {
         margin: 2.4rem 4.6rem;

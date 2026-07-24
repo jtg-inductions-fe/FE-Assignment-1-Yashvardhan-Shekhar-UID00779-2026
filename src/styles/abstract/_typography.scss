@@ -1,8 +1,10 @@
+@import './variables';
+
 @font-face {
     font-family: 'Circular-Std';
     src:
-        url('.../public/assets/fonts/CircularStd-Book.woff2') format('woff2'),
-        url('.../public/assets/fonts/CircularStd-Book.woff') format('woff');
+        url('/public/assets/fonts/CircularStd-Book.woff2') format('woff2'),
+        url('/public/assets/fonts/CircularStd-Book.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
@@ -10,16 +12,16 @@
 @font-face {
     font-family: 'Circular-Std';
     src:
-        url('.../public/assets/fonts/CircularStd-Bold.woff2') format('woff2'),
-        url('.../public/assets/fonts/CircularStd-Bold.woff') format('woff');
+        url('/public/assets/fonts/CircularStd-Bold.woff2') format('woff2'),
+        url('/public/assets/fonts/CircularStd-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Inter';
-    src: url('.../public/assets/fonts/Inter-Regular.woff2') format('woff2');
-    src: url('.../public/assets/fonts/Inter_18pt-Regular.ttf') format('ttf');
+    src: url('/public/assets/fonts/Inter-Regular.woff2') format('woff2');
+    src: url('/public/assets/fonts/Inter_18pt-Regular.ttf') format('ttf');
     font-weight: 400;
     font-style: normal;
 }
@@ -28,9 +30,67 @@ html {
     font-family: circular-std, sans-serif;
 }
 
-a,
-button {
+button,
+a {
     font-size: 0.6rem;
     font-weight: 700;
     line-height: 120%;
+}
+
+a {
+    color: $link;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+// hero section heading
+h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1.7rem;
+    line-height: 125%;
+}
+
+p {
+    font-weight: 400;
+    line-height: 160%;
+    font-size: 1rem;
+    text-align: center;
+    color: $grey;
+}
+
+.top {
+    color: $pink;
+    font-size: 1.5rem;
+    // margin: 2.6rem 0 0 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 20%;
+}
+
+// travel point and testimonial
+h3 {
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: bold;
+}
+
+// testimonial name
+h5 {
+    font-size: 1.55rem;
+    font-weight: bolder;
+    span {
+        color: $orange;
+        font-weight: bold;
+    }
+}
+
+h6 {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 1.2rem;
+    line-height: 120%;
+    letter-spacing: 0%;
 }

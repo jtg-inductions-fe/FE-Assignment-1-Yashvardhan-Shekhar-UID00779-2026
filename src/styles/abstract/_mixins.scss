@@ -1,4 +1,5 @@
 // mixins.scss
+@import './variables';
 
 @mixin flexRow {
     display: flex;
@@ -44,19 +45,19 @@
 // media query mixin
 
 @mixin mobile {
-    @media (max-width: 430px) {
+    @media (max-width: $mobile) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media (min-width: 431px) and (max-width: 1024px) {
+    @media (min-width: $mobile) and (max-width: $tablet) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media (min-width: 1025px) {
+    @media (min-width: $tablet) {
         @content;
     }
 }
