@@ -158,21 +158,27 @@
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     .hero_right-section_img_msg {
         top: 18.9rem;
         left: 1.3rem;
 =======
     .msg-icon {
         top: 33.3dvw;
+=======
+    .hero_right-section_img_msg {
+        top: 39.9dvh;
+>>>>>>> c8df1f2 ([YS_A1_04]: Fixed incemental changes and made pixel perfect)
         left: 2.2dvw;
 >>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
     }
 
-    .friend-icon {
-        top: 63.3dvw;
+    .hero_right-section_img_friend {
+        top: 76dvh;
         left: 43dvw;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     .hero_right-section_img_location {
         top: 27.1rem;
@@ -180,54 +186,12 @@
 =======
     .location-icon {
         top: 47.6dvw;
+=======
+    .hero_right-section_img_location {
+        top: 57dvh;
+>>>>>>> c8df1f2 ([YS_A1_04]: Fixed incemental changes and made pixel perfect)
         left: 54.7dvw;
 >>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
-    }
-
-    .hero_right-section_img_msg {
-        top: 10.8rem;
-        left: 0.8rem;
-        height: 5.5rem;
-    }
-
-    .hero_right-section_img_friend {
-        top: 20.7rem;
-        left: 14.2rem;
-        height: 5.5rem;
-    }
-
-    .hero_right-section_img_location {
-        top: 15.5rem;
-        left: 17.9rem;
-        height: 5.5rem;
-    }
-}
-
-@include tablet {
-    .image-3,
-    .image-2,
-    .image-1 {
-        max-width: 17rem;
-        padding: 0.5rem;
-        width: auto;
-        align-self: center;
-        padding-right: 1.5rem;
-        padding-top: 1.7rem;
-    }
-
-    .hero_right-section_img_msg {
-        top: 21.4rem;
-        left: 1.5rem;
-    }
-
-    .hero_right-section_img_friend {
-        top: 40.7rem;
-        left: 27.6rem;
-    }
-
-    .hero_right-section_img_location {
-        top: 30.6rem;
-        left: 35rem;
     }
 }
 
