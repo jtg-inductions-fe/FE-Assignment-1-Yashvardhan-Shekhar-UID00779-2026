@@ -121,6 +121,7 @@ h5 {
     }
 }
 
+<<<<<<< HEAD
 /// Section Headings (H3)
 .text-section-heading {
     font-size: 2rem;
@@ -262,5 +263,13 @@ h5 {
 
     @include desktop {
         font-size: 1.2rem;
+=======
+h6 {
+    font-size: 1.55rem;
+    font-weight: bolder;
+    span {
+        color: $orange;
+        font-weight: bold;
+>>>>>>> 29dca3a ([YS_A1_04]: Fixed incemental changes)
     }
 }

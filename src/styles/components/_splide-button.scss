@@ -66,6 +66,11 @@
 
         &__slide {
             height: 24.6rem;
+            p {
+                font-size: 1.4rem;
+                margin: 0 13rem;
+                text-align: center;
+            }
         }
 
         &__arrow {
@@ -93,6 +98,14 @@
 
         &__slide {
             height: 16.8rem;
+            h6 {
+                font-size: 1.35rem;
+            }
+            p {
+                font-size: 1rem;
+                margin: 0 13rem;
+                text-align: center;
+            }
         }
 
         &__arrow {
