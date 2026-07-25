@@ -37,6 +37,10 @@
     .travel-point__right__cards {
         @include flex-row-between;
         flex-wrap: wrap;
+<<<<<<< HEAD
+=======
+        margin-top: 1rem;
+>>>>>>> c5fefb9 ([YS_A1_03]: Fixed incemental changes)
         height: 14.5rem;
     }
 

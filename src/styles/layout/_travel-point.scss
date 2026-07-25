@@ -15,8 +15,27 @@
         margin-top: 2.8rem;
         height: 57.5rem;
 
+<<<<<<< HEAD
         &__discount {
             display: none;
+=======
+        &__top {
+            color: $pink;
+            font-size: 1rem;
+            margin: 2.6rem 0 0 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 20%;
+        }
+
+        &__heading {
+            width: 90vw;
+            margin-top: 1.3rem;
+        }
+
+        &__description {
+            margin: 0.8rem 1rem 0rem 1rem;
+>>>>>>> c5fefb9 ([YS_A1_03]: Fixed incemental changes)
         }
     }
 }
@@ -31,8 +50,34 @@
         }
 
         &__right {
+<<<<<<< HEAD
             height: 35.1rem;
             margin-top: 6.4rem;
+=======
+            height: 35.2rem;
+            margin-top: 2.5rem;
+            @include flexColEvenly;
+
+            &__top {
+                color: $pink;
+                font-size: 1.5rem;
+                // margin: 2.6rem 0 0 0.9rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 20%;
+            }
+
+            &__heading {
+                font-size: 2.6rem;
+                width: 90vw;
+                // margin-top: 1.4rem;
+            }
+
+            &__description {
+                // margin: 2rem 1.9rem 1rem 1.9rem;
+                letter-spacing: 8%;
+            }
+>>>>>>> c5fefb9 ([YS_A1_03]: Fixed incemental changes)
         }
     }
 }
@@ -49,6 +94,7 @@
 
         &__right {
             align-items: start;
+<<<<<<< HEAD
             height: 27.3rem;
             margin-top: 0.5rem;
 
@@ -57,6 +103,28 @@
                 position: absolute;
                 right: 0;
                 top: 62.2rem;
+=======
+            &__top {
+                color: $pink;
+                font-size: 1rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 20%;
+                margin: 2rem 0 0 0;
+            }
+
+            &__heading {
+                font-size: 1.75rem;
+                width: auto;
+            }
+
+            &__description {
+                margin-top: 1rem;
+                letter-spacing: 8%;
+                font-size: 0.7rem;
+                text-align: start;
+                margin: 2rem 0 0 0;
+>>>>>>> c5fefb9 ([YS_A1_03]: Fixed incemental changes)
             }
         }
     }

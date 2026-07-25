@@ -91,8 +91,25 @@ p {
 }
 >>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
 
+<<<<<<< HEAD
     @include desktop {
         text-align: start;
+=======
+// travel point and testimonial
+h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 110%;
+}
+
+// testimonial name
+h5 {
+    font-size: 1.55rem;
+    font-weight: bolder;
+    span {
+        color: $orange;
+        font-weight: bold;
+>>>>>>> c5fefb9 ([YS_A1_03]: Fixed incemental changes)
     }
 }
 
