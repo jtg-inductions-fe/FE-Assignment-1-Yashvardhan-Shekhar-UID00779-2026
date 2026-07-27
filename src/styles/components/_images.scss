@@ -1,6 +1,6 @@
 @import '../abstract/mixins';
 
-.hero_right-section_img_msg,
+.msg-icon,
 .hero_right-section_img_friend,
 .hero_right-section_img_location {
     position: absolute;
@@ -27,7 +27,7 @@
         margin-left: 1rem;
     }
 
-    .hero_right-section_img_msg {
+    .msg-icon {
         top: 9.6rem;
         left: 0.9rem;
         height: 5.2rem;
@@ -58,7 +58,7 @@
         padding-top: 1.7rem;
     }
 
-    .hero_right-section_img_msg {
+    .msg-icon {
         top: 18.9rem;
         left: 1.3rem;
     }
@@ -93,7 +93,7 @@
         padding-top: 3rem;
     }
 
-    .hero_right-section_img_msg {
+    .msg-icon {
         top: 14.1rem;
         left: 1.2rem;
     }
