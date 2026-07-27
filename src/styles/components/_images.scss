@@ -1,6 +1,7 @@
 @import '../abstract/mixins';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .msg-icon,
 .friend-icon,
 .location-icon {
@@ -9,6 +10,11 @@
 .hero_right-section_img_friend,
 .hero_right-section_img_location {
 >>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
+=======
+.msg-icon,
+.friend-icon,
+.location-icon {
+>>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
     position: absolute;
     z-index: 2;
 }
@@ -95,19 +101,23 @@
         height: 22.8%;
     }
 
+<<<<<<< HEAD
     .hero_right-section_img_msg {
+=======
+    .msg-icon {
+>>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
         top: 9.6rem;
         left: 0.9rem;
         height: 5.2rem;
     }
 
-    .hero_right-section_img_friend {
+    .friend-icon {
         top: 18.5rem;
         left: 13.05rem;
         height: 4.7rem;
     }
 
-    .hero_right-section_img_location {
+    .location-icon {
         top: 13.8rem;
         left: 16.3rem;
         height: 4.8rem;
@@ -126,19 +136,31 @@
         padding-top: 1.7rem;
     }
 
+<<<<<<< HEAD
     .hero_right-section_img_msg {
         top: 18.9rem;
         left: 1.3rem;
+=======
+    .msg-icon {
+        top: 33.3dvw;
+        left: 2.2dvw;
+>>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
     }
 
-    .hero_right-section_img_friend {
-        top: 36.1rem;
-        left: 24.5rem;
+    .friend-icon {
+        top: 63.3dvw;
+        left: 43dvw;
     }
 
+<<<<<<< HEAD
     .hero_right-section_img_location {
         top: 27.1rem;
         left: 31rem;
+=======
+    .location-icon {
+        top: 47.6dvw;
+        left: 54.7dvw;
+>>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
     }
 }
 
@@ -161,6 +183,7 @@
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     .msg-icon {
         top: 46.6%;
         left: 3%;
@@ -179,16 +202,19 @@
         height: 22.3%;
 =======
     .hero_right-section_img_msg {
+=======
+    .msg-icon {
+>>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
         top: 14.1rem;
         left: 1.2rem;
     }
 
-    .hero_right-section_img_friend {
+    .friend-icon {
         top: 27rem;
         left: 18.6rem;
     }
 
-    .hero_right-section_img_location {
+    .location-icon {
         top: 20.3rem;
         left: 23.5rem;
 >>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)

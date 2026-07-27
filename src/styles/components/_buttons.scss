@@ -11,12 +11,21 @@
 .header {
     &__button {
         &--signup {
+<<<<<<< HEAD
             background-color: variables.$secondary-color;
             color: variables.$primary-color;
         }
 
         &--login {
             background-color: variables.$primary-color;
+=======
+            background-color: $secondary-color;
+            color: $primary-color;
+        }
+
+        &--login {
+            background-color: $primary-color;
+>>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
         }
     }
 }
@@ -248,6 +257,7 @@
     }
 }
 
+<<<<<<< HEAD
 // for tablet + desktop
 @media screen and (min-width: 431px) {
     // Desktop
@@ -256,6 +266,8 @@
     }
 }
 
+=======
+>>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
 @include desktop {
     .header__buttons {
         display: unset;

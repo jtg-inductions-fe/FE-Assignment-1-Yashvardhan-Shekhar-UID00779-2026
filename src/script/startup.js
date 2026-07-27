@@ -62,15 +62,8 @@ function insertNavLinks() {
     heading.innerHTML = `Travel <span>top destination</span> of the world`;
     let description = document.querySelector('.description');
     description.innerHTML = `we always make our customer happy by providing <br /> as many choices as possible`;
-
-    // inserting images
-    let img = document.querySelector('.image-1');
-    img.src = `assets/images/Rectangle 1.png`;
-    img = document.querySelector('.image-2');
-    img.src = `assets/images/Rectangle 2.png`;
-    img = document.querySelector('.image-3');
-    img.src = `assets/images/Rectangle 3.png`;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // inserting travel point card stats
@@ -95,5 +88,8 @@ insertNavLinks();
 insertStats();
 =======
 // setTimeout(insert, 1000);
+=======
+// insert data into the HTML page
+>>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
 insert();
 >>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
