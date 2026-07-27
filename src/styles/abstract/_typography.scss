@@ -22,6 +22,7 @@
 @font-face {
     font-family: 'Inter';
 <<<<<<< HEAD
+<<<<<<< HEAD
     src:
         url('assets/fonts/Inter-Regular.woff2') format('woff2'),
         url('assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
@@ -29,10 +30,16 @@
     src: url('assets/fonts/Inter-Regular.woff2') format('woff2');
     src: url('assets/fonts/Inter_18pt-Regular.ttf') format('ttf');
 >>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
+=======
+    src:
+        url('assets/fonts/Inter-Regular.woff2') format('woff2'),
+        url('assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
+>>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
     font-weight: 400;
     font-style: normal;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /// Hero Main Heading (H1)
 .text-hero-heading {
@@ -44,6 +51,8 @@ html {
     font-family: circular-Std, sans-serif;
 }
 
+=======
+>>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
 button,
 a {
     font-size: 0.6rem;
@@ -87,7 +96,6 @@ p {
     font-size: 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 20%;
 }
 >>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
 

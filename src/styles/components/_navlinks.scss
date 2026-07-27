@@ -58,15 +58,9 @@
         padding: 0.3rem 1rem;
     }
 }
+
 // header link styling
-
 .header {
-    &__link {
-        color: rgba(25, 24, 37, 0.5019607843);
-        text-decoration: none;
-        padding: 0.3rem 1rem;
-    }
-
     &__close-btn {
         display: unset;
         background-color: variables.$transparent;

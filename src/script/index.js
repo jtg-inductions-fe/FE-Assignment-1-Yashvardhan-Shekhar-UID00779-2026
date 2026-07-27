@@ -1,4 +1,5 @@
-// functionality of hamburger
+// functionality of hamburger it toggles the visibility of nav links in mobile and tablet
+
 let toggleHamburger = () => {
     let headerLinks = document.querySelector('.header__links');
     headerLinks.classList.toggle('header__links--none');
