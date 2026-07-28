@@ -52,7 +52,7 @@
     .image-3,
     .image-2,
     .image-1 {
-        max-width: 17rem;
+        max-width: 27dvw;
         padding: 0.5rem;
         width: auto;
         align-self: center;
@@ -63,16 +63,19 @@
     .msg-icon {
         top: 33.3dvw;
         left: 2.2dvw;
+        height: 17dvw;
     }
 
     .friend-icon {
         top: 63.3dvw;
         left: 43dvw;
+        height: 17dvw;
     }
 
     .location-icon {
         top: 47.6dvw;
         left: 54.7dvw;
+        height: 16dvw;
     }
 }
 
@@ -80,7 +83,7 @@
     .image-3,
     .image-2,
     .image-1 {
-        width: 273px;
+        width: 19dvw;
         align-self: center;
         padding: 1rem 0.8rem 1rem 0.8rem;
     }
@@ -98,15 +101,18 @@
     .msg-icon {
         top: 14.1rem;
         left: 1.2rem;
+        height: 11.5dvw;
     }
 
     .friend-icon {
         top: 27rem;
         left: 18.6rem;
+        height: 11.5dvw;
     }
 
     .location-icon {
         top: 20.3rem;
-        left: 23.5rem;
+        left: 23.2rem;
+        height: 11.5dvw;
     }
 }

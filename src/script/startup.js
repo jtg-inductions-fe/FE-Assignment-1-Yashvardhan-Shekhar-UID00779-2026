@@ -37,7 +37,7 @@ function insert() {
     let heading = document.querySelector('.heading');
     heading.innerHTML = `Travel <span>top destination</span> of the world`;
     let description = document.querySelector('.description');
-    description.innerHTML = `we always make our customer happy by providing <br /> as many choices as possible`;
+    description.innerHTML = `We always make our customer happy by providing <br /> as many choices as possible`;
 }
 
 // setTimeout(insert, 1000);

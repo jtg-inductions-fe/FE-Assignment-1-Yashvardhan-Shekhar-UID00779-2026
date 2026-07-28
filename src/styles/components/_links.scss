@@ -1,5 +1,5 @@
-@import '../abstract/mixins';
-@import '../abstract/variables';
+@use '../abstract/mixins' as *;
+@use '../abstract/variables';
 
 @keyframes slideInRight {
     0% {
@@ -45,7 +45,7 @@
         box-shadow:
             0 4px 8px 0 rgba(0, 0, 0, 0.2),
             0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        background-color: $primary-color;
+        background-color: variables.$primary-color;
         animation: slideInRight 0.3s ease-out forwards;
     }
 }
@@ -60,7 +60,7 @@
 
     &__close-btn {
         display: unset;
-        background-color: $transparent;
+        background-color: variables.$transparent;
         svg {
             height: 2rem;
         }
@@ -125,7 +125,6 @@
     .header {
         &__links {
             all: initial;
-            animation: none;
         }
 
         &__close-btn {
@@ -133,7 +132,7 @@
         }
 
         &__link {
-            color: $link;
+            color: variables.$link;
             padding: 0.3rem 1rem;
             font-size: 0.6rem;
             font-weight: bold;

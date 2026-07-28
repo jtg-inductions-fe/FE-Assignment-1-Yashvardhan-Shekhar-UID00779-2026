@@ -3,6 +3,10 @@
 .header {
     @include flex-row-between;
     reading-flow: flex-visual;
+<<<<<<< HEAD
+=======
+
+>>>>>>> ef09656 ([YS_A1_02]: Fixed PR reviews)
     &__burger {
         button {
             background-color: unset;

@@ -1,5 +1,5 @@
-@import '../abstract/variables';
-@import '../abstract/mixins';
+@use '../abstract/variables';
+@use '../abstract/mixins' as *;
 
 .button {
     padding: 0.9rem 2rem;
@@ -15,12 +15,13 @@
 =======
 >>>>>>> d3ce191 ([YS_A1_02]: Fixed PR and updated incremental changes)
         &--signup {
-            background-color: $secondary-color;
-            color: $primary-color;
+            background-color: variables.$secondary-color;
+            color: variables.$primary-color;
         }
 
         &--login {
-            background-color: $primary-color;
+            background-color: variables.$primary-color;
+            border: 1px solid variables.$smoke-white;
         }
     }
 
@@ -56,17 +57,16 @@
     border-radius: 2rem;
 
     &--get-started {
-        background-color: $secondary-color;
-        color: $primary-color;
-        box-shadow: 1px;
+        background-color: variables.$secondary-color;
+        color: variables.$primary-color;
         padding: 1.5rem;
         margin-top: 0.9rem;
     }
 
     &--watch-demo {
-        @include flexRow;
-        background-color: $primary-color;
-        border: 1px solid $lightgrey;
+        @include flex-row;
+        background-color: variables.$primary-color;
+        border: 1px solid variables.$lightgrey;
         width: 92vw;
         padding: 1.3rem;
         margin-top: 1.7rem;
@@ -75,7 +75,6 @@
         }
     }
 }
-// }
 
 @include tablet {
     .button {
@@ -100,9 +99,9 @@
 <<<<<<< HEAD
 =======
     // hero section get started
-    .hero_left-section {
-        &_buttons {
-            @include flexRow;
+    .hero__left-section {
+        &__buttons {
+            @include flex-row;
         }
     }
 
@@ -111,19 +110,19 @@
         width: unset;
 
         &--get-started {
-            background-color: $secondary-color;
-            color: $primary-color;
-            box-shadow: 1px;
+            background-color: variables.$secondary-color;
+            color: variables.$primary-color;
             padding: 1rem 2rem;
             border-radius: 2rem;
+            margin: 0;
         }
 
         &--watch-demo {
-            @include flexRow;
-            background-color: $primary-color;
+            @include flex-row;
+            background-color: variables.$primary-color;
             border: 1px solid #eeeeee;
-            padding: 1rem 2rem;
-            margin-left: 1rem;
+            padding: 0.7rem 2rem;
+            margin: 0 0 0 1rem;
             border-radius: 2rem;
             span {
                 padding-left: 0.5rem;
@@ -160,7 +159,6 @@
         border-radius: 1.4rem;
         border: none;
         font-weight: 700;
-        font-style: bold;
         font-size: 13px;
         line-height: 120%;
 <<<<<<< HEAD
@@ -170,9 +168,8 @@
 >>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
 
         &--get-started {
-            background-color: $secondary-color;
-            color: $primary-color;
-            box-shadow: 1px;
+            background-color: variables.$secondary-color;
+            color: variables.$primary-color;
             border-radius: 2rem;
             margin: 0 1rem 0 0;
         }
@@ -181,6 +178,7 @@
         &--watch-demo {
             display: inline-flex;
             align-items: center;
+            border: 1px solid #eeeeee;
             padding: 0.6rem 0.7rem;
             margin: 0;
             width: 7rem;

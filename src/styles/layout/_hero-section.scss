@@ -1,5 +1,5 @@
-@import '../abstract/variables';
-@import '../abstract/mixins';
+@use '../abstract/variables';
+@use '../abstract/mixins' as *;
 
 // global
 .hero {
@@ -7,25 +7,30 @@
         position: absolute;
         display: none;
     }
-    &_right-section {
+    &__right-section {
         height: 80vh;
     }
 
-    &_right-section_box {
+    &__right-section__box {
         width: inherit;
-        @include flexRow;
+        @include flex-row;
         background-image: url('/assets/images/layer.svg');
         background-repeat: no-repeat;
         background-size: contain;
         position: relative;
     }
 
-    &_right-section_img {
+    &__right-section__img {
         z-index: 1;
     }
 
-    &_right-section_images-left {
-        @include flexColEvenly;
+    &__right-section__images-left {
+        @include flex-col-evenly;
+    }
+    &__left-section__top {
+        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.05);
+        padding: 0.6rem 1.2rem;
+        border-radius: 2rem;
     }
 }
 
@@ -35,29 +40,29 @@
     flex-direction: column-reverse;
     margin-top: 3.2rem;
 
-    &_left-section {
-        @include flexColBetween;
+    &__left-section {
+        @include flex-col-between;
         margin-top: 2.8rem;
         max-width: none;
         height: 53.6vh;
     }
 
-    &_right-section {
+    &__right-section {
         height: auto;
     }
 
-    &_right-section_box {
+    &__right-section__box {
         justify-content: center;
         margin-top: -0.3rem;
         padding-top: 2.4rem;
         gap: 1rem;
     }
 
-    &_left-section_top {
-        padding: 0.5rem;
+    &__left-section__top {
+        // padding: 0.5rem;
         color: #f85e9f;
         background-color: rgba(255, 255, 255, 0.092);
-        @include flexRowAround;
+        @include flex-row-around;
         width: 11.5rem;
         font-size: 0.9rem;
         font-weight: 600;
@@ -82,12 +87,12 @@
             top: 123.6dvw;
         }
 
-        &_right-section {
-            @include flexCol;
+        &__right-section {
+            @include flex-col;
             width: auto;
             height: auto;
 
-            &_box {
+            &__box {
                 width: 75vw;
                 margin-top: 3.3rem;
                 padding-top: 2.9rem;
@@ -95,12 +100,12 @@
             }
         }
 
-        &_left-section {
+        &__left-section {
             max-width: none;
             height: 46.2vh;
             margin-top: 4.6rem;
 
-            &_top {
+            &__top {
                 padding: 0.3rem;
             }
         }
@@ -116,7 +121,7 @@
 
 @include desktop {
     .hero {
-        @include flexRow;
+        @include flex-row;
         align-items: normal;
         margin-top: 3.4rem;
 
@@ -126,53 +131,52 @@
             top: 60.2dvw;
         }
 
-        &_right-section {
+        &__right-section {
             height: 80vh;
 
-            &_box {
+            &__box {
                 width: 32.3rem;
                 padding-top: 0;
-                @include flexRow;
+                @include flex-row;
                 background-image: url('/assets/images/layer.svg');
                 background-repeat: no-repeat;
                 background-size: contain;
                 gap: 0;
             }
 
-            &_img {
+            &__img {
                 z-index: 1;
             }
 
-            &_images-left {
+            &__images-left {
                 margin-top: 2rem;
-                @include flexColEvenly;
+                @include flex-col-evenly;
             }
         }
 
-        &_left-section {
+        &__left-section {
             max-width: none;
             // height: 50vh;
-            @include flexColBetween;
+            @include flex-col-between;
             align-items: start;
             margin: 3.1rem 0 0 0.5rem;
             height: 38.9dvw;
 
-            &_top {
-                padding: 0.3rem;
-                color: $pink;
+            &__top {
+                padding: 0.6rem 1.2rem;
+                color: variables.$pink;
                 background-color: rgba(255, 255, 255, 0.092);
-                @include flexRowAround;
+                @include flex-row-around;
                 width: 11.5rem;
 
                 font-size: 0.6rem;
-                padding-left: 1.2rem;
                 width: 7rem;
                 border-radius: 2rem;
             }
 
-            &_buttons {
+            &__buttons {
                 margin-top: 1rem;
-                @include flexRow;
+                @include flex-row;
             }
         }
     }
