@@ -1,6 +1,7 @@
 @import '../abstract/variables';
 @import '../abstract/mixins';
 
+<<<<<<< HEAD
 .card {
     border: 1px solid $lightgrey;
     @include flex-col-evenly;
@@ -11,6 +12,18 @@
     .travel-point__right__cards {
         width: 94.5%;
     }
+=======
+@include mobile {
+    .travel-point__right__cards {
+        &__card {
+            width: 22rem;
+            height: 8rem;
+            border: 1px solid $lightgrey;
+            border-radius: 1.5rem;
+            margin: 1.3rem;
+            @include flex-col-evenly;
+            flex-wrap: wrap;
+>>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
 
     .card {
         height: 9.3rem;
@@ -25,17 +38,41 @@
         height: 21rem;
     }
 
+<<<<<<< HEAD
     .card {
         width: 47%;
         max-width: 25rem;
         min-width: 13rem;
         height: 9rem;
         margin: 1.3rem 0;
+=======
+        &__card {
+            width: 47%;
+            max-width: 25rem;
+            min-width: 13rem;
+            height: 9rem;
+            border: 1px solid $lightgrey;
+            border-radius: 1.5rem;
+            margin: 1.3rem 0;
+            @include flex-col-evenly;
+
+            &__data {
+                color: $orange;
+                font-size: 2rem;
+                font-weight: 900;
+            }
+        }
+>>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
     }
 }
 @include desktop {
     .travel-point__right__cards {
+<<<<<<< HEAD
         @include flex-row-between;
+=======
+        @include flex-row;
+        justify-content: space-between;
+>>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
         flex-wrap: wrap;
 <<<<<<< HEAD
 =======
@@ -44,10 +81,32 @@
         height: 14.5rem;
     }
 
+<<<<<<< HEAD
     .card {
         margin: 0.6rem 0;
         padding: 1rem;
         width: 35.2%;
         height: 30.7%;
+=======
+        &__card {
+            border: 1px solid $lightgrey;
+            border-radius: 1.5rem;
+            @include flex-col;
+            justify-content: space-between;
+            margin: 0;
+            width: 38%;
+            height: 3.2rem;
+            padding: 1rem;
+
+            &__data {
+                color: $orange;
+                font-size: 1.4rem;
+                font-weight: 900;
+            }
+            &__text {
+                font-size: 0.8rem;
+            }
+        }
+>>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
     }
 }

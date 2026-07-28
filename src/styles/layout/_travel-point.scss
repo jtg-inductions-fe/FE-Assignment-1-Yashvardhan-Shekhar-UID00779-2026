@@ -3,7 +3,10 @@
 
 .travel-point {
     @include flex-col;
+<<<<<<< HEAD
     margin-top: 7.7rem;
+=======
+>>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
 
     &__image {
 <<<<<<< HEAD
@@ -21,7 +24,7 @@
     }
 
     &__right {
-        @include flexColBetween;
+        @include flex-col-between;
         height: 222dvw;
 >>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
 
@@ -32,7 +35,7 @@
         &__top {
             color: $pink;
             font-size: 1rem;
-            margin: 2.6rem 0 0 0.9rem;
+            // margin: 2.6rem 0 0 0.9rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 20%;
@@ -53,7 +56,10 @@
 @include tablet {
     .travel-point {
         @include flex-col;
+<<<<<<< HEAD
         margin-top: 9rem;
+=======
+>>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
 
         &__image {
 <<<<<<< HEAD
@@ -75,7 +81,7 @@
             height: 39.2rem;
 >>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
             margin-top: 2.5rem;
-            @include flexColEvenly;
+            @include flex-col-evenly;
 
             &__top {
                 color: $pink;
@@ -88,7 +94,7 @@
             &__heading {
                 font-size: 2.6rem;
                 width: 90vw;
-                margin-top: 1.4rem;
+                // margin-top: 1.4rem;
             }
 
             &__description {
@@ -103,7 +109,10 @@
 @include desktop {
     .travel-point {
         @include flex-row;
+<<<<<<< HEAD
         margin-top: 5.8rem;
+=======
+>>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
         align-items: unset;
 
         &__image {
@@ -154,12 +163,5 @@
 >>>>>>> c5fefb9 ([YS_A1_03]: Fixed incemental changes)
             }
         }
-    }
-    .description--travel-point {
-        margin-top: 1rem;
-        line-height: 160%;
-        font-weight: 400;
-        letter-spacing: 8%;
-        font-size: 0.7rem;
     }
 }

@@ -12,6 +12,7 @@
         display: none;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     &__right-section__box {
         width: inherit;
@@ -96,12 +97,15 @@
 }
 =======
     &_right-section {
+=======
+    &__right-section {
+>>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
         height: 80vh;
     }
 
-    &_right-section_box {
+    &__right-section__box {
         width: inherit;
-        @include flexRow;
+        @include flex-row;
         background-image: url('/assets/images/layer.svg');
         background-repeat: no-repeat;
         background-size: contain;
@@ -109,12 +113,12 @@
     }
 >>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
 
-    &_right-section_img {
+    &__right-section__img {
         z-index: 1;
     }
 
-    &_right-section_images-left {
-        @include flexColEvenly;
+    &__right-section__images-left {
+        @include flex-col-evenly;
     }
 }
 
@@ -124,17 +128,18 @@
     flex-direction: column-reverse;
     margin-top: 3.2rem;
 
-    &_left-section {
-        @include flexColBetween;
+    &__left-section {
+        @include flex-col-between;
         margin-top: 2.8rem;
         max-width: none;
         height: 53.6vh;
     }
 
-    &_right-section {
+    &__right-section {
         height: auto;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         &--header {
             margin-top: 1.3rem;
@@ -142,17 +147,20 @@
 >>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
 =======
     &_right-section_box {
+=======
+    &__right-section__box {
+>>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
         justify-content: center;
         margin-top: -0.3rem;
         padding-top: 2.4rem;
         gap: 1rem;
     }
 
-    &_left-section_top {
+    &__left-section__top {
         padding: 0.5rem;
         color: #f85e9f;
         background-color: rgba(255, 255, 255, 0.092);
-        @include flexRowAround;
+        @include flex-row-around;
         width: 11.5rem;
         font-size: 0.9rem;
         font-weight: 600;
@@ -174,14 +182,19 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
         &__triangle {
+=======
+        &_triangle {
+>>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
             display: unset;
             left: 3.8dvw;
             top: 123.6dvw;
         }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         &__right-section {
             @include flex-col;
@@ -198,22 +211,27 @@
 >>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
         &_right-section {
             @include flexCol;
+=======
+        &__right-section {
+            @include flex-col;
+>>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
             width: auto;
             height: auto;
 
-            &_box {
+            &__box {
                 width: 75vw;
                 margin-top: 3.3rem;
-                padding-top: 2.8rem;
+                padding-top: 2.9rem;
+                gap: 0;
             }
         }
 
-        &_left-section {
+        &__left-section {
             max-width: none;
             height: 46.2vh;
             margin-top: 4.6rem;
 
-            &_top {
+            &__top {
                 padding: 0.3rem;
             }
 <<<<<<< HEAD
@@ -279,10 +297,11 @@
 <<<<<<< HEAD
 =======
 
-        &_right-section {
+        &__right-section {
             height: 80vh;
 >>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
 
+<<<<<<< HEAD
         &__right-section {
             &__box {
                 width: 32.3rem;
@@ -292,6 +311,12 @@
 =======
                 @include flexRow;
 >>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
+=======
+            &__box {
+                width: 32.3rem;
+                padding-top: 0;
+                @include flex-row;
+>>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
                 background-image: url('/assets/images/layer.svg');
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -313,6 +338,7 @@
             // height: 50vh;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             @include flex-col-between;
 =======
             @include flexColEvenly;
@@ -321,10 +347,14 @@
 =======
             @include flexColBetween;
 >>>>>>> 6936c4b ([YS_A1_02]: Fixed hero section PR reviews)
+=======
+            @include flex-col-between;
+>>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
             align-items: start;
             margin: 3.1rem 0 0 0.5rem;
             height: 38.9dvw;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             &__top {
                 padding: 0.6rem 1.2rem;
@@ -356,10 +386,13 @@
                 letter-spacing: -2%;
 =======
             &_top {
+=======
+            &__top {
+>>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
                 padding: 0.3rem;
                 color: $pink;
                 background-color: rgba(255, 255, 255, 0.092);
-                @include flexRowAround;
+                @include flex-row-around;
                 font-size: 0.6rem;
 >>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
                 padding-left: 1.2rem;
@@ -367,6 +400,7 @@
                 border-radius: 2rem;
             }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             &_heading {
                 font-size: 2.8rem;
@@ -390,28 +424,11 @@
 =======
 >>>>>>> 2596f70 ([YS_A1_02]: Rebased with Header section and updated BEM)
             &_buttons {
+=======
+            &__buttons {
+>>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
                 margin-top: 1rem;
-                @include flexRow;
-            }
-
-            &_buttons {
-                @include flexRow;
-            }
-
-            &_buttons {
-                @include flexRow;
-            }
-
-            &_buttons {
-                @include flexRow;
-            }
-
-            &_buttons {
-                @include flexRow;
-            }
-
-            &_buttons {
-                @include flexRow;
+                @include flex-row;
             }
         }
     }

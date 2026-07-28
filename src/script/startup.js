@@ -24,8 +24,12 @@ const stats = [
 =======
 let stats = [
     {
+<<<<<<< HEAD
         data: '750+',
 >>>>>>> c188f8e ([YS_A1_03]: Made travel point dynamic)
+=======
+        data: '700+',
+>>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
         name: 'Holiday Packages',
     },
     {
@@ -82,9 +86,9 @@ function insert() {
     let description = document.querySelector('.description');
     description.innerHTML = `we always make our customer happy by providing <br /> as many choices as possible`;
 
+    // inserting data inside cards
     let travelPoint = document.querySelector('.travel-point__right__cards');
     str = '';
-
     stats.forEach((s) => {
         str += `<div class="travel-point__right__cards__card">
                         <div class="travel-point__right__cards__card__data">
@@ -127,6 +131,7 @@ insertStats();
 >>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
 insert();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
 =======
 
@@ -139,3 +144,5 @@ var splide = new Splide('.splide', {
 
 splide.mount();
 >>>>>>> 2e6748e ([YS_A1_04]: Testimonial Section added carousel)
+=======
+>>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)

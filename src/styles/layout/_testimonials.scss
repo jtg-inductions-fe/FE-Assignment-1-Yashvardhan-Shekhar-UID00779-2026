@@ -3,44 +3,37 @@
 
 .testimonials {
     position: relative;
-    @include flexCol;
-    // background-image: url(/assets/images/pink-gradient.svg);
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: 0%;
-    .background {
+    @include flex-col;
+    margin: 4.8rem 0 7rem 0;
+
+    &__background {
         position: absolute;
         top: -17rem;
         width: 100vw;
-    }
-}
-// mobile
-.testimonials {
-    margin: 2.8rem 0 7rem 0;
-    .background {
         display: none;
     }
-}
-
-.rating {
-    font-size: 1.95rem;
+    &__rating {
+        font-size: 1.95rem;
+    }
 }
 
 @include tablet {
     .testimonials {
-        margin: 3rem 0 5rem 0;
-    }
-
-    .rating {
-        font-size: 1.95rem;
+        margin: 2rem 0 5rem 0;
+        &__background {
+            // display: unset;
+        }
     }
 }
 
 @include desktop {
     .testimonials {
         margin: 3.4rem 0 4rem 0;
-    }
-    .rating {
-        font-size: 1.2rem;
+        &__background {
+            // display: unset;
+        }
+        &__rating {
+            font-size: 1.2rem;
+        }
     }
 }
