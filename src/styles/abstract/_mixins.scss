@@ -1,66 +1,87 @@
 // mixins.scss
-@import './variables';
+@use './variables';
 
-@mixin flexRow {
+@mixin flex-row {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
 }
 
-@mixin flexCol {
+@mixin flex-col {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-@mixin flexRowEvenly {
-    @include flexRow;
+/// Flexbox row layout with space-evenly alignment.
+@mixin flex-row-evenly {
+    @include flex-row;
+
     justify-content: space-evenly;
 }
 
-@mixin flexColEvenly {
-    @include flexCol;
+/// Flexbox column layout with space-evenly alignment.
+@mixin flex-col-evenly {
+    @include flex-col;
+
     justify-content: space-evenly;
 }
 
-@mixin flexRowAround {
-    @include flexRow;
+/// Flexbox row layout with space-around alignment.
+@mixin flex-row-around {
+    @include flex-row;
+
     justify-content: space-around;
 }
 
-@mixin flexColAround {
-    @include flexCol;
+/// Flexbox column layout with space-around alignment.
+@mixin flex-col-around {
+    @include flex-col;
+
     justify-content: space-around;
 }
 
-@mixin flexColStart {
-    @include flexCol;
+/// Flexbox column layout with space-between alignment.
+@mixin flex-col-between {
+    @include flex-col;
+
+    justify-content: space-between;
+}
+
+/// Flexbox row layout with space-between alignment.
+@mixin flex-row-between {
+    @include flex-row;
+
+    justify-content: space-between;
+}
+
+/// Flexbox column layout aligned to start.
+@mixin flex-col-start {
+    @include flex-col;
+
     justify-content: start;
 }
 
-@mixin flexRowStart {
-    @include flexRow;
+/// Flexbox row layout aligned to start.
+@mixin flex-row-start {
+    @include flex-row;
+
     justify-content: start;
 }
 
-// media query mixin
-
-@mixin mobile {
-    @media (max-width: $mobile) {
-        @content;
-    }
-}
-
+/// Breakpoint for Tablet screens
 @mixin tablet {
-    @media (min-width: $mobile) and (max-width: $tablet) {
+    @media (min-width: variables.$mobile) {
         @content;
     }
 }
 
+/// Breakpoint for Desktop screens
 @mixin desktop {
-    @media (min-width: $tablet) {
+    @media (min-width: variables.$tablet) {
         @content;
     }
 }

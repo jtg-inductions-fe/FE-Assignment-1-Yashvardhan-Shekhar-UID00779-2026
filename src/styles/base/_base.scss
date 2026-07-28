@@ -12,12 +12,8 @@ html {
     );
     background-repeat: no-repeat;
 }
-
-// margin for mobile
-@include mobile {
-    .container {
-        margin: 1.8rem 0.6rem;
-    }
+.container {
+    margin: 1.8rem 0.6rem;
 }
 
 // margin for tablet

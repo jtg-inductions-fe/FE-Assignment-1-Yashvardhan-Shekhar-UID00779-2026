@@ -7,9 +7,10 @@
     border: none;
 }
 
-// Header buttons
 .header {
     &__button {
+        display: none;
+
         &--signup {
             background-color: $secondary-color;
             color: $primary-color;
@@ -19,26 +20,14 @@
             background-color: $primary-color;
         }
     }
-}
 
-// for mobile
-@include mobile {
-    .header {
-        &__burger {
-            button {
-                padding: 0.9rem 0.3rem;
-            }
-        }
-
-        &__buttons {
-            display: none;
-        }
+    &__burger button {
+        padding: 0.9rem 0.3rem;
     }
 }
 
 @include tablet {
     .button {
-        padding: 0.9rem 2rem;
         font-size: 1rem;
     }
 
@@ -49,10 +38,7 @@
             }
         }
     }
-}
 
-// for tablet + desktop
-@media screen and (min-width: 431px) {
     .links__button {
         display: none;
     }
@@ -61,7 +47,6 @@
 @include desktop {
     .button {
         padding: 0.7rem 1.4rem;
-        border-radius: 1.4rem;
-        border: none;
+        font-size: initial;
     }
 }

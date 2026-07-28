@@ -7,14 +7,27 @@ let toggleHamburger = () => {
     headerBurger.classList.toggle('header__burger--none');
 };
 
-let closeBtn = document.querySelector('.header__links');
 let hamburgerBtn = document.querySelector('.header__burger');
 
-hamburgerBtn.addEventListener('click', toggleHamburger);
+hamburgerBtn.addEventListener('click', () => {
+    toggleHamburger();
+    document.querySelector('.header__close-btn').focus();
+});
 
-closeBtn.addEventListener('click', (e) => {
+document.addEventListener('click', (e) => {
     // button or icon
     if (e.target.matches('.header__close-btn') || e.target.matches('path')) {
+        toggleHamburger();
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (
+        e.key === 'Escape' &&
+        !document
+            .querySelector('.header__links')
+            .classList.contains('header__links--none')
+    ) {
         toggleHamburger();
     }
 });
