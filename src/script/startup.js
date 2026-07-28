@@ -22,7 +22,7 @@ let links = [
 =======
 let stats = [
     {
-        data: '750+',
+        data: '500+',
         name: 'Holiday Packages',
     },
     {
@@ -64,7 +64,7 @@ function insert() {
     let heading = document.querySelector('.heading');
     heading.innerHTML = `Travel <span>top destination</span> of the world`;
     let description = document.querySelector('.description');
-    description.innerHTML = `we always make our customer happy by providing <br /> as many choices as possible`;
+    description.innerHTML = `We always make our customer happy by providing <br /> as many choices as possible`;
 
     let travelPoint = document.querySelector('.travel-point__right__cards');
     str = '';

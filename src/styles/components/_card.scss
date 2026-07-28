@@ -6,14 +6,14 @@ $lightgrey: rgba(25, 24, 37, 0.1);
 
 @include mobile {
     .travel-point__right__cards {
+        width: 94.5%;
+
         &__card {
-            width: 22rem;
-            height: 8rem;
+            height: 9.3rem;
             border: 1px solid $lightgrey;
             border-radius: 1.5rem;
-            margin: 1.3rem;
-            @include flexColEvenly;
-            flex-wrap: wrap;
+            margin: 1.1rem;
+            @include flex-col-evenly;
 
             &__data {
                 color: $orange;
@@ -26,7 +26,7 @@ $lightgrey: rgba(25, 24, 37, 0.1);
 
 @include tablet {
     .travel-point__right__cards {
-        @include flexRowEvenly;
+        @include flex-row-evenly;
         flex-wrap: wrap;
         // margin-top: 2rem;
         height: 21rem;
@@ -39,7 +39,7 @@ $lightgrey: rgba(25, 24, 37, 0.1);
             border: 1px solid $lightgrey;
             border-radius: 1.5rem;
             margin: 1.3rem 0;
-            @include flexColEvenly;
+            @include flex-col-evenly;
 
             &__data {
                 color: $orange;
@@ -51,21 +51,19 @@ $lightgrey: rgba(25, 24, 37, 0.1);
 }
 @include desktop {
     .travel-point__right__cards {
-        @include flexRow;
-        justify-content: space-between;
+        @include flex-row-between;
         flex-wrap: wrap;
-        margin-top: 1rem;
+        margin-top: 1.9rem;
         height: 14.5rem;
 
         &__card {
             border: 1px solid $lightgrey;
-            border-radius: 1.5rem;
-            @include flexCol;
-            justify-content: space-between;
-            margin: 0;
-            width: 38%;
-            height: 3.2rem;
+            border-radius: 1.2rem;
+            @include flex-col-evenly;
+            margin: 0.6rem 0;
             padding: 1rem;
+            width: 35.2%;
+            height: 30.7%;
 
             &__data {
                 color: $orange;

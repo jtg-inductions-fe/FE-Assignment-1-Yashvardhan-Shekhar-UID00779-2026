@@ -10,10 +10,14 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 @mixin flex-col {
 =======
 @mixin flexCol {
 >>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
+=======
+@mixin flex-col {
+>>>>>>> b2c6f5e ([YS_A1_03]: Fixed PR reviews and added coupan image)
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,24 +27,37 @@
 /// Flexbox row layout with space-evenly alignment.
 @mixin flex-row-evenly {
     @include flex-row;
+<<<<<<< HEAD
+=======
+
+>>>>>>> b2c6f5e ([YS_A1_03]: Fixed PR reviews and added coupan image)
     justify-content: space-evenly;
 }
 
 /// Flexbox column layout with space-evenly alignment.
 @mixin flex-col-evenly {
     @include flex-col;
+<<<<<<< HEAD
+=======
+
+>>>>>>> b2c6f5e ([YS_A1_03]: Fixed PR reviews and added coupan image)
     justify-content: space-evenly;
 }
 
 /// Flexbox row layout with space-around alignment.
 @mixin flex-row-around {
     @include flex-row;
+<<<<<<< HEAD
+=======
+
+>>>>>>> b2c6f5e ([YS_A1_03]: Fixed PR reviews and added coupan image)
     justify-content: space-around;
 }
 
 /// Flexbox column layout with space-around alignment.
 @mixin flex-col-around {
     @include flex-col;
+<<<<<<< HEAD
     justify-content: space-around;
 }
 
@@ -63,23 +80,46 @@
 =======
 @mixin flexColBetween {
     @include flexCol;
+=======
+
+    justify-content: space-around;
+}
+
+/// Flexbox column layout with space-between alignment.
+@mixin flex-col-between {
+    @include flex-col;
+
+>>>>>>> b2c6f5e ([YS_A1_03]: Fixed PR reviews and added coupan image)
     justify-content: space-between;
 }
 
-@mixin flexRowBetween {
-    @include flexRow;
+/// Flexbox row layout with space-between alignment.
+@mixin flex-row-between {
+    @include flex-row;
+
     justify-content: space-between;
 }
 
+<<<<<<< HEAD
 @mixin flexColStart {
     @include flexCol;
 >>>>>>> 6936c4b ([YS_A1_02]: Fixed hero section PR reviews)
+=======
+/// Flexbox column layout aligned to start.
+@mixin flex-col-start {
+    @include flex-col;
+
+>>>>>>> b2c6f5e ([YS_A1_03]: Fixed PR reviews and added coupan image)
     justify-content: start;
 }
 
 /// Flexbox row layout aligned to start.
 @mixin flex-row-start {
     @include flex-row;
+<<<<<<< HEAD
+=======
+
+>>>>>>> b2c6f5e ([YS_A1_03]: Fixed PR reviews and added coupan image)
     justify-content: start;
 }
 

@@ -2,21 +2,22 @@
 @import '../abstract/variables';
 
 .travel-point {
-    @include flexCol;
+    @include flex-col;
 
     &__image {
         margin: 7rem 0 0 -0.1rem;
-        width: 99vw;
+        width: 100vw;
     }
 
     &__right {
-        @include flexColBetween;
-        height: 222dvw;
+        @include flex-col-between;
+        margin-top: 2.4rem;
+        height: 214dvw;
 
         &__top {
             color: $pink;
             font-size: 1rem;
-            margin: 2.6rem 0 0 0.9rem;
+            // margin: 2.6rem 0 0 0.9rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 20%;
@@ -24,28 +25,32 @@
 
         &__heading {
             width: 90vw;
-            margin-top: 1.3rem;
+            // margin-top: 1.3rem;
         }
 
         &__description {
-            margin: 0.8rem 1rem 0rem 1rem;
+            // margin: 0.8rem 1rem 0rem 1rem;
+        }
+
+        &__discount {
+            display: none;
         }
     }
 }
 
 @include tablet {
     .travel-point {
-        @include flexCol;
+        @include flex-col;
 
         &__image {
-            margin: 7.2rem 0 0 -0.1rem;
-            width: 99vw;
+            margin: 5.4rem 0 0 0;
+            width: 100vw;
         }
 
         &__right {
             height: 39.2rem;
-            margin-top: 2.5rem;
-            @include flexColEvenly;
+            // margin-top: 2.5rem;
+            @include flex-col-evenly;
 
             &__top {
                 color: $pink;
@@ -71,7 +76,7 @@
 
 @include desktop {
     .travel-point {
-        @include flexRow;
+        @include flex-row;
         align-items: unset;
 
         &__image {
@@ -80,7 +85,7 @@
 
         &__right {
             align-items: start;
-            height: 49dvw;
+            height: 68dvh;
             &__top {
                 color: $pink;
                 font-size: 1rem;
@@ -102,6 +107,13 @@
                 font-size: 0.7rem;
                 text-align: start;
                 margin: 2rem 0 0 0;
+            }
+
+            &__discount {
+                display: unset;
+                position: absolute;
+                right: 0;
+                top: 62.2rem;
             }
         }
     }
