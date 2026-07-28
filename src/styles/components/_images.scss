@@ -21,16 +21,29 @@
 
 @include mobile {
     .image-1,
+<<<<<<< HEAD
+=======
+    .image-2,
+    .image-3 {
+        width: 8.7rem;
+        align-self: center;
+    }
+
+>>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
     .image-2,
 <<<<<<< HEAD
     .image-3 {
         width: 8.7rem;
 =======
     .image-1 {
+<<<<<<< HEAD
         max-width: 9rem;
         width: 7.7rem;
 >>>>>>> 6936c4b ([YS_A1_02]: Fixed hero section PR reviews)
         align-self: center;
+=======
+        max-width: 18rem;
+>>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
     }
 
     .image-2,
@@ -44,6 +57,7 @@
 
     .image-3 {
         max-width: 11rem;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         width: 7.5rem;
@@ -99,23 +113,26 @@
         top: 68%;
         left: 72.8%;
         height: 22.8%;
+=======
+        margin-right: 0.5rem;
+>>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
     }
 
     .msg-icon {
-        top: 9.6rem;
-        left: 0.9rem;
+        top: 11rem;
+        left: 1.4rem;
         height: 5.2rem;
     }
 
     .friend-icon {
-        top: 18.5rem;
-        left: 13.05rem;
-        height: 4.7rem;
+        top: 20.8rem;
+        left: 14.75rem;
+        height: 5.3rem;
     }
 
     .location-icon {
-        top: 13.8rem;
-        left: 16.3rem;
+        top: 15.7rem;
+        left: 18.8rem;
         height: 4.8rem;
     }
 }

@@ -5,12 +5,13 @@
     @include flexCol;
 
     &__image {
-        margin: 6.3rem 0 0 -0.1rem;
+        margin: 7rem 0 0 -0.1rem;
         width: 99vw;
     }
 
     &__right {
-        @include flexColStart;
+        @include flexColBetween;
+        height: 222dvw;
 
         &__top {
             color: $pink;
@@ -37,12 +38,12 @@
         @include flexCol;
 
         &__image {
-            margin: 4rem 0 0 -0.1rem;
+            margin: 7.2rem 0 0 -0.1rem;
             width: 99vw;
         }
 
         &__right {
-            height: 35.2rem;
+            height: 39.2rem;
             margin-top: 2.5rem;
             @include flexColEvenly;
 
@@ -74,11 +75,12 @@
         align-items: unset;
 
         &__image {
-            margin: 1.7rem 0 0 -5rem;
+            margin: 1.9rem 0 0 -5rem;
         }
 
         &__right {
             align-items: start;
+            height: 49dvw;
             &__top {
                 color: $pink;
                 font-size: 1rem;
@@ -91,6 +93,7 @@
             &__heading {
                 font-size: 1.75rem;
                 width: auto;
+                text-align: start;
             }
 
             &__description {

@@ -28,6 +28,33 @@
     }
 }
 
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 // for mobile
 .header {
     &__links {
@@ -45,6 +72,7 @@
         box-shadow:
             0 4px 8px 0 rgba(0, 0, 0, 0.2),
             0 6px 20px 0 rgba(0, 0, 0, 0.19);
+<<<<<<< HEAD
         background-color: variables.$primary-color;
         animation: slideInRight 0.3s ease-out forwards;
     }
@@ -56,6 +84,10 @@
         color: rgba(25, 24, 37, 0.5019607843);
         text-decoration: none;
         padding: 0.3rem 1rem;
+=======
+        background-color: $primary-color;
+        animation: slideInRight 0.3s ease-out forwards;
+>>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
     }
 }
 
@@ -63,11 +95,19 @@
 .header {
     &__close-btn {
         display: unset;
+<<<<<<< HEAD
         background-color: variables.$transparent;
         svg {
             height: 2rem;
         }
         align-self: end;
+=======
+        background-color: $transparent;
+        align-self: end;
+        svg {
+            height: 2rem;
+        }
+>>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
     }
 
     .links__button {
@@ -132,6 +172,7 @@
     .header {
         &__links {
             all: initial;
+            animation: none;
         }
 
         &__close-btn {
