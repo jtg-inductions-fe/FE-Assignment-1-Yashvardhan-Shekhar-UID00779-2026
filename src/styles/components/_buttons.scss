@@ -10,12 +10,12 @@
 // Header buttons
 .header {
     &__button {
-        &--login {
+        &--signup {
             background-color: $secondary-color;
             color: $primary-color;
         }
 
-        &--signup {
+        &--login {
             background-color: $primary-color;
         }
     }
@@ -24,11 +24,6 @@
 // for mobile
 @include mobile {
     .header {
-        &__close-btn {
-            // Formerly .header_links_close
-            padding: 1rem 1.5rem;
-        }
-
         &__burger {
             button {
                 padding: 0.9rem 0.3rem;
@@ -60,9 +55,6 @@
 @media screen and (min-width: 431px) {
     .links__button {
         display: none;
-    }
-    .header__close-btn {
-        padding: 0.3rem 1.5rem;
     }
 }
 

@@ -13,7 +13,8 @@ let hamburgerBtn = document.querySelector('.header__burger');
 hamburgerBtn.addEventListener('click', toggleHamburger);
 
 closeBtn.addEventListener('click', (e) => {
-    if (e.target.matches('.header__close-btn')) {
+    // button or icon
+    if (e.target.matches('.header__close-btn') || e.target.matches('path')) {
         toggleHamburger();
     }
 });

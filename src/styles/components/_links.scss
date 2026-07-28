@@ -1,6 +1,33 @@
 @import '../abstract/mixins';
 @import '../abstract/variables';
 
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 // for mobile
 .header {
     &__links {
@@ -14,24 +41,28 @@
         bottom: 0;
         height: 100dvh;
         width: 50dvw;
-        background: $header-background;
         box-sizing: border-box;
+        box-shadow:
+            0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: $primary-color;
+        animation: slideInRight 0.3s ease-out forwards;
     }
 
     &__close-btn {
         display: unset;
-        margin-bottom: 0.5rem;
-        border: none;
-        font-size: 2rem; // for x (cross btn)
-        height: 2rem;
         background-color: $transparent;
-        font-weight: 100;
-        color: $primary-color;
-        margin: -2rem 1rem 1rem 6.5rem;
+        svg {
+            height: 2rem;
+        }
+        align-self: end;
+    }
+
+    .links__button {
+        font-size: 1rem;
     }
 
     &__link {
-        color: $primary-color;
         padding: 1rem 0rem;
 
         &__top,
@@ -39,7 +70,7 @@
             @include flexCol;
             justify-content: unset;
             align-items: start;
-            width: 40vw;
+            width: 100%;
         }
     }
 }
@@ -52,25 +83,17 @@
             flex-direction: column;
             justify-items: center;
             align-items: start;
-            padding: 5rem 2rem;
+            padding: 2rem;
             z-index: 5;
             left: 0;
             top: 0;
             bottom: 0;
             width: 25dvw;
-        }
-
-        &__close-btn {
-            margin: 0 0 0.5rem 0;
-            padding: 1rem;
-            color: $primary-color;
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
+            min-width: 12rem;
+            animation: slideInLeft 0.3s ease-out forwards;
         }
 
         &__link {
-            color: $primary-color;
             padding: 1rem 0rem;
 
             &__top {
@@ -82,7 +105,7 @@
     }
 }
 
-// to hide buttons from the page
+// Hide links
 .header {
     &__links--none {
         display: none;
@@ -93,6 +116,7 @@
     .header {
         &__links {
             all: initial;
+            animation: none;
         }
 
         &__close-btn {
