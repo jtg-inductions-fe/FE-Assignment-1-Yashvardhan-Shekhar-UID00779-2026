@@ -9,12 +9,19 @@
     flex-direction: row;
 }
 
+<<<<<<< HEAD
 @mixin flex-col {
+=======
+@mixin flexCol {
+>>>>>>> d3ce191 ([YS_A1_02]: Fixed PR and updated incremental changes)
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
     flex-direction: row;
+=======
+>>>>>>> d3ce191 ([YS_A1_02]: Fixed PR and updated incremental changes)
 }
 
 /// Flexbox row layout with space-evenly alignment.

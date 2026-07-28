@@ -9,8 +9,11 @@
 
 .header {
     &__button {
+<<<<<<< HEAD
         display: none;
 
+=======
+>>>>>>> d3ce191 ([YS_A1_02]: Fixed PR and updated incremental changes)
         &--signup {
             background-color: $secondary-color;
             color: $primary-color;
@@ -26,13 +29,7 @@
         padding: 0.9rem 0.3rem;
 =======
 // for mobile
-// @include mobile {
 .header {
-    &__close-btn {
-        // Formerly .header_links_close
-        padding: 1rem 1.5rem;
-    }
-
     &__burger {
         button {
             padding: 0.9rem 0.3rem;
@@ -42,6 +39,12 @@
 
     &__buttons {
         display: none;
+    }
+
+    &__link__bottom {
+        .button {
+            width: auto;
+        }
     }
 }
 
