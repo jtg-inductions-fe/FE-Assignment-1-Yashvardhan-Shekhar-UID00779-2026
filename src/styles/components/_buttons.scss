@@ -32,6 +32,7 @@
 
 // for mobile
 <<<<<<< HEAD
+<<<<<<< HEAD
 .header {
     &__burger {
         button {
@@ -74,12 +75,9 @@
             padding-left: 0.5rem;
 =======
 // @include mobile {
+=======
+>>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
 .header {
-    &__close-btn {
-        // Formerly .header_links_close
-        padding: 1rem 1.5rem;
-    }
-
     &__burger {
         button {
             padding: 0.9rem 0.3rem;
@@ -89,6 +87,12 @@
 
     &__buttons {
         display: none;
+    }
+
+    &__link__bottom {
+        .button {
+            width: auto;
+        }
     }
 }
 
@@ -141,6 +145,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     .hero__left-section {
         &__buttons {
             @include flex-row;
@@ -181,6 +186,8 @@
 >>>>>>> 2596f70 ([YS_A1_02]: Rebased with Header section and updated BEM)
 =======
 >>>>>>> 8f91275 ([YS_A1_02]: completed hero section with pixel perfect)
+=======
+>>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
     .hero_left-section {
         &_buttons {
             @include flexRow;
@@ -225,35 +232,12 @@
             }
         }
     }
-    // hero section get started
-    .hero_left-section {
-        &_buttons {
-            @include flexRow;
-        }
-    }
+}
 
-    .button {
-        padding: 0.9rem 2rem;
-
-        &--get-started {
-            background-color: $secondary-color;
-            color: $primary-color;
-            box-shadow: 1px;
-            padding: 1rem 2rem;
-            border-radius: 2rem;
-        }
-
-        &--watch-demo {
-            @include flexRow;
-            background-color: $primary-color;
-            border: 1px solid #eeeeee;
-            padding: 1rem 2rem;
-            margin-left: 1rem;
-            border-radius: 2rem;
-            span {
-                padding-left: 0.5rem;
-            }
-        }
+// for tablet + desktop
+@media screen and (min-width: 431px) {
+    .links__button {
+        display: none;
     }
 }
 

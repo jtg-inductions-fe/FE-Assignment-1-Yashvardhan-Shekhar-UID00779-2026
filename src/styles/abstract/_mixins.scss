@@ -9,7 +9,11 @@
     flex-direction: row;
 }
 
+<<<<<<< HEAD
 @mixin flex-col {
+=======
+@mixin flexCol {
+>>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
     display: flex;
     flex-direction: column;
     align-items: center;

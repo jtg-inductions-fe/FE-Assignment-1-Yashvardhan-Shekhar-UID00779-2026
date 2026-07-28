@@ -15,6 +15,7 @@ hamburgerBtn.addEventListener('click', () => {
     document.querySelector('.header__close-btn').focus();
 });
 
+<<<<<<< HEAD
 document.addEventListener('click', (e) => {
     // button or icon
     if (e.target.matches('.header__close-btn') || e.target.matches('path')) {
@@ -29,6 +30,11 @@ document.addEventListener('keydown', (e) => {
             .querySelector('.header__links')
             .classList.contains('header__links--none')
     ) {
+=======
+closeBtn.addEventListener('click', (e) => {
+    // button or icon
+    if (e.target.matches('.header__close-btn') || e.target.matches('path')) {
+>>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
         toggleHamburger();
     }
 });
