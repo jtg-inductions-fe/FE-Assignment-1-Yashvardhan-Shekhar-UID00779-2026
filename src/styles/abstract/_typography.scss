@@ -27,10 +27,6 @@
     font-style: normal;
 }
 
-html {
-    font-family: circular-Std, sans-serif;
-}
-
 button,
 a {
     font-size: 0.6rem;
@@ -58,6 +54,7 @@ h1 {
 }
 
 p {
+    font-family: inter, circular-Std, sans-serif, Arial;
     font-weight: 400;
     line-height: 160%;
     font-size: 1rem;
