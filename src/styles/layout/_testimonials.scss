@@ -9,8 +9,9 @@
     &__background {
         position: absolute;
         top: -17rem;
-        width: 100vw;
+        width: 98dvw;
         display: none;
+        object-fit: cover;
     }
     &__rating {
         font-size: 1.95rem;

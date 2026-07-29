@@ -15,15 +15,19 @@
 =======
 @include mobile {
     .travel-point__right__cards {
+        width: 94.5%;
+
         &__card {
-            width: 22rem;
-            height: 8rem;
+            height: 9.3rem;
             border: 1px solid $lightgrey;
             border-radius: 1.5rem;
-            margin: 1.3rem;
+            margin: 1.1rem;
             @include flex-col-evenly;
+<<<<<<< HEAD
             flex-wrap: wrap;
 >>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
+=======
+>>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
 
     .card {
         height: 9.3rem;
@@ -68,6 +72,7 @@
 @include desktop {
     .travel-point__right__cards {
 <<<<<<< HEAD
+<<<<<<< HEAD
         @include flex-row-between;
 =======
         @include flex-row;
@@ -78,6 +83,11 @@
 =======
         margin-top: 1rem;
 >>>>>>> c5fefb9 ([YS_A1_03]: Fixed incemental changes)
+=======
+        @include flex-row-between;
+        flex-wrap: wrap;
+        margin-top: 1.9rem;
+>>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
         height: 14.5rem;
     }
 
@@ -90,13 +100,12 @@
 =======
         &__card {
             border: 1px solid $lightgrey;
-            border-radius: 1.5rem;
-            @include flex-col;
-            justify-content: space-between;
-            margin: 0;
-            width: 38%;
-            height: 3.2rem;
+            border-radius: 1.2rem;
+            @include flex-col-evenly;
+            margin: 0.6rem 0;
             padding: 1rem;
+            width: 35.2%;
+            height: 30.7%;
 
             &__data {
                 color: $orange;

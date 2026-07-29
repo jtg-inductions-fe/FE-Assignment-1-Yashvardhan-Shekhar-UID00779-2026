@@ -3,7 +3,7 @@
 @import '../abstract/variables';
 
 .splide {
-    width: 99vw; // to prevent overflow
+    width: 100%; // to prevent overflow
 
     &__slide {
         @include flex-col-evenly;
@@ -113,10 +113,10 @@
             top: 44%;
 
             &--next {
-                right: 4.9rem;
+                right: 2rem;
             }
             &--prev {
-                left: 4.9rem;
+                left: 2rem;
             }
         }
     }

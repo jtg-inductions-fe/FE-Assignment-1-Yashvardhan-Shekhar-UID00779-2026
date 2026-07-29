@@ -12,6 +12,7 @@
     &__button {
         &--signup {
 <<<<<<< HEAD
+<<<<<<< HEAD
             background-color: variables.$secondary-color;
             color: variables.$primary-color;
         }
@@ -26,16 +27,18 @@
         &--login {
             background-color: $primary-color;
 >>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
+=======
+            background-color: variables.$secondary-color;
+            color: variables.$primary-color;
+        }
+
+        &--login {
+            background-color: variables.$primary-color;
+            // border: 1px solid variables.$smoke-white;
+>>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
         }
     }
 }
-
-.hero_left-section_buttons_watch-demo {
-    background-color: $primary-color;
-    border: 1px solid #eeeeee;
-    align-items: center;
-}
-
 // for mobile
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -110,17 +113,16 @@
     border-radius: 2rem;
 
     &--get-started {
-        background-color: $secondary-color;
-        color: $primary-color;
-        box-shadow: 1px 0;
+        background-color: variables.$secondary-color;
+        color: variables.$primary-color;
         padding: 1.5rem;
         margin-top: 0.9rem;
     }
 
     &--watch-demo {
         @include flex-row;
-        background-color: $primary-color;
-        border: 1px solid $lightgrey;
+        background-color: variables.$primary-color;
+        border: 1px solid variables.$lightgrey;
         width: 92vw;
         padding: 1.3rem;
         margin-top: 1.7rem;
@@ -129,7 +131,6 @@
         }
     }
 }
-// }
 
 @include tablet {
     .button {
@@ -148,11 +149,15 @@
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     // hero section get started
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+    // hero section get started
+>>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
     .hero__left-section {
         &__buttons {
             @include flex-row;
@@ -166,6 +171,7 @@
         &--get-started {
             background-color: variables.$secondary-color;
             color: variables.$primary-color;
+<<<<<<< HEAD
             padding: 1rem 2rem;
             border-radius: 2rem;
             margin: 0;
@@ -228,17 +234,19 @@
             background-color: $secondary-color;
             color: $primary-color;
             box-shadow: 1px;
+=======
+>>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
             padding: 1rem 2rem;
             border-radius: 2rem;
-            margin: 0 1rem 0 0;
+            margin: 0;
         }
 
         &--watch-demo {
             @include flex-row;
-            background-color: $primary-color;
+            background-color: variables.$primary-color;
             border: 1px solid #eeeeee;
-            padding: 1rem 2rem;
-            margin: 0;
+            padding: 0.7rem 2rem;
+            margin: 0 0 0 1rem;
             border-radius: 2rem;
             span {
                 padding-left: 0.5rem;
@@ -279,6 +287,7 @@
         &--get-started {
             background-color: variables.$secondary-color;
             color: variables.$primary-color;
+<<<<<<< HEAD
             border-radius: 2rem;
             margin: 0 1rem 0 0;
         }
@@ -318,6 +327,8 @@
             background-color: $secondary-color;
             color: $primary-color;
             box-shadow: 1px;
+=======
+>>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
             border-radius: 2rem;
             margin: 0 1rem 0 0;
         }
@@ -326,6 +337,7 @@
         &--watch-demo {
             display: inline-flex;
             align-items: center;
+            border: 1px solid #eeeeee;
             padding: 0.6rem 0.7rem;
             margin: 0;
             width: 7rem;

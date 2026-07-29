@@ -149,7 +149,7 @@
     .image-3,
     .image-2,
     .image-1 {
-        max-width: 17rem;
+        max-width: 27dvw;
         padding: 0.5rem;
         width: auto;
         align-self: center;
@@ -175,12 +175,17 @@
         top: 33.3dvw;
 >>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
         left: 2.2dvw;
+<<<<<<< HEAD
 >>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
+=======
+        height: 17dvw;
+>>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
     }
 
     .friend-icon {
         top: 63.3dvw;
         left: 43dvw;
+        height: 17dvw;
     }
 
 <<<<<<< HEAD
@@ -201,7 +206,11 @@
         top: 47.6dvw;
 >>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
         left: 54.7dvw;
+<<<<<<< HEAD
 >>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
+=======
+        height: 16dvw;
+>>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
     }
 }
 
@@ -209,8 +218,13 @@
     .image-3,
     .image-2,
     .image-1 {
+<<<<<<< HEAD
+=======
+        width: 19dvw;
+>>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
         align-self: center;
         padding: 1rem 0.8rem 1rem 0.8rem;
+        max-width: 12rem;
     }
 
     .image-2 {
@@ -248,16 +262,23 @@
 >>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
         top: 14.1rem;
         left: 1.2rem;
+        height: 11.5dvw;
     }
 
     .friend-icon {
         top: 27rem;
         left: 18.6rem;
+        height: 11.5dvw;
     }
 
     .location-icon {
         top: 20.3rem;
+<<<<<<< HEAD
         left: 23.5rem;
 >>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
+=======
+        left: 23.2rem;
+        height: 11.5dvw;
+>>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
     }
 }

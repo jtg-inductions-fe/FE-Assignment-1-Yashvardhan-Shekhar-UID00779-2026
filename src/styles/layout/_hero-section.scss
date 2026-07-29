@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @use '../abstract/variables' as *;
+=======
+@use '../abstract/variables';
+>>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
 @use '../abstract/mixins' as *;
 
 // global
@@ -120,6 +124,11 @@
     &__right-section__images-left {
         @include flex-col-evenly;
     }
+    &__left-section__top {
+        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.05);
+        padding: 0.6rem 1.2rem;
+        border-radius: 2rem;
+    }
 }
 
 // mobile
@@ -157,7 +166,7 @@
     }
 
     &__left-section__top {
-        padding: 0.5rem;
+        // padding: 0.5rem;
         color: #f85e9f;
         background-color: rgba(255, 255, 255, 0.092);
         @include flex-row-around;
@@ -285,7 +294,7 @@
 
 @include desktop {
     .hero {
-        @include flex-row;
+        @include flex-row-between;
         align-items: normal;
         margin-top: 3.4rem;
 
@@ -313,7 +322,7 @@
 >>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
 =======
             &__box {
-                width: 32.3rem;
+                width: 53.6dvw;
                 padding-top: 0;
                 @include flex-row;
 >>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
@@ -335,10 +344,13 @@
 
         &__left-section {
             max-width: none;
+<<<<<<< HEAD
             // height: 50vh;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
             @include flex-col-between;
 =======
             @include flexColEvenly;
@@ -353,11 +365,14 @@
             align-items: start;
             margin: 3.1rem 0 0 0.5rem;
             height: 38.9dvw;
+            max-height: 26rem;
+            max-width: 24rem;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
             &__top {
                 padding: 0.6rem 1.2rem;
+<<<<<<< HEAD
                 color: $pink;
                 background-color: rgba(255, 255, 255, 0.092);
 <<<<<<< HEAD
@@ -396,6 +411,12 @@
                 font-size: 0.6rem;
 >>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
                 padding-left: 1.2rem;
+=======
+                color: variables.$pink;
+                background-color: rgba(255, 255, 255, 0.092);
+                @include flex-row-around;
+                font-size: 0.6rem;
+>>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
                 width: 7rem;
                 border-radius: 2rem;
             }

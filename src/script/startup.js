@@ -25,11 +25,15 @@ const stats = [
 let stats = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         data: '750+',
 >>>>>>> c188f8e ([YS_A1_03]: Made travel point dynamic)
 =======
         data: '700+',
 >>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
+=======
+        data: '500+',
+>>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
         name: 'Holiday Packages',
     },
     {
@@ -84,7 +88,7 @@ function insert() {
     let heading = document.querySelector('.heading');
     heading.innerHTML = `Travel <span>top destination</span> of the world`;
     let description = document.querySelector('.description');
-    description.innerHTML = `we always make our customer happy by providing <br /> as many choices as possible`;
+    description.innerHTML = `We always make our customer happy by providing <br/> as many choices as possible`;
 
     // inserting data inside cards
     let travelPoint = document.querySelector('.travel-point__right__cards');
@@ -132,6 +136,7 @@ insertStats();
 insert();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
 =======
 
@@ -146,3 +151,82 @@ splide.mount();
 >>>>>>> 2e6748e ([YS_A1_04]: Testimonial Section added carousel)
 =======
 >>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
+=======
+
+function insertTestimonialData() {
+    let data = [
+        {
+            name: 'Paul Greyrat',
+            image: 'assets/images/avatar.png',
+            tag: 'Travel',
+            comment: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.`,
+            rating: 4,
+        },
+        {
+            name: 'Zenith Marchrol',
+            image: 'assets/images/avatar.png',
+            tag: 'Travel',
+            comment: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.`,
+            rating: 2,
+        },
+        {
+            name: 'Ojha Gehi',
+            image: 'assets/images/avatar.png',
+            tag: 'Enthusiast',
+            comment: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.`,
+            rating: 4,
+        },
+        {
+            name: 'Amon Greyrat',
+            image: 'assets/images/avatar.png',
+            tag: 'Enthusiast',
+            comment: `Contrary to popular belief, Lorem Ipsum is not simply random text.`,
+            rating: 1,
+        },
+        {
+            name: 'Earl Hall',
+            image: 'assets/images/avatar.png',
+            tag: 'Enthusiast',
+            comment: `Contrary to popular belief, It has roots in a piece of classical Latin literature from 45 BC.`,
+            rating: 5,
+        },
+    ];
+
+    function insertOne(data) {
+        let splideCards = document.querySelector('.splide__list');
+        let card = document.createElement('li');
+
+        splideCards.appendChild(card);
+
+        let str = `<li class="splide__slide">
+                        <img src="${data.image}" alt="avatar" />
+                        <h5 class="name">
+                            <span>${data.name}</span> / ${data.tag}
+                        </h5>
+                        <div class="rating">`;
+
+        str +=
+            `<i class="fa-solid fa-star" style="color: rgb(255, 212, 59)" ></i>`.repeat(
+                data.rating,
+            ) +
+            `<i class="fa-solid fa-star" style="color: rgba(255, 200, 0, 0.209)" ></i>`.repeat(
+                5 - data.rating,
+            );
+
+        str += `</div>
+                    <p class="description description--carousel">
+                        Contrary to popular belief, Lorem Ipsum is
+                        not simply random text. It has roots in a
+                        piece of classical Latin literature from 45
+                        BC.
+                    </p>
+                </li>`;
+
+        card.outerHTML = str;
+    }
+
+    data.forEach((d) => insertOne(d));
+}
+
+insertTestimonialData();
+>>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)

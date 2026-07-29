@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 @use '../abstract/mixins' as *;
 @use '../abstract/variables';
 
@@ -23,6 +24,10 @@
 @import '../abstract/mixins';
 @import '../abstract/variables';
 >>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
+=======
+@use '../abstract/mixins' as *;
+@use '../abstract/variables';
+>>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
 
 @keyframes slideInRight {
     0% {
@@ -30,15 +35,6 @@
     }
     100% {
         transform: translateX(0);
-    }
-}
-
-@keyframes slideOutRight {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(100%);
     }
 }
 
@@ -231,15 +227,22 @@
         box-shadow:
             0 4px 8px 0 rgba(0, 0, 0, 0.2),
             0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        background-color: $primary-color;
+        background-color: variables.$primary-color;
         animation: slideInRight 0.3s ease-out forwards;
     }
 }
-
 // header link styling
+
 .header {
+    &__link {
+        color: rgba(25, 24, 37, 0.5019607843);
+        text-decoration: none;
+        padding: 0.3rem 1rem;
+    }
+
     &__close-btn {
         display: unset;
+<<<<<<< HEAD
         background-color: $transparent;
 <<<<<<< HEAD
         font-weight: 100;
@@ -247,6 +250,9 @@
         margin: -2rem 1rem 1rem 6.5rem;
 >>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
 =======
+=======
+        background-color: variables.$transparent;
+>>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
         align-self: end;
         svg {
             height: 2rem;
@@ -346,10 +352,6 @@
                 justify-content: unset;
                 align-items: start;
             }
-
-            &__bottom {
-                display: none;
-            }
         }
     }
 }
@@ -373,7 +375,6 @@
     .header {
         &__links {
             all: initial;
-            animation: none;
         }
 
         &__close-btn {
@@ -381,6 +382,7 @@
         }
 
         &__link {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:src/styles/components/_navlinks.scss
             color: variables.$link;
@@ -390,6 +392,9 @@
 =======
             color: $link;
 >>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
+=======
+            color: variables.$link;
+>>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
             padding: 0.3rem 1rem;
             font-size: 0.6rem;
             font-weight: bold;
@@ -398,7 +403,6 @@
             &__bottom {
                 all: initial;
             }
-
             &__bottom {
                 display: none;
             }
