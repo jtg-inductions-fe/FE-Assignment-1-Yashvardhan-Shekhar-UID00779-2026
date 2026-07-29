@@ -6,7 +6,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
 }
 
 <<<<<<< HEAD
@@ -31,28 +30,24 @@
 /// Flexbox row layout with space-evenly alignment.
 @mixin flex-row-evenly {
     @include flex-row;
-
     justify-content: space-evenly;
 }
 
 /// Flexbox column layout with space-evenly alignment.
 @mixin flex-col-evenly {
     @include flex-col;
-
     justify-content: space-evenly;
 }
 
 /// Flexbox row layout with space-around alignment.
 @mixin flex-row-around {
     @include flex-row;
-
     justify-content: space-around;
 }
 
 /// Flexbox column layout with space-around alignment.
 @mixin flex-col-around {
     @include flex-col;
-
     justify-content: space-around;
 }
 
@@ -63,21 +58,24 @@
 /// Flexbox column layout with space-between alignment.
 @mixin flex-col-between {
     @include flex-col;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8265a8 ([YS_A1_02]: Fixed review of hero section)
     justify-content: space-between;
 }
 
 /// Flexbox row layout with space-between alignment.
 @mixin flex-row-between {
     @include flex-row;
-
     justify-content: space-between;
 }
 
 /// Flexbox column layout aligned to start.
 @mixin flex-col-start {
     @include flex-col;
+<<<<<<< HEAD
 
 =======
 @mixin flexColBetween {
@@ -104,13 +102,14 @@
     @include flex-col;
 
 >>>>>>> ef09656 ([YS_A1_02]: Fixed PR reviews)
+=======
+>>>>>>> f8265a8 ([YS_A1_02]: Fixed review of hero section)
     justify-content: start;
 }
 
 /// Flexbox row layout aligned to start.
 @mixin flex-row-start {
     @include flex-row;
-
     justify-content: start;
 }
 
