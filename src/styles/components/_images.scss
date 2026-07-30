@@ -1,49 +1,18 @@
 @import '../abstract/mixins';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 .msg-icon,
 .friend-icon,
 .location-icon {
-=======
-.hero_right-section_img_msg,
-.hero_right-section_img_friend,
-.hero_right-section_img_location {
->>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
-=======
-.msg-icon,
-.friend-icon,
-.location-icon {
->>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
     position: absolute;
     z-index: 2;
 }
 
 @include mobile {
     .image-1,
-<<<<<<< HEAD
-=======
     .image-2,
     .image-3 {
         width: 8.7rem;
         align-self: center;
-    }
-
->>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
-    .image-2,
-<<<<<<< HEAD
-    .image-3 {
-        width: 8.7rem;
-=======
-    .image-1 {
-<<<<<<< HEAD
-        max-width: 9rem;
-        width: 7.7rem;
->>>>>>> 6936c4b ([YS_A1_02]: Fixed hero section PR reviews)
-        align-self: center;
-=======
-        max-width: 18rem;
->>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
     }
 
     .image-2,
@@ -57,12 +26,6 @@
 
     .image-3 {
         max-width: 11rem;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        width: 7.5rem;
-        align-self: center;
->>>>>>> 6936c4b ([YS_A1_02]: Fixed hero section PR reviews)
         margin-right: 0.5rem;
     }
 
@@ -113,58 +76,6 @@
         top: 68%;
         left: 72.8%;
         height: 22.8%;
-=======
-        margin-right: 0.5rem;
->>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
-    }
-
-    .msg-icon {
-        top: 11rem;
-        left: 1.4rem;
-        height: 5.2rem;
-    }
-
-    .friend-icon {
-        top: 20.8rem;
-        left: 14.75rem;
-        height: 5.3rem;
-    }
-
-    .location-icon {
-        top: 15.7rem;
-        left: 18.8rem;
-        height: 4.8rem;
-    }
-}
-
-@include tablet {
-    .image-3,
-    .image-2,
-    .image-1 {
-        max-width: 27dvw;
-        padding: 0.5rem;
-        width: auto;
-        align-self: center;
-        padding-right: 1.5rem;
-        padding-top: 1.7rem;
-    }
-
-    .msg-icon {
-        top: 33.3dvw;
-        left: 2.2dvw;
-        height: 17dvw;
-    }
-
-    .friend-icon {
-        top: 63.3dvw;
-        left: 43dvw;
-        height: 17dvw;
-    }
-
-    .location-icon {
-        top: 47.6dvw;
-        left: 54.7dvw;
-        height: 16dvw;
     }
 }
 
@@ -172,13 +83,8 @@
     .image-3,
     .image-2,
     .image-1 {
-<<<<<<< HEAD
-=======
-        width: 19dvw;
->>>>>>> b2c6f5e ([YS_A1_03]: Fixed PR reviews and added coupan image)
         align-self: center;
         padding: 1rem 0.8rem 1rem 0.8rem;
-        max-width: 12rem;
     }
 
     .image-2 {
@@ -191,8 +97,6 @@
         padding-top: 3rem;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     .msg-icon {
         top: 46.6%;
         left: 3%;
@@ -209,30 +113,5 @@
         top: 66.4%;
         left: 71.8%;
         height: 22.3%;
-=======
-    .hero_right-section_img_msg {
-=======
-    .msg-icon {
->>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
-        top: 14.1rem;
-        left: 1.2rem;
-        height: 11.5dvw;
-    }
-
-    .friend-icon {
-        top: 27rem;
-        left: 18.6rem;
-        height: 11.5dvw;
-    }
-
-    .location-icon {
-        top: 20.3rem;
-<<<<<<< HEAD
-        left: 23.5rem;
->>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
-=======
-        left: 23.2rem;
-        height: 11.5dvw;
->>>>>>> b2c6f5e ([YS_A1_03]: Fixed PR reviews and added coupan image)
     }
 }

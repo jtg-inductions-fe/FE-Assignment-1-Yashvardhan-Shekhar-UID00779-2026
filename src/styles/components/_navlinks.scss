@@ -1,35 +1,5 @@
 @use '../abstract/mixins' as *;
 @use '../abstract/variables';
-<<<<<<< HEAD
-
-@keyframes slideInRight {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideOutRight {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
-
-@keyframes slideInLeft {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-=======
->>>>>>> b2c6f5e ([YS_A1_03]: Fixed PR reviews and added coupan image)
 
 @keyframes slideInRight {
     0% {
@@ -66,26 +36,8 @@
         box-shadow:
             0 4px 8px 0 rgba(0, 0, 0, 0.2),
             0 6px 20px 0 rgba(0, 0, 0, 0.19);
-<<<<<<< HEAD
-<<<<<<< HEAD
         background-color: variables.$primary-color;
         animation: slideInRight 0.3s ease-out forwards;
-    }
-}
-// header link styling
-
-.header {
-    &__link {
-        color: rgba(25, 24, 37, 0.5019607843);
-        text-decoration: none;
-        padding: 0.3rem 1rem;
-=======
-        background-color: $primary-color;
-=======
-        background-color: variables.$primary-color;
->>>>>>> b2c6f5e ([YS_A1_03]: Fixed PR reviews and added coupan image)
-        animation: slideInRight 0.3s ease-out forwards;
->>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
     }
 }
 // header link styling
@@ -99,27 +51,11 @@
 
     &__close-btn {
         display: unset;
-<<<<<<< HEAD
-<<<<<<< HEAD
         background-color: variables.$transparent;
         svg {
             height: 2rem;
         }
         align-self: end;
-=======
-        background-color: $transparent;
-        align-self: end;
-        svg {
-            height: 2rem;
-        }
->>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
-=======
-        background-color: variables.$transparent;
-        svg {
-            height: 2rem;
-        }
-        align-self: end;
->>>>>>> b2c6f5e ([YS_A1_03]: Fixed PR reviews and added coupan image)
     }
 
     .links__button {
@@ -187,15 +123,7 @@
         }
 
         &__link {
-<<<<<<< HEAD
-<<<<<<< HEAD
             color: variables.$link;
-=======
-            color: $link;
->>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
-=======
-            color: variables.$link;
->>>>>>> b2c6f5e ([YS_A1_03]: Fixed PR reviews and added coupan image)
             padding: 0.3rem 1rem;
             font-size: 0.6rem;
             font-weight: bold;

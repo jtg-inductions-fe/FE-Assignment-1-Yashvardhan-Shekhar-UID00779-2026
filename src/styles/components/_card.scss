@@ -1,26 +1,20 @@
 @import '../abstract/variables';
 @import '../abstract/mixins';
 
-$orange: rgba(255, 87, 34, 1);
-$lightgrey: rgba(25, 24, 37, 0.1);
+.card {
+    border: 1px solid $lightgrey;
+    @include flex-col-evenly;
+    border-radius: 1.5rem;
+}
 
 @include mobile {
     .travel-point__right__cards {
         width: 94.5%;
+    }
 
-        &__card {
-            height: 9.3rem;
-            border: 1px solid $lightgrey;
-            border-radius: 1.5rem;
-            margin: 1.1rem;
-            @include flex-col-evenly;
-
-            &__data {
-                color: $orange;
-                font-size: 2rem;
-                font-weight: 900;
-            }
-        }
+    .card {
+        height: 9.3rem;
+        margin: 1.1rem;
     }
 }
 
@@ -28,51 +22,28 @@ $lightgrey: rgba(25, 24, 37, 0.1);
     .travel-point__right__cards {
         @include flex-row-evenly;
         flex-wrap: wrap;
-        // margin-top: 2rem;
         height: 21rem;
+    }
 
-        &__card {
-            width: 47%;
-            max-width: 25rem;
-            min-width: 13rem;
-            height: 9rem;
-            border: 1px solid $lightgrey;
-            border-radius: 1.5rem;
-            margin: 1.3rem 0;
-            @include flex-col-evenly;
-
-            &__data {
-                color: $orange;
-                font-size: 2rem;
-                font-weight: 900;
-            }
-        }
+    .card {
+        width: 47%;
+        max-width: 25rem;
+        min-width: 13rem;
+        height: 9rem;
+        margin: 1.3rem 0;
     }
 }
 @include desktop {
     .travel-point__right__cards {
         @include flex-row-between;
         flex-wrap: wrap;
-        margin-top: 1.9rem;
         height: 14.5rem;
+    }
 
-        &__card {
-            border: 1px solid $lightgrey;
-            border-radius: 1.2rem;
-            @include flex-col-evenly;
-            margin: 0.6rem 0;
-            padding: 1rem;
-            width: 35.2%;
-            height: 30.7%;
-
-            &__data {
-                color: $orange;
-                font-size: 1.4rem;
-                font-weight: 900;
-            }
-            &__text {
-                font-size: 0.8rem;
-            }
-        }
+    .card {
+        margin: 0.6rem 0;
+        padding: 1rem;
+        width: 35.2%;
+        height: 30.7%;
     }
 }
