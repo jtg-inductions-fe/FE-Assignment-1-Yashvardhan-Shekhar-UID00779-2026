@@ -151,10 +151,10 @@ function insertTestimonialData() {
 
         str +=
             `<i class="fa-solid fa-star" style="color: rgb(255, 212, 59)" ></i>`.repeat(
-                data.rating,
+                Math.min(5, data.rating),
             ) +
             `<i class="fa-solid fa-star" style="color: rgba(255, 200, 0, 0.209)" ></i>`.repeat(
-                5 - data.rating,
+                5 - Math.min(5, data.rating),
             );
 
         str += `</div>

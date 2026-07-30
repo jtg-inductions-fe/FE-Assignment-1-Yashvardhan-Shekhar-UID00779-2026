@@ -1,12 +1,12 @@
 @import '../abstract/mixins';
 
-.travel-point-logo {
+.travel-point__logo {
     @include flex-row;
     flex-wrap: wrap;
 }
 
 @include mobile {
-    .travel-point-logo {
+    .travel-point__logo {
         margin: 3.4rem 0;
         img {
             height: 1.3rem;
@@ -16,7 +16,7 @@
 }
 
 @include tablet {
-    .travel-point-logo {
+    .travel-point__logo {
         margin: 8rem 5rem;
         max-width: 82%;
 
@@ -27,7 +27,7 @@
     }
 }
 @include desktop {
-    .travel-point-logo {
+    .travel-point__logo {
         margin: 4.6rem 1rem;
         justify-content: space-between;
     }
