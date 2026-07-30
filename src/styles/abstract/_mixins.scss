@@ -8,23 +8,11 @@
     justify-content: center;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 @mixin flex-col {
-=======
-@mixin flexCol {
->>>>>>> d3ce191 ([YS_A1_02]: Fixed PR and updated incremental changes)
-=======
-@mixin flex-col {
->>>>>>> ef09656 ([YS_A1_02]: Fixed PR reviews)
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
-    flex-direction: row;
-=======
->>>>>>> d3ce191 ([YS_A1_02]: Fixed PR and updated incremental changes)
 }
 
 /// Flexbox row layout with space-evenly alignment.
@@ -51,18 +39,9 @@
     justify-content: space-around;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef09656 ([YS_A1_02]: Fixed PR reviews)
 /// Flexbox column layout with space-between alignment.
 @mixin flex-col-between {
     @include flex-col;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> f8265a8 ([YS_A1_02]: Fixed review of hero section)
     justify-content: space-between;
 }
 
@@ -75,35 +54,6 @@
 /// Flexbox column layout aligned to start.
 @mixin flex-col-start {
     @include flex-col;
-<<<<<<< HEAD
-
-=======
-@mixin flexColBetween {
-    @include flexCol;
-=======
->>>>>>> ef09656 ([YS_A1_02]: Fixed PR reviews)
-    justify-content: space-between;
-}
-
-/// Flexbox row layout with space-between alignment.
-@mixin flex-row-between {
-    @include flex-row;
-
-    justify-content: space-between;
-}
-
-<<<<<<< HEAD
-@mixin flexColStart {
-    @include flexCol;
->>>>>>> 6936c4b ([YS_A1_02]: Fixed hero section PR reviews)
-=======
-/// Flexbox column layout aligned to start.
-@mixin flex-col-start {
-    @include flex-col;
-
->>>>>>> ef09656 ([YS_A1_02]: Fixed PR reviews)
-=======
->>>>>>> f8265a8 ([YS_A1_02]: Fixed review of hero section)
     justify-content: start;
 }
 
@@ -113,11 +63,6 @@
     justify-content: start;
 }
 
-<<<<<<< HEAD
-/// Breakpoint for Tablet screens
-@mixin tablet {
-    @media (min-width: variables.$mobile) {
-=======
 /// Breakpoint or mobile screens
 @mixin mobile {
     @media (max-width: variables.$mobile) {
@@ -128,7 +73,6 @@
 /// Breakpoint for Tablet screens
 @mixin tablet {
     @media (min-width: variables.$mobile) and (max-width: variables.$tablet) {
->>>>>>> ef09656 ([YS_A1_02]: Fixed PR reviews)
         @content;
     }
 }

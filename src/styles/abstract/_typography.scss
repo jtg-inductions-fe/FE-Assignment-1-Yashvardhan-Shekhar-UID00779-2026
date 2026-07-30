@@ -1,4 +1,5 @@
-@import './variables';
+@use './variables' as *;
+@use './mixins' as *;
 
 @font-face {
     font-family: 'Circular-Std';
@@ -27,69 +28,162 @@
     font-style: normal;
 }
 
-button,
-a {
-    font-size: 0.6rem;
-    font-weight: 700;
-    line-height: 120%;
-    cursor: pointer;
-}
-
-a {
-    color: $link;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-// hero section heading
-h1 {
+/// Hero Main Heading (H1)
+.text-hero-heading {
     font-size: 2.7rem;
-    font-weight: bold;
-    text-align: center;
+    font-weight: 700;
     line-height: 125%;
-    span {
-        color: $pink;
+    text-align: center;
+
+    @include tablet {
+        font-size: 3.5rem;
+    }
+
+    @include desktop {
+        text-align: start;
     }
 }
 
-p {
-    font-family: inter, circular-Std, sans-serif, Arial;
+/// Section Headings (H3)
+.text-section-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 110%;
+    text-align: center;
+
+    @include tablet {
+        font-size: 2.6rem;
+    }
+
+    @include desktop {
+        font-size: 1.75rem;
+        text-align: start;
+    }
+}
+
+/// Category / Top Tag Badges
+.text-tag {
+    color: $pink;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.9rem;
+
+    @include tablet {
+        font-size: 1.5rem;
+    }
+
+    @include desktop {
+        font-size: 0.6rem;
+    }
+}
+
+/// Standard Body Paragraphs
+.text-body {
+    font-size: 1rem;
     font-weight: 400;
     line-height: 160%;
-    font-size: 1rem;
+    color: $grey;
     text-align: center;
+
+    @include tablet {
+        font-size: 1.1rem;
+    }
+
+    @include desktop {
+        font-size: 0.82rem;
+        text-align: start;
+    }
+}
+
+/// Carousel / Testimonial Paragraph Body Text
+.text-body-carousel {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 160%;
+    color: $grey;
+    text-align: center;
+
+    @include tablet {
+        font-size: 1.4rem;
+    }
+
+    @include desktop {
+        font-size: 1rem;
+    }
+}
+
+/// Stat Card Numbers (e.g., 500+, 100, 2k+)
+.text-stat-number {
+    color: $orange;
+    font-size: 2rem;
+    font-weight: 900;
+
+    @include desktop {
+        font-size: 1.4rem;
+    }
+}
+
+/// Stat Card Labels (e.g., Holiday Packages)
+.text-stat-label {
+    font-size: 0.8rem;
+    font-weight: 400;
     color: $grey;
 }
 
-.top {
-    color: $pink;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 20%;
-}
-
-// travel point and testimonial
-h3 {
-    text-align: center;
-    font-size: 2.6rem;
-    font-weight: bold;
-}
-
-// testimonial name
-h5 {
+/// Testimonial Names (H5)
+.text-testimonial-name {
     font-size: 1.55rem;
-    font-weight: bolder;
-    span {
-        color: $orange;
-        font-weight: bold;
+    font-weight: 900;
+
+    @include desktop {
+        font-size: 1.05rem;
     }
 }
 
-h6 {
+/// Subheadings / Grid Section Titles (H6)
+.text-subheading {
     font-weight: 700;
     font-size: 1.2rem;
     line-height: 120%;
-    letter-spacing: 0%;
+
+    @include desktop {
+        font-size: 0.9rem;
+    }
+}
+
+/// Button Labels
+.text-button {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 120%;
+
+    @include tablet {
+        font-size: 0.7rem;
+    }
+
+    @include desktop {
+        font-size: 13px;
+    }
+}
+
+/// Navigation Links & Links
+.text-nav-link {
+    font-size: 1.2rem;
+    color: $link;
+    text-decoration: none;
+
+    @include desktop {
+        font-size: 0.6rem;
+        font-weight: 700;
+    }
+}
+
+/// Star Rating Icon Scale
+.text-rating-stars {
+    font-size: 1.95rem;
+
+    @include desktop {
+        font-size: 1.2rem;
+    }
 }

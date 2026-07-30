@@ -14,10 +14,6 @@ hamburgerBtn.addEventListener('click', () => {
     document.querySelector('.header__close-btn').focus();
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ef09656 ([YS_A1_02]: Fixed PR reviews)
 document.addEventListener('click', (e) => {
     // button or icon
     if (e.target.matches('.header__close-btn') || e.target.matches('path')) {
@@ -32,14 +28,6 @@ document.addEventListener('keydown', (e) => {
             .querySelector('.header__links')
             .classList.contains('header__links--none')
     ) {
-<<<<<<< HEAD
-=======
-closeBtn.addEventListener('click', (e) => {
-    // button or icon
-    if (e.target.matches('.header__close-btn') || e.target.matches('path')) {
->>>>>>> d3ce191 ([YS_A1_02]: Fixed PR and updated incremental changes)
-=======
->>>>>>> ef09656 ([YS_A1_02]: Fixed PR reviews)
         toggleHamburger();
     }
 });
