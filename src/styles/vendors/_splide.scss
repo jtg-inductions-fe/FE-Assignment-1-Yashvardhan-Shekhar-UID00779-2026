@@ -1,6 +1,6 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
 @import '@splidejs/splide/css/skyblue';
-@import '../abstract/mixins';
-@import '../abstract/variables';
 
 .splide {
     width: 100%; // to prevent overflow
@@ -14,8 +14,9 @@
         padding: 2rem;
         border: 1px solid $lightgrey;
         border-radius: 2rem;
+        background-color: $primary-color;
         i {
-            color: black;
+            color: $grey;
         }
     }
 

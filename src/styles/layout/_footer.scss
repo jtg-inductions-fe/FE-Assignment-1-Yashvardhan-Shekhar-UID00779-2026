@@ -1,0 +1,140 @@
+@import '../abstract/mixins';
+@import '../abstract/variables';
+
+.bar {
+    @include flex-row-start;
+}
+
+.footer__right {
+    &--grid {
+        grid-auto-flow: column;
+    }
+}
+
+.footer {
+    position: relative;
+    margin: 13.6rem 1rem 1rem 1.2rem;
+
+    h5 {
+        margin-left: 1rem;
+    }
+
+    a {
+        font-family: Inter, Circular-Std, sans-serif, Arial;
+    }
+
+    &__design-spirals,
+    &__design-dots {
+        display: none;
+    }
+
+    &__social-links {
+        margin-top: 2rem;
+        a {
+            margin-right: 1.6rem;
+            height: fit-content;
+            display: inline-block;
+        }
+    }
+    &__right {
+        &--grid {
+            display: none;
+        }
+        &--accordion {
+            @include flex-col-between;
+            align-items: unset;
+            margin-top: 2rem;
+
+            .links__heading {
+                @include flex-row-between;
+                margin: 3rem 0 1.3rem 0;
+                button {
+                    padding: 0.2rem;
+                    border-radius: 50%;
+                    background-color: $primary-color;
+                }
+            }
+            .links__content {
+                @include flex-col-evenly;
+                gap: 0.4rem;
+                align-items: start;
+                a {
+                    padding: 0.5rem 1rem;
+                }
+            }
+        }
+    }
+    .description {
+        margin-top: 1.45rem;
+    }
+}
+
+.invisible {
+    display: none !important;
+}
+
+@include tablet {
+    .footer {
+        margin: 19.1rem 0.5rem 1rem 0.5rem;
+
+        &__right {
+            &--grid {
+                margin-top: 4rem;
+                display: grid;
+                gap: 1.4rem;
+
+                h6 {
+                    margin: 0;
+                }
+            }
+            &--accordion {
+                display: none;
+            }
+        }
+
+        &__design-spirals {
+            display: unset;
+            position: absolute;
+            bottom: 3.6rem;
+            right: -4rem;
+        }
+    }
+}
+
+@include desktop {
+    .footer {
+        margin: 14.3rem 0 0 1rem;
+        @include flex-row;
+        align-items: start;
+
+        &__right {
+            &--grid {
+                display: grid;
+                gap: 1rem;
+            }
+            &--accordion {
+                display: none;
+            }
+        }
+
+        &__left {
+            width: 70dvw;
+            margin-right: 1rem;
+        }
+
+        &__design-spirals {
+            display: unset;
+            position: absolute;
+            bottom: -3rem;
+            right: -4.5rem;
+        }
+
+        &__design-dots {
+            display: unset;
+            position: absolute;
+            left: -1.1rem;
+            top: -5.4rem;
+            opacity: 0.1;
+        }
+    }
+}

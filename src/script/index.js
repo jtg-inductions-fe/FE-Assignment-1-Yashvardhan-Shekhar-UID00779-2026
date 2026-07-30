@@ -31,3 +31,15 @@ document.addEventListener('keydown', (e) => {
         toggleHamburger();
     }
 });
+
+let footerLinks = document.querySelectorAll('.footer__links__container');
+footerLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        let icon = link.children[0].children[1].children[0];
+        let content = link.children[1];
+        icon.style.transform = content.classList.contains('invisible')
+            ? 'rotate(180deg)'
+            : 'rotate(0deg)';
+        content.classList.toggle('invisible');
+    });
+});
