@@ -1,15 +1,20 @@
-@import '../abstract/mixins';
-@import '../abstract/variables';
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
 
 .testimonials {
     position: relative;
-    @include flex-col;
-    margin: 4.8rem 0 7rem 0;
+    @include flex-col-between;
+    margin: 7rem 0;
+    height: 36rem;
+
+    h5 span {
+        color: $orange;
+    }
 
     &__background {
         position: absolute;
-        top: -17rem;
-        width: 98dvw;
+        top: -22rem;
+        width: 98vw;
         display: none;
         object-fit: cover;
     }
@@ -20,7 +25,9 @@
 
 @include tablet {
     .testimonials {
-        margin: 2rem 0 5rem 0;
+        margin: 3rem 0;
+        height: 37rem;
+
         &__background {
             display: unset;
         }
@@ -29,12 +36,11 @@
 
 @include desktop {
     .testimonials {
-        margin: 3.4rem 0 4rem 0;
+        margin: 5.5rem 0 7rem 0;
+        height: 23.6rem;
+
         &__background {
             display: unset;
-        }
-        &__rating {
-            font-size: 1.2rem;
         }
     }
 }

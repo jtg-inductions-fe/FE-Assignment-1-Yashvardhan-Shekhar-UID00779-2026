@@ -21,109 +21,30 @@
 
 @font-face {
     font-family: 'Inter';
-<<<<<<< HEAD
-<<<<<<< HEAD
     src:
         url('assets/fonts/Inter-Regular.woff2') format('woff2'),
         url('assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
-=======
-    src: url('assets/fonts/Inter-Regular.woff2') format('woff2');
-    src: url('assets/fonts/Inter_18pt-Regular.ttf') format('ttf');
->>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
-=======
-    src:
-        url('assets/fonts/Inter-Regular.woff2') format('woff2'),
-        url('assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
->>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
     font-weight: 400;
     font-style: normal;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-/// Hero Main Heading (H1)
+// Hero Main Heading (H1)
 .text-hero-heading {
     font-size: 2.7rem;
     font-weight: 700;
     line-height: 125%;
-=======
-html {
-    font-family: circular-Std, sans-serif;
-}
-
-=======
->>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
-button,
-a {
-    font-size: 0.6rem;
-    font-weight: 700;
-    line-height: 120%;
-    cursor: pointer;
-}
-
-a {
-    color: $link;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-// hero section heading
-h1 {
-    font-size: 2.7rem;
-    font-weight: bold;
-    text-align: center;
-    line-height: 125%;
-    span {
-        color: $pink;
-    }
-}
-
-p {
-    font-weight: 400;
-    line-height: 160%;
-    font-size: 1rem;
->>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
     text-align: center;
 
-<<<<<<< HEAD
     @include tablet {
         font-size: 3.5rem;
     }
-=======
-.top {
-    color: $pink;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
->>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
 
-<<<<<<< HEAD
     @include desktop {
         text-align: start;
-=======
-// travel point and testimonial
-h3 {
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 110%;
-    text-align: center;
-}
-
-// testimonial name
-h5 {
-    font-size: 1.55rem;
-    font-weight: bolder;
-    span {
-        color: $orange;
-        font-weight: bold;
->>>>>>> c5fefb9 ([YS_A1_03]: Fixed incemental changes)
     }
 }
 
-<<<<<<< HEAD
-/// Section Headings (H3)
+// Section Headings (H3)
 .text-section-heading {
     font-size: 2rem;
     font-weight: 700;
@@ -140,7 +61,7 @@ h5 {
     }
 }
 
-/// Category / Top Tag Badges
+// Category / Top Tag Badges
 .text-tag {
     color: $pink;
     font-weight: 700;
@@ -157,7 +78,7 @@ h5 {
     }
 }
 
-/// Standard Body Paragraphs
+// Standard Body Paragraphs
 .text-body {
     font-size: 1rem;
     font-weight: 400;
@@ -175,7 +96,7 @@ h5 {
     }
 }
 
-/// Carousel / Testimonial Paragraph Body Text
+// Carousel Testimonial Paragraph Body Text
 .text-body-carousel {
     font-size: 1rem;
     font-weight: 400;
@@ -192,7 +113,7 @@ h5 {
     }
 }
 
-/// Stat Card Numbers (e.g., 500+, 100, 2k+)
+// Stat Card Numbers
 .text-stat-number {
     color: $orange;
     font-size: 2rem;
@@ -203,14 +124,14 @@ h5 {
     }
 }
 
-/// Stat Card Labels (e.g., Holiday Packages)
+// Stat Card Labels
 .text-stat-label {
     font-size: 0.8rem;
     font-weight: 400;
     color: $grey;
 }
 
-/// Testimonial Names (H5)
+// Testimonial Names (H5)
 .text-testimonial-name {
     font-size: 1.55rem;
     font-weight: 900;
@@ -220,7 +141,7 @@ h5 {
     }
 }
 
-/// Subheadings / Grid Section Titles (H6)
+// Subheadings / Grid Section Titles (H6)
 .text-subheading {
     font-weight: 700;
     font-size: 1.2rem;
@@ -231,7 +152,7 @@ h5 {
     }
 }
 
-/// Button Labels
+// Button Labels
 .text-button {
     font-size: 1rem;
     font-weight: 700;
@@ -246,7 +167,7 @@ h5 {
     }
 }
 
-/// Navigation Links & Links
+// Navigation Links & Links
 .text-nav-link {
     font-size: 1.2rem;
     color: $link;
@@ -258,26 +179,11 @@ h5 {
     }
 }
 
-/// Star Rating Icon Scale
+// Star Rating Icon Scale
 .text-rating-stars {
     font-size: 1.95rem;
 
     @include desktop {
         font-size: 1.2rem;
-=======
-h6 {
-<<<<<<< HEAD
-    font-size: 1.55rem;
-    font-weight: bolder;
-    span {
-        color: $orange;
-        font-weight: bold;
->>>>>>> 29dca3a ([YS_A1_04]: Fixed incemental changes)
     }
-=======
-    font-weight: 700;
-    font-size: 1.2rem;
-    line-height: 120%;
-    letter-spacing: 0%;
->>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
 }

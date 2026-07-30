@@ -3,14 +3,9 @@
 
 .travel-point {
     @include flex-col;
-<<<<<<< HEAD
     margin-top: 7.7rem;
-=======
->>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
 
     &__image {
-<<<<<<< HEAD
-<<<<<<< HEAD
         margin: 0 0 0 -0.6rem;
         width: stretch;
     }
@@ -19,53 +14,9 @@
         @include flex-col-between;
         margin-top: 2.8rem;
         height: 57.5rem;
-=======
-        margin: 7rem 0 0 -0.1rem;
-        width: 99vw;
-=======
-        margin: 5.4rem 0 0 -1rem;
-        width: 98vw;
->>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
-    }
 
-    &__right {
-        @include flex-col-between;
-<<<<<<< HEAD
-        height: 222dvw;
->>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
-=======
-        margin-top: 2.4rem;
-        height: 214dvw;
->>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
-
-<<<<<<< HEAD
         &__discount {
             display: none;
-=======
-        &__top {
-            color: $pink;
-            font-size: 1rem;
-            // margin: 2.6rem 0 0 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 20%;
-        }
-
-        &__heading {
-            width: 90vw;
-            margin-top: 1.3rem;
-        }
-
-        &__description {
-<<<<<<< HEAD
-            margin: 0.8rem 1rem 0rem 1rem;
->>>>>>> c5fefb9 ([YS_A1_03]: Fixed incemental changes)
-=======
-            // margin: 0.8rem 1rem 0rem 1rem;
-            img {
-                display: none;
-            }
->>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
         }
     }
 }
@@ -73,61 +24,15 @@
 @include tablet {
     .travel-point {
         @include flex-col;
-<<<<<<< HEAD
         margin-top: 9rem;
-=======
->>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
 
         &__image {
-<<<<<<< HEAD
-<<<<<<< HEAD
             margin-left: -3.6rem;
         }
 
         &__right {
-<<<<<<< HEAD
             height: 35.1rem;
             margin-top: 6.4rem;
-=======
-            height: 35.2rem;
-=======
-            margin: 7.2rem 0 0 -0.1rem;
-            width: 99vw;
-=======
-            // margin: 5.4rem 0 0 0;
-            // width: 100vw;
->>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
-        }
-
-        &__right {
-            height: 39.2rem;
-<<<<<<< HEAD
->>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
-            margin-top: 2.5rem;
-=======
-            // margin-top: 2.5rem;
->>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
-            @include flex-col-evenly;
-
-            &__top {
-                color: $pink;
-                font-size: 1.5rem;
-                // margin: 2.6rem 0 0 0.9rem;
-                font-weight: 700;
-                text-transform: uppercase;
-            }
-
-            &__heading {
-                font-size: 2.6rem;
-                width: 90vw;
-                // margin-top: 1.4rem;
-            }
-
-            &__description {
-                // margin: 2rem 1.9rem 1rem 1.9rem;
-                letter-spacing: 8%;
-            }
->>>>>>> c5fefb9 ([YS_A1_03]: Fixed incemental changes)
         }
     }
 }
@@ -135,29 +40,15 @@
 @include desktop {
     .travel-point {
         @include flex-row;
-<<<<<<< HEAD
         margin-top: 5.8rem;
-=======
->>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
         align-items: unset;
 
         &__image {
-<<<<<<< HEAD
-<<<<<<< HEAD
             margin: 0 0 0 -4.6rem;
-=======
-            margin: 1.9rem 0 0 -5rem;
->>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
-=======
-            margin-left: -5rem;
->>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
         }
 
         &__right {
             align-items: start;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             height: 27.3rem;
             margin-top: 0.5rem;
 
@@ -166,46 +57,6 @@
                 position: absolute;
                 right: 0;
                 top: 62.2rem;
-=======
-=======
-            height: 49dvw;
->>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
-=======
-            height: 68dvh;
->>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
-            &__top {
-                color: $pink;
-                font-size: 1rem;
-                font-weight: 700;
-                text-transform: uppercase;
-                letter-spacing: 20%;
-                margin: 2rem 0 0 0;
-            }
-
-            &__heading {
-                font-size: 1.75rem;
-                width: auto;
-                text-align: start;
-            }
-
-            &__description {
-                margin-top: 1rem;
-                letter-spacing: 8%;
-                font-size: 0.7rem;
-                text-align: start;
-                margin: 2rem 0 0 0;
-<<<<<<< HEAD
->>>>>>> c5fefb9 ([YS_A1_03]: Fixed incemental changes)
-=======
-                position: relative;
-
-                img {
-                    display: unset;
-                    position: absolute;
-                    top: 2rem;
-                    right: -5rem;
-                }
->>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
             }
         }
     }

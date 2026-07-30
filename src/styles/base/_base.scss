@@ -6,9 +6,9 @@
 html {
     // height: 100vh;
     background-image: radial-gradient(
-        at top left,
-        rgba(255, 115, 72, 0.44) 10%,
-        rgb(255, 255, 255) 50%
+        circle at 15% 7%,
+        rgba(255, 115, 72, 0.34) 0.1%,
+        rgb(255, 255, 255) 15%
     );
     background-repeat: no-repeat;
 }
@@ -32,62 +32,3 @@ html {
         margin: 2.4rem 4.6rem;
     }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 322ce62 ([YS_A1_02]: completed styling for mobile and tablet)
-
-// for tablet
-@include desktop {
-    html {
-        font-size: 24px;
-    }
-    .container {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b5491cf ([YS_A1_02]: Fixed hero section PR reviews)
-        // margin: 2.4rem 4.6rem;
-        margin: 2.4rem 5rem;
-    }
-}
-<<<<<<< HEAD
->>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
-=======
->>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
-=======
-        margin: 2.6rem 5rem;
-=======
-        margin: 2.4rem 5rem;
->>>>>>> 636f507 ([YS_A1_02]: completed hero section with pixel perfect)
-    }
-}
->>>>>>> 322ce62 ([YS_A1_02]: completed styling for mobile and tablet)
-=======
-
-// for tablet
-@include desktop {
-    html {
-        font-size: 24px;
-    }
-    .container {
-        margin: 2.4rem 5rem;
-    }
-}
-<<<<<<< HEAD
->>>>>>> d7e03d8 ([YS_A1_02]: completed styling for mobile and tablet)
-=======
-
-// for tablet
-@include desktop {
-    html {
-        font-size: 24px;
-    }
-    .container {
-        margin: 2.4rem 5rem;
-    }
-}
->>>>>>> fbc8f92 ([YS_A1_02]: completed styling for mobile and tablet)

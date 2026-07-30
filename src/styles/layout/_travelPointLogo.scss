@@ -17,21 +17,8 @@
 
 @include tablet {
     .travel-point-logo {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         margin: 8rem 5rem;
         max-width: 82%;
-=======
-        margin: 8.8rem 5rem 2.4rem 5rem;
->>>>>>> c8df1f2 ([YS_A1_04]: Fixed incemental changes and made pixel perfect)
-=======
-        margin: 3.6rem 5rem 2.4rem 5rem;
->>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
-=======
-        margin: 7rem 5rem 2.4rem 5rem;
-        max-width: 82%;
->>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
 
         img {
             height: 2rem;
@@ -41,19 +28,7 @@
 }
 @include desktop {
     .travel-point-logo {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         margin: 4.6rem 1rem;
-=======
-        margin: 6.1rem 0 4rem 0;
->>>>>>> c5fefb9 ([YS_A1_03]: Fixed incemental changes)
-=======
-        margin: 2.1rem 0 4rem 0;
->>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
-=======
-        margin: 4.1rem 0 4rem 0;
->>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
         justify-content: space-between;
     }
 }

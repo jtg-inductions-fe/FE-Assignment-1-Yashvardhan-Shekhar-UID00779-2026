@@ -8,18 +8,8 @@
 @use 'components/hamburger';
 @use 'layout/hero-section';
 @use 'components/images';
-<<<<<<< HEAD
 @use 'components/card';
 @use 'layout/travel-point';
 @use 'layout/travelPointLogo';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
-=======
-@use 'components/splide-button';
-=======
-@use 'vendors/splide';
->>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
 @use 'layout/testimonials';
->>>>>>> 2e6748e ([YS_A1_04]: Testimonial Section added carousel)
+@use 'vendors/splide';

@@ -11,37 +11,17 @@
 .header {
     &__button {
         &--signup {
-<<<<<<< HEAD
-<<<<<<< HEAD
             background-color: variables.$secondary-color;
             color: variables.$primary-color;
         }
 
         &--login {
             background-color: variables.$primary-color;
-=======
-            background-color: $secondary-color;
-            color: $primary-color;
-        }
-
-        &--login {
-            background-color: $primary-color;
->>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
-=======
-            background-color: variables.$secondary-color;
-            color: variables.$primary-color;
-        }
-
-        &--login {
-            background-color: variables.$primary-color;
-            // border: 1px solid variables.$smoke-white;
->>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
         }
     }
 }
+
 // for mobile
-<<<<<<< HEAD
-<<<<<<< HEAD
 .header {
     &__burger {
         button {
@@ -61,7 +41,6 @@
 }
 
 // hero section get started
-
 .button {
     font-size: 1rem;
     width: stretch;
@@ -78,52 +57,6 @@
         @include flex-row;
         background-color: variables.$primary-color;
         border: 1px solid variables.$lightgrey;
-        padding: 1.3rem;
-        margin-top: 1.7rem;
-        span {
-            padding-left: 0.5rem;
-=======
-// @include mobile {
-=======
->>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
-.header {
-    &__burger {
-        button {
-            padding: 0.9rem 0.3rem;
->>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
-        }
-    }
-
-    &__buttons {
-        display: none;
-    }
-
-    &__link__bottom {
-        .button {
-            width: auto;
-        }
-    }
-}
-
-// hero section get started
-
-.button {
-    font-size: 1rem;
-    width: 92vw;
-    border-radius: 2rem;
-
-    &--get-started {
-        background-color: variables.$secondary-color;
-        color: variables.$primary-color;
-        padding: 1.5rem;
-        margin-top: 0.9rem;
-    }
-
-    &--watch-demo {
-        @include flex-row;
-        background-color: variables.$primary-color;
-        border: 1px solid variables.$lightgrey;
-        width: 92vw;
         padding: 1.3rem;
         margin-top: 1.7rem;
         span {
@@ -148,16 +81,7 @@
             }
         }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
     // hero section get started
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    // hero section get started
->>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
     .hero__left-section {
         &__buttons {
             @include flex-row;
@@ -171,7 +95,6 @@
         &--get-started {
             background-color: variables.$secondary-color;
             color: variables.$primary-color;
-<<<<<<< HEAD
             padding: 1rem 2rem;
             border-radius: 2rem;
             margin: 0;
@@ -186,87 +109,18 @@
             border-radius: 2rem;
             span {
                 padding-left: 0.5rem;
-=======
-=======
->>>>>>> 8f91275 ([YS_A1_02]: completed hero section with pixel perfect)
-
-    button {
-        padding: 0.9rem 2rem;
-    }
-
-<<<<<<< HEAD
-=======
->>>>>>> 2596f70 ([YS_A1_02]: Rebased with Header section and updated BEM)
-=======
->>>>>>> 8f91275 ([YS_A1_02]: completed hero section with pixel perfect)
-=======
->>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
-    .hero_left-section {
-        &_buttons {
-            @include flexRow;
-=======
-
-    .hero__left-section {
-        &__buttons {
-            @include flex-row;
->>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
-        }
-    }
-
-    .button {
-        padding: 0.9rem 2rem;
-        width: unset;
-
-<<<<<<< HEAD
-            &_watch-demo {
-                @include flexRow;
-                background-color: $primary-color;
-                border: 1px solid #eeeeee;
-                padding: 1rem 2rem;
-                margin-left: 1rem;
-                border-radius: 2rem;
-                span {
-                    padding-left: 0.5rem;
-                }
->>>>>>> 2b5dfbd ([YS_A1_02]: completed hero section with pixel perfect)
-=======
-        &--get-started {
-            background-color: $secondary-color;
-            color: $primary-color;
-            box-shadow: 1px;
-=======
->>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
-            padding: 1rem 2rem;
-            border-radius: 2rem;
-            margin: 0;
-        }
-
-        &--watch-demo {
-            @include flex-row;
-            background-color: variables.$primary-color;
-            border: 1px solid #eeeeee;
-            padding: 0.7rem 2rem;
-            margin: 0 0 0 1rem;
-            border-radius: 2rem;
-            span {
-                padding-left: 0.5rem;
->>>>>>> 2596f70 ([YS_A1_02]: Rebased with Header section and updated BEM)
             }
         }
     }
 }
 
-<<<<<<< HEAD
 // for tablet + desktop
 @media screen and (min-width: 431px) {
-    // Desktop
-    .links_button {
+    .links__button {
         display: none;
     }
 }
 
-=======
->>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
 @include desktop {
     .header__buttons {
         display: unset;
@@ -276,10 +130,6 @@
         border-radius: 1.4rem;
         border: none;
         font-weight: 700;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
         font-size: 13px;
         line-height: 120%;
         width: unset;
@@ -287,48 +137,6 @@
         &--get-started {
             background-color: variables.$secondary-color;
             color: variables.$primary-color;
-<<<<<<< HEAD
-            border-radius: 2rem;
-            margin: 0 1rem 0 0;
-        }
-
-        // hero section get started
-        &--watch-demo {
-            display: inline-flex;
-            align-items: center;
-            border: 1px solid #eeeeee;
-            padding: 0.6rem 0.7rem;
-            margin: 0;
-            width: 7rem;
-            justify-content: space-evenly;
-            img {
-                height: 1rem;
-            }
-        }
-    }
-    .hero_left-section_buttons_get-started {
-        background-color: $secondary-color;
-        color: $primary-color;
-        box-shadow: 1px;
-        border-radius: 2rem;
-        margin-right: 1rem;
-    }
-=======
-        font-style: bold;
-        font-size: 13px;
-        line-height: 120%;
-<<<<<<< HEAD
->>>>>>> 2596f70 ([YS_A1_02]: Rebased with Header section and updated BEM)
-=======
-        width: unset;
->>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach)
-
-        &--get-started {
-            background-color: $secondary-color;
-            color: $primary-color;
-            box-shadow: 1px;
-=======
->>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
             border-radius: 2rem;
             margin: 0 1rem 0 0;
         }

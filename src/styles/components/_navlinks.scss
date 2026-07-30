@@ -1,33 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 @use '../abstract/mixins' as *;
 @use '../abstract/variables';
-
-@keyframes slideInRight {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInLeft {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-=======
-@import '../abstract/mixins';
-@import '../abstract/variables';
->>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
-=======
-@use '../abstract/mixins' as *;
-@use '../abstract/variables';
->>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
 
 @keyframes slideInRight {
     0% {
@@ -50,179 +22,16 @@
 // for mobile
 .header {
     &__links {
-<<<<<<< HEAD
-<<<<<<< HEAD
         @include flex-col;
         justify-content: space-between;
         position: absolute;
         padding: 1rem;
-=======
-        @include flexCol;
-=======
-        @include flex-col;
->>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
-        justify-content: space-between;
-        position: absolute;
-        padding: 2rem;
->>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
         z-index: 5;
         right: 0;
         top: 0;
         bottom: 0;
         height: 100dvh;
         width: 50dvw;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        box-sizing: border-box;
-        box-shadow:
-            0 4px 8px 0 rgba(0, 0, 0, 0.2),
-            0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        background-color: variables.$primary-color;
-        animation: slideInRight 0.3s ease-out forwards;
-    }
-}
-// header link styling
-
-.header {
-    &__link {
-        color: rgba(25, 24, 37, 0.5019607843);
-        text-decoration: none;
-        padding: 0.3rem 1rem;
-    }
-<<<<<<< HEAD:src/styles/components/_navlinks.scss
-}
-// header link styling
-
-.header {
-    &__link {
-        color: rgba(25, 24, 37, 0.5019607843);
-        text-decoration: none;
-        padding: 0.3rem 1rem;
-    }
-}
-// header link styling
-
-.header {
-    &__link {
-        color: rgba(25, 24, 37, 0.5019607843);
-        text-decoration: none;
-        padding: 0.3rem 1rem;
-    }
-}
-// header link styling
-
-.header_links_link {
-    color: #19182580;
-    text-decoration: none;
-    padding: 0.3rem 2rem;
-    font: 1.2rem;
-}
-// close button
-.header_links_close {
-    display: none;
-}
-
-// links for tablet
-@include tablet {
-    .header_links_close {
-        display: unset;
-        margin-bottom: 0.5rem;
-        border: none;
-        font-size: 2rem;
-        color: $secondary-color;
-        background-color: rgba(255, 0, 0, 0);
-    }
-
-    .header_links_link {
-        padding: 0.5rem 0rem;
-    }
-
-    .header_links {
-        @include flexCol;
-        position: absolute;
-        left: 1rem;
-        top: 1rem;
-        padding: 1rem 1rem;
-
-        background-color: rgba(255, 255, 255, 0.265);
-        border: 0.2rem solid $secondary-color;
-        border-radius: 2rem;
-        font-size: 1.2rem;
-        font-weight: bold;
-        line-height: 2rem;
-        color: $primary-color;
-    }
-}
-
-// for mobile
-@include mobile {
-    .header_links_close {
-        display: unset;
-        border: none;
-        background-color: white;
-        font-size: 2rem;
-        color: $secondary-color;
-        background-color: rgba(255, 0, 0, 0);
-    }
-
-    .header_links_link {
-        padding: 0;
-    }
-
-    .header_links_link {
-        padding: 1rem 0rem;
-        &_button {
-            cursor: pointer;
-        }
-    }
-
-    .header_links {
-        @include flexCol;
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
-        padding: 1rem 1rem;
-
-        background-color: rgba(255, 255, 255, 0.639);
-        border: 0.2rem solid $secondary-color;
-        border-radius: 2rem;
-        font-size: 1rem;
-        font-weight: bold;
-        line-height: 1rem;
-        color: $primary-color;
-        z-index: 3;
-    }
-}
-
-// header link default display to none
-.header_links--none {
-    display: none;
-}
-
-// header links visible on desktop
-@include desktop {
-    .header_links_link {
-        font-size: 0.6rem;
-        font-weight: bold;
-    }
-=======
->>>>>>> a1596ee ([YS_A1_03]: Fixed incemental changes):src/styles/components/_links.scss
-
-    &__close-btn {
-        display: unset;
-        background-color: variables.$transparent;
-        svg {
-            height: 2rem;
-        }
-        align-self: end;
-    }
-
-    .links__button {
-        font-size: 1rem;
-=======
-        background: $header-background;
-=======
->>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
         box-sizing: border-box;
         box-shadow:
             0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -242,26 +51,15 @@
 
     &__close-btn {
         display: unset;
-<<<<<<< HEAD
-        background-color: $transparent;
-<<<<<<< HEAD
-        font-weight: 100;
-        color: $primary-color;
-        margin: -2rem 1rem 1rem 6.5rem;
->>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
-=======
-=======
         background-color: variables.$transparent;
->>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
-        align-self: end;
         svg {
             height: 2rem;
         }
+        align-self: end;
     }
 
     .links__button {
         font-size: 1rem;
->>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
     }
 
     &__link {
@@ -269,24 +67,10 @@
 
         &__top,
         &__bottom {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
             @include flex-col;
             justify-content: unset;
             align-items: start;
             width: 100%;
-=======
-            @include flexCol;
-            justify-content: unset;
-            align-items: start;
-<<<<<<< HEAD
-            width: 40vw;
->>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
-=======
-            width: 100%;
->>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
         }
     }
 }
@@ -299,22 +83,12 @@
             flex-direction: column;
             justify-items: center;
             align-items: start;
-<<<<<<< HEAD
-<<<<<<< HEAD
             padding: 2rem;
-=======
-            padding: 5rem 2rem;
->>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
-=======
-            padding: 2rem;
->>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
             z-index: 5;
             left: 0;
             top: 0;
             bottom: 0;
             width: 25dvw;
-<<<<<<< HEAD
-<<<<<<< HEAD
             min-width: 12rem;
             animation: slideInLeft 0.3s ease-out forwards;
         }
@@ -324,31 +98,6 @@
 
             &__top {
                 @include flex-col;
-<<<<<<< HEAD
-=======
-        }
-
-        &__close-btn {
-            margin: 0 0 0.5rem 0;
-            padding: 1rem;
-            color: $primary-color;
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-=======
-            min-width: 12rem;
-            animation: slideInLeft 0.3s ease-out forwards;
->>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
-        }
-
-        &__link {
-            padding: 1rem 0rem;
-
-            &__top {
-                @include flexCol;
->>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
-=======
->>>>>>> b4a19b8 ([YS_A1_04]: Fixed PR review of testimonial section)
                 justify-content: unset;
                 align-items: start;
             }
@@ -356,15 +105,7 @@
     }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Hide links
-=======
-// to hide buttons from the page
->>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
-=======
-// Hide links
->>>>>>> c739d77 ([YS_A1_03]: Fixed PR review of travel point section)
 .header {
     &__links--none {
         display: none;
@@ -382,19 +123,7 @@
         }
 
         &__link {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:src/styles/components/_navlinks.scss
             color: variables.$link;
-=======
-            color: $link;
->>>>>>> 415a946 ([YS_A1_02]: Fixed incemental changes and followed mobile first approach):src/styles/components/_links.scss
-=======
-            color: $link;
->>>>>>> db42536 ([YS_A1_02]: Fixed PR Reviews for the travel point section)
-=======
-            color: variables.$link;
->>>>>>> b8637f1 ([YS_A1_04]: Fixed PR reviews added dynamic data insertion in testimonials)
             padding: 0.3rem 1rem;
             font-size: 0.6rem;
             font-weight: bold;
@@ -402,9 +131,6 @@
             &__top,
             &__bottom {
                 all: initial;
-            }
-            &__bottom {
-                display: none;
             }
 
             &s--none {
