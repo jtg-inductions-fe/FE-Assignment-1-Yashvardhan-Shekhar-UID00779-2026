@@ -1,13 +1,13 @@
 // functionality of hamburger
-let toggleHamburger = () => {
-    let headerLinks = document.querySelector('.header__links');
+const toggleHamburger = () => {
+    const headerLinks = document.querySelector('.header__links');
     headerLinks.classList.toggle('header__links--none');
 
-    let headerBurger = document.querySelector('.header__burger');
+    const headerBurger = document.querySelector('.header__burger');
     headerBurger.classList.toggle('header__burger--none');
 };
 
-let hamburgerBtn = document.querySelector('.header__burger');
+const hamburgerBtn = document.querySelector('.header__burger');
 
 hamburgerBtn.addEventListener('click', () => {
     toggleHamburger();
@@ -30,4 +30,16 @@ document.addEventListener('keydown', (e) => {
     ) {
         toggleHamburger();
     }
+});
+
+const footerLinks = document.querySelectorAll('.footer__links__container');
+footerLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        const icon = link.children[0].children[1].children[0];
+        const content = link.children[1];
+        icon.style.transform = content.classList.contains('invisible')
+            ? 'rotate(180deg)'
+            : 'rotate(0deg)';
+        content.classList.toggle('invisible');
+    });
 });

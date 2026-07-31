@@ -1,0 +1,46 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
+
+.testimonials {
+    position: relative;
+    @include flex-col-between;
+    margin: 7rem 0;
+    height: 36rem;
+
+    h5 span {
+        color: $orange;
+    }
+
+    &__background {
+        position: absolute;
+        top: -22rem;
+        width: 98vw;
+        display: none;
+        object-fit: cover;
+    }
+    &__rating {
+        font-size: 1.95rem;
+    }
+}
+
+@include tablet {
+    .testimonials {
+        margin: 3rem 0;
+        height: 37rem;
+
+        &__background {
+            display: unset;
+        }
+    }
+}
+
+@include desktop {
+    .testimonials {
+        margin: 5.5rem 0 7rem 0;
+        height: 23.6rem;
+
+        &__background {
+            display: unset;
+        }
+    }
+}

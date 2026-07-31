@@ -1,0 +1,112 @@
+@import '../abstract/mixins';
+
+.msg-icon,
+.friend-icon,
+.location-icon {
+    position: absolute;
+    z-index: 2;
+}
+
+@include mobile {
+    .image-1,
+    .image-2,
+    .image-3 {
+        width: 8.7rem;
+        align-self: center;
+    }
+
+    .image-2,
+    .image-1 {
+        max-width: 18rem;
+    }
+
+    .image-1 {
+        margin-bottom: 1rem;
+    }
+
+    .image-3 {
+        max-width: 11rem;
+        margin-right: 0.5rem;
+    }
+
+    .msg-icon {
+        top: 48.7%;
+        left: 5.2%;
+        height: 23%;
+    }
+
+    .friend-icon {
+        top: 92%;
+        left: 57.4%;
+        height: 23%;
+    }
+
+    .location-icon {
+        top: 69.4%;
+        left: 72%;
+        height: 23%;
+    }
+}
+
+@include tablet {
+    .image-3,
+    .image-2,
+    .image-1 {
+        width: auto;
+        align-self: center;
+        padding: 1.7rem 1.5rem 0.5rem 0.5rem;
+    }
+
+    .msg-icon {
+        top: 47.4%;
+        left: 2.9%;
+        height: 24%;
+    }
+
+    .friend-icon {
+        top: 90.3%;
+        left: 57.4%;
+        height: 24%;
+    }
+
+    .location-icon {
+        top: 68%;
+        left: 72.8%;
+        height: 22.8%;
+    }
+}
+
+@include desktop {
+    .image-3,
+    .image-2,
+    .image-1 {
+        align-self: center;
+        padding: 1rem 0.8rem 1rem 0.8rem;
+    }
+
+    .image-2 {
+        padding-top: 0.5rem;
+    }
+
+    .image-3 {
+        padding: 3rem 1.2rem 0 0.5rem;
+    }
+
+    .msg-icon {
+        top: 46.6%;
+        left: 3%;
+        height: 23%;
+    }
+
+    .friend-icon {
+        top: 88.5%;
+        left: 56.9%;
+        height: 23%;
+    }
+
+    .location-icon {
+        top: 66.4%;
+        left: 71.8%;
+        height: 22.3%;
+    }
+}

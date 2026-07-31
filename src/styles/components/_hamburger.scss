@@ -1,6 +1,6 @@
 @import '../abstract/mixins';
 
-@media screen and (min-width: 1025px) {
+@include desktop {
     .header__burger {
         display: none;
     }

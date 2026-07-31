@@ -1,0 +1,63 @@
+@import '../abstract/mixins';
+@import '../abstract/variables';
+
+.travel-point {
+    @include flex-col;
+    margin-top: 7.7rem;
+
+    &__image {
+        margin: 0 0 0 -0.6rem;
+        width: stretch;
+    }
+
+    &__right {
+        @include flex-col-between;
+        margin-top: 2.8rem;
+        height: 57.5rem;
+
+        &__discount {
+            display: none;
+        }
+    }
+}
+
+@include tablet {
+    .travel-point {
+        @include flex-col;
+        margin-top: 9rem;
+
+        &__image {
+            margin-left: -3.6rem;
+        }
+
+        &__right {
+            height: 35.1rem;
+            margin-top: 6.4rem;
+        }
+    }
+}
+
+@include desktop {
+    .travel-point {
+        @include flex-row;
+        margin-top: 5.8rem;
+        align-items: unset;
+
+        &__image {
+            margin: 0 0 0 -4.6rem;
+        }
+
+        &__right {
+            align-items: start;
+            height: 27.3rem;
+            margin-top: 0.5rem;
+
+            &__discount {
+                display: unset;
+                position: absolute;
+                right: 0;
+                top: 62.2rem;
+            }
+        }
+    }
+}

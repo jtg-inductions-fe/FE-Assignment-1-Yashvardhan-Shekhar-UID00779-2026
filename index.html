@@ -1,16 +1,15 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Explore the World - Travel Portal</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@vetixy/circular-std@1.0.0/dist/index.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+            integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
         />
         <link rel="stylesheet" href="src/styles/main.scss" />
     </head>
@@ -29,17 +28,210 @@
                     </button>
                 </div>
                 <div class="header__buttons">
-                    <button class="button header__button--login" type="button">
+                    <button
+                        class="button header__button--login text-button"
+                        type="button"
+                    >
                         Log In
                     </button>
-                    <button class="button header__button--signup" type="button">
+                    <button
+                        class="button header__button--signup text-button"
+                        type="button"
+                    >
                         Sign Up
                     </button>
                 </div>
             </header>
+
+            <main class="hero">
+                <img
+                    class="hero__triangle"
+                    src="assets/icons/triangles.svg"
+                    alt="triangles"
+                />
+                <div class="hero__left-section">
+                    <div class="hero__left-section__top">
+                        Explore the world!
+                        <img src="assets/icons/work.svg" alt="work" />
+                    </div>
+                    <h1 class="text-hero-heading heading">
+                        Travel <span>top destination</span> of the world
+                    </h1>
+                    <p class="description text-body">
+                        We always make our customer happy by providing <br />
+                        as many choices as possible
+                    </p>
+                    <div class="hero__left-section__buttons">
+                        <button
+                            type="button"
+                            class="button button--get-started text-button"
+                        >
+                            Get Started
+                        </button>
+                        <button
+                            type="button"
+                            class="button button--watch-demo text-button"
+                        >
+                            <img src="assets/icons/play-circle.svg" alt="" />
+                            <span>Watch Demo</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero__right-section">
+                    <div class="hero__right-section__box">
+                        <div class="hero__right-section__images-left">
+                            <img
+                                class="hero__right-section__img image-1"
+                                src="assets/images/Rectangle 1.png"
+                                alt="Traveler exploring"
+                            />
+                            <img
+                                class="msg-icon"
+                                src="assets/icons/message.svg"
+                                alt="plane"
+                            />
+                            <img
+                                class="friend-icon"
+                                src="assets/icons/friends.svg"
+                                alt="friend"
+                            />
+                            <img
+                                class="location-icon"
+                                src="assets/icons/location.svg"
+                                alt="location"
+                            />
+                            <img
+                                class="hero__right-section__img image-2"
+                                src="assets/images/Rectangle 2.png"
+                                alt="Scenic view"
+                            />
+                        </div>
+                        <img
+                            class="hero__right-section__img image-3"
+                            src="assets/images/Rectangle 3.png"
+                            alt="Destination card"
+                        />
+                    </div>
+                </div>
+            </main>
+
+            <div class="travel-point__logo">
+                <img src="assets/logo/tripadvisor.png" alt="tripadvisor" />
+                <img src="assets/logo/expedia.png" alt="expedia" />
+                <img src="assets/logo/booking.png" alt="booking" />
+                <img src="assets/logo/airbnb.png" alt="airbnb" />
+                <img src="assets/logo/rbitz.png" alt="rbitz" />
+            </div>
+
+            <div class="travel-point">
+                <img
+                    class="travel-point__image"
+                    src="assets/images/discount-price.png"
+                    alt=""
+                />
+                <div class="travel-point__right">
+                    <img
+                        class="travel-point__right__discount"
+                        src="assets/icons/offer.svg"
+                        alt="discount"
+                    />
+                    <div class="travel-point__right__top text-tag">
+                        Travel point
+                    </div>
+                    <h3
+                        class="travel-point__right__heading text-section-heading"
+                    >
+                        We helping you find your dream location
+                    </h3>
+                    <p class="travel-point__right__description text-body">
+                        Contrary to popular belief, Lorem Ipsum is not simply
+                        random text. It has roots in a piece of classical Latin
+                        literature from 45 BC.
+                    </p>
+                    <div class="travel-point__right__cards">
+                        <!-- Data will be inserted dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <section class="testimonials">
+                <img
+                    class="testimonials__background"
+                    src="assets/images/pink-gradient.svg"
+                    alt=""
+                />
+                <div class="travel-point__right__top top text-tag">
+                    Testimonials
+                </div>
+                <h3 class="travel-point__right__heading text-section-heading">
+                    Trust Our Clients
+                </h3>
+                <div class="splide" aria-label="Basic Structure Example">
+                    <div class="splide__arrows">
+                        <button class="splide__arrow splide__arrow--prev">
+                            <i class="fa-solid fa-arrow-down fa-rotate-90"></i>
+                        </button>
+                        <button class="splide__arrow splide__arrow--next">
+                            <i class="fa-solid fa-arrow-down fa-rotate-270"></i>
+                        </button>
+                    </div>
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <!-- Inserted Data Dynamically -->
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer">
+                <div class="footer__left">
+                    <div class="bar">
+                        <span>
+                            <a href="/">
+                                <img src="/assets/icons/logo.svg" alt="logo"
+                            /></a>
+                        </span>
+                        <h5 class="text-testimonial-name">Travlog</h5>
+                    </div>
+                    <p class="description description--mgt text-body">
+                        Contrary to popular belief, Lorem Ipsum is not simply
+                        random text. It has roots in a piece of classical Latin
+                        literature from 45 BC
+                    </p>
+                    <div class="footer__social-links">
+                        <a href="https://facebook.com/" class="text-footer-link"
+                            ><img
+                                src="assets/icons/facebook.svg"
+                                alt="facebook"
+                        /></a>
+                        <a href="https://x.com/" class="text-footer-link"
+                            ><img src="assets/icons/twitter.svg" alt="twitter"
+                        /></a>
+                        <a
+                            href="https://instagram.com/"
+                            class="text-footer-link"
+                            ><img
+                                src="assets/icons/instagram.svg"
+                                alt="instagram"
+                        /></a>
+                    </div>
+                </div>
+                <div class="footer__right footer__right--accordion"></div>
+                <div class="footer__right footer__right--grid"></div>
+                <img
+                    class="footer__design-dots"
+                    src="assets/icons/Graphic_Elements.svg"
+                    alt="dots"
+                />
+                <img
+                    class="footer__design-spirals"
+                    src="assets/icons/design.svg"
+                    alt="design"
+                />
+            </footer>
         </div>
 
         <script type="module" src="./src/script/startup.js"></script>
         <script type="module" src="./src/script/index.js"></script>
+        <script type="module" src="./src/script/splide.min.js"></script>
     </body>
 </html>
