@@ -1,0 +1,34 @@
+@import '../abstract/mixins';
+
+.travel-point__logo {
+    @include flex-row;
+    flex-wrap: wrap;
+}
+
+@include mobile {
+    .travel-point__logo {
+        margin: 3.4rem 0;
+        img {
+            height: 1.3rem;
+            margin: 0.8rem 0.3rem;
+        }
+    }
+}
+
+@include tablet {
+    .travel-point__logo {
+        margin: 8rem 5rem;
+        max-width: 82%;
+
+        img {
+            height: 2rem;
+            padding: 0.8rem 1rem;
+        }
+    }
+}
+@include desktop {
+    .travel-point__logo {
+        margin: 4.6rem 1rem;
+        justify-content: space-between;
+    }
+}
