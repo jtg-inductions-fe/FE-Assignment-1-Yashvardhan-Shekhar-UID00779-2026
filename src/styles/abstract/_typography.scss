@@ -167,6 +167,10 @@
     }
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 // Navigation Links & Links
 .text-nav-link {
     font-size: 1.2rem;
@@ -176,6 +180,27 @@
     @include desktop {
         font-size: 0.6rem;
         font-weight: 700;
+    }
+
+    &:hover {
+        color: $dark-grey;
+    }
+}
+
+// Footer Links
+.text-footer-link {
+    font-family: 'Inter', 'Circular-Std', sans-serif, Arial;
+    color: $link;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+
+    &:hover {
+        color: $dark-grey;
+    }
+
+    @include desktop {
+        font-size: 0.8rem;
     }
 }
 

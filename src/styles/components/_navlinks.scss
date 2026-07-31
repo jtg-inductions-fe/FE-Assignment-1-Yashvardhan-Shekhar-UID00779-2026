@@ -22,16 +22,15 @@
 // for mobile
 .header {
     &__links {
-        @include flex-col;
-        justify-content: space-between;
-        position: absolute;
+        @include flex-col-between;
+        position: fixed;
         padding: 1rem;
         z-index: 5;
         right: 0;
         top: 0;
         bottom: 0;
         height: 100dvh;
-        width: 50dvw;
+        width: 12rem;
         box-sizing: border-box;
         box-shadow:
             0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -52,10 +51,10 @@
     &__close-btn {
         display: unset;
         background-color: variables.$transparent;
+        align-self: end;
         svg {
             height: 2rem;
         }
-        align-self: end;
     }
 
     .links__button {
@@ -78,17 +77,13 @@
 @include tablet {
     .header {
         &__links {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            justify-items: center;
-            align-items: start;
+            @include flex-col-start;
             padding: 2rem;
             z-index: 5;
             left: 0;
             top: 0;
             bottom: 0;
-            width: 25dvw;
+            width: 25%;
             min-width: 12rem;
             animation: slideInLeft 0.3s ease-out forwards;
         }

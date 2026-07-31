@@ -52,12 +52,9 @@
     .image-3,
     .image-2,
     .image-1 {
-        max-width: 27dvw;
-        padding: 0.5rem;
         width: auto;
         align-self: center;
-        padding-right: 1.5rem;
-        padding-top: 1.7rem;
+        padding: 1.7rem 1.5rem 0.5rem 0.5rem;
     }
 
     .msg-icon {
@@ -92,9 +89,7 @@
     }
 
     .image-3 {
-        padding-left: 0.5rem;
-        padding-right: 1.2rem;
-        padding-top: 3rem;
+        padding: 3rem 1.2rem 0 0.5rem;
     }
 
     .msg-icon {
