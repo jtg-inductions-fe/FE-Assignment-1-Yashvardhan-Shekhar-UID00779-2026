@@ -36,6 +36,64 @@ const stats = [
     },
 ];
 
+const testimonialsData = [
+    {
+        name: 'Paul Greyrat',
+        image: 'assets/images/avatar.png',
+        tag: 'Travel',
+        comment: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.`,
+        rating: 4,
+    },
+    {
+        name: 'Zenith Marchrol',
+        image: 'assets/images/avatar.png',
+        tag: 'Travel',
+        comment: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.`,
+        rating: 2,
+    },
+    {
+        name: 'Ojha Gehi',
+        image: 'assets/images/avatar.png',
+        tag: 'Enthusiast',
+        comment: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.`,
+        rating: 4,
+    },
+    {
+        name: 'Amon Greyrat',
+        image: 'assets/images/avatar.png',
+        tag: 'Enthusiast',
+        comment: `Contrary to popular belief, Lorem Ipsum is not simply random text.`,
+        rating: 1,
+    },
+    {
+        name: 'Earl Hall',
+        image: 'assets/images/avatar.png',
+        tag: 'Enthusiast',
+        comment: `Contrary to popular belief, It has roots in a piece of classical Latin literature from 45 BC.`,
+        rating: 5,
+    },
+];
+
+const footer = {
+    Company: {
+        About: '/about',
+        Career: '/career',
+        Mobile: '/mobile',
+    },
+    'Contact Us': {
+        'Why Trevlog': '/reason',
+        'Partner with us': '/becomePartner',
+        "FAQ's": '/faq',
+        Blog: 'blog',
+    },
+    'Meet Us': {
+        '+00 95322 67648': 'tel:+9532283732',
+        'info@travlog.com': 'mailto:info@travlog.com',
+        '205. R Street, New York BD893244':
+            'https://www.google.com/maps/search/205.+R+Street,+New+York+BD893244',
+    },
+};
+
 // insert nav links into HTML
 function insertNavLinks() {
     const div = document.querySelector('.header__links');
@@ -76,5 +134,82 @@ function insertStats() {
     travelPoint.innerHTML = str;
 }
 
+// inserting cards data into the carousel
+function insertTestimonialData() {
+    function insertOne(data) {
+        const splideCards = document.querySelector('.splide__list');
+        const card = document.createElement('li');
+
+        splideCards.appendChild(card);
+
+        let str = `<li class="splide__slide">
+                        <img src="${data.image}" alt="avatar" />
+                        <h5 class="name text-testimonial-name">
+                            <span>${data.name}</span> / ${data.tag}
+                        </h5>
+                        <div class="rating text-rating-stars">`;
+
+        str +=
+            `<i class="fa-solid fa-star" style="color: rgb(255, 212, 59)" ></i>`.repeat(
+                Math.min(5, data.rating),
+            ) +
+            `<i class="fa-solid fa-star" style="color: rgba(255, 200, 0, 0.209)" ></i>`.repeat(
+                5 - Math.min(5, data.rating),
+            );
+
+        str += `</div>
+                    <p class="text-body-carousel">
+                        ${data.comment}
+                    </p>
+                </li>`;
+
+        card.outerHTML = str;
+    }
+
+    testimonialsData.forEach((d) => insertOne(d));
+}
+
+// insert footer data links
+function insertFooter() {
+    let max = 0;
+    let str = '';
+    Object.keys(footer).forEach((el) => {
+        if (Object.values(footer[el]).length > 0) {
+            max = Math.max(Object.values(footer[el]).length, max);
+            str += ` <div class="footer__links__container" > <div class="links__heading"> <h6 class="text-subheading">${el} </h6> <button> <img src="assets/icons/arrow-circle.svg" alt="arrow-down" /> </button> </div> <div class="links__content invisible">`;
+            Object.keys(footer[el]).forEach((val) => {
+                str += ` <a href="${footer[el][val]}" class="text-footer-link" > ${val} </a>`;
+            });
+            str += '</div> </div>';
+        }
+    });
+
+    let ftr = document.querySelector('.footer__right--accordion');
+    let column = 0;
+    ftr.innerHTML = str;
+
+    ftr = document.querySelector('.footer__right--grid');
+    str = '';
+
+    Object.keys(footer).forEach((el) => {
+        if (Object.values(footer[el]).length > 0) {
+            str += `<h6 class="text-subheading">${el}</h6>`;
+            let total = 0;
+            column++;
+            Object.keys(footer[el]).forEach((val) => {
+                str += ` <a href="${footer[el][val]}" class="text-footer-link" > ${val} </a>`;
+                total++;
+            });
+            str += `<div></div>`.repeat(max - total);
+        }
+    });
+
+    ftr.innerHTML = str;
+    ftr.style.gridTemplateColumns = `repeat(${column},1fr)`;
+    ftr.style.gridTemplateRows = `repeat(${max + 1},1fr)`;
+}
+
 insertNavLinks();
 insertStats();
+insertTestimonialData();
+insertFooter();

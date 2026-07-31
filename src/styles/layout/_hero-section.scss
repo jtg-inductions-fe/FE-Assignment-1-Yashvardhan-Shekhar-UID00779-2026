@@ -5,7 +5,7 @@
 .hero {
     &__triangle {
         position: absolute;
-        display: none;
+        visibility: hidden;
     }
 
     &__right-section__box {
@@ -38,12 +38,12 @@
 .hero {
     display: flex;
     flex-direction: column-reverse;
-    margin-top: 3.2rem;
+    margin-top: 2.8rem;
 
     &__left-section {
         @include flex-col-between;
         margin-top: 2.8rem;
-        height: 51.6vh;
+        height: 29.7rem;
         &__buttons {
             width: stretch;
         }
@@ -55,7 +55,6 @@
 
     &__right-section__box {
         justify-content: center;
-        margin-top: -0.3rem;
         padding-top: 2.4rem;
         gap: 1rem;
     }
@@ -84,9 +83,9 @@
         margin-top: 2rem;
 
         &__triangle {
-            display: unset;
-            left: 3.8dvw;
-            top: 123.6dvw;
+            visibility: unset;
+            left: 2.3rem;
+            top: 79.2rem;
         }
 
         &__right-section {
@@ -124,9 +123,9 @@
         margin-top: 3.4rem;
 
         &__triangle {
-            display: unset;
-            left: 2.9dvw;
-            top: 60.2dvw;
+            visibility: unset;
+            left: 1.6rem;
+            top: 36.1rem;
         }
 
         &__right-section {
@@ -152,10 +151,10 @@
 
         &__left-section {
             max-width: none;
-            // height: 50vh;
             @include flex-col-between;
             align-items: start;
             margin: 3.1rem 0 0 0.5rem;
+            height: 23.5rem;
 
             &__top {
                 padding: 0.6rem 1.2rem;
