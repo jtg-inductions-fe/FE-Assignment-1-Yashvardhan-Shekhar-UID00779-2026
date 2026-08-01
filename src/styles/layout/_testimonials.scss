@@ -1,46 +1,67 @@
+@use '../abstract/functions' as *;
 @use '../abstract/mixins' as *;
 @use '../abstract/variables' as *;
+
+// Testimonials Section Component (Mobile Viewport Default)
 
 .testimonials {
     position: relative;
     @include flex-col-between;
-    margin: 7rem 0;
-    height: 36rem;
+    margin: px-to-rem(112) 0;
+    height: px-to-rem(576);
 
     h5 span {
         color: $orange;
     }
 
+    // Background graphic positioning and display defaults
     &__background {
         position: absolute;
-        top: -22rem;
+        top: px-to-rem(-352);
         width: 98vw;
         display: none;
         object-fit: cover;
+        object-position: center;
+        height: px-to-rem(850);
     }
+
     &__rating {
-        font-size: 1.95rem;
+        font-size: px-to-rem(31.2);
     }
 }
 
+// Testimonials Section Layout (Tablet Viewport)
+
 @include tablet {
     .testimonials {
-        margin: 3rem 0;
-        height: 37rem;
+        margin: px-to-rem(48) 0;
+        height: px-to-rem(592);
 
         &__background {
             display: unset;
+            top: px-to-rem(-74);
         }
     }
 }
 
+// Testimonials Section Layout (Desktop Viewport)
+
 @include desktop {
     .testimonials {
-        margin: 5.5rem 0 7rem 0;
-        height: 23.6rem;
+        margin: px-to-rem(132) 0 px-to-rem(168) 0;
+        height: px-to-rem(566.4);
 
         &__background {
             display: unset;
+            top: 0;
+            width: 118%;
+            object-fit: cover;
+            object-position: center;
+            height: 850px;
+        }
+
+        &__rating {
+            font-size: px-to-rem(46.8);
         }
     }
 }

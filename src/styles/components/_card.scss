@@ -1,11 +1,20 @@
-@import '../abstract/variables';
-@import '../abstract/mixins';
+@use '../abstract/functions' as *;
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+// Base Card Component
 
 .card {
     border: 1px solid $lightgrey;
     @include flex-col-evenly;
-    border-radius: 1.5rem;
+    border-radius: px-to-rem(24);
+
+    @include desktop {
+        border-radius: px-to-rem(36);
+    }
 }
+
+// Travel Point Cards Container & Card Sizing (Mobile Default)
 
 @include mobile {
     .travel-point__right__cards {
@@ -13,36 +22,41 @@
     }
 
     .card {
-        height: 9.3rem;
-        margin: 1.1rem;
+        height: px-to-rem(148.8);
+        margin: px-to-rem(17.6);
     }
 }
+
+// Tablet Layout & Responsive Card Dimensions
 
 @include tablet {
     .travel-point__right__cards {
         @include flex-row-evenly;
         flex-wrap: wrap;
-        height: 21rem;
+        height: px-to-rem(336);
     }
 
     .card {
         width: 47%;
-        max-width: 25rem;
-        min-width: 13rem;
-        height: 9rem;
-        margin: 1.3rem 0;
+        max-width: px-to-rem(400);
+        min-width: px-to-rem(208);
+        height: px-to-rem(144);
+        margin: px-to-rem(20.8) 0;
     }
 }
+
+// Desktop Grid Layout & Precise Card Proportions
+
 @include desktop {
     .travel-point__right__cards {
         @include flex-row-between;
         flex-wrap: wrap;
-        height: 14.5rem;
+        height: px-to-rem(348);
     }
 
     .card {
-        margin: 0.6rem 0;
-        padding: 1rem;
+        margin: px-to-rem(14.4) 0;
+        padding: px-to-rem(24);
         width: 35.2%;
         height: 30.7%;
     }

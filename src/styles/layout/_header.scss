@@ -1,4 +1,7 @@
-@import '../abstract/mixins';
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+
+// Header Component Structure (Mobile Default)
 
 .header {
     @include flex-row-between;
@@ -12,16 +15,20 @@
     }
 }
 
-// to show logo in the middle for tablet
+// Tablet Viewport Adjustments
+
+// Center logo alignment shift for tablet layouts
 @include tablet {
     .header__logo {
         padding-left: 18%;
     }
 }
 
+// Desktop Viewport Adjustments
+
 @include desktop {
     .header__logo {
-        padding: 0.45rem 0.15rem 0.15rem 0.15rem;
-        margin: 0.2rem;
+        padding: px-to-rem(10.8) px-to-rem(3.6) px-to-rem(3.6) px-to-rem(3.6);
+        margin: px-to-rem(4.8);
     }
 }

@@ -1,5 +1,8 @@
+@use '../abstract/functions' as *;
 @use '../abstract/mixins' as *;
 @use '../abstract/variables';
+
+// Header Drawer Slide-in Animations
 
 @keyframes slideInRight {
     0% {
@@ -19,18 +22,19 @@
     }
 }
 
-// for mobile
+// Off-Canvas Navigation Drawer & Navigation Links (Mobile Default)
+
 .header {
     &__links {
         @include flex-col-between;
         position: fixed;
-        padding: 1rem;
+        padding: px-to-rem(16);
         z-index: 5;
         right: 0;
         top: 0;
         bottom: 0;
         height: 100dvh;
-        width: 12rem;
+        width: px-to-rem(192);
         box-sizing: border-box;
         box-shadow:
             0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -38,31 +42,11 @@
         background-color: variables.$primary-color;
         animation: slideInRight 0.3s ease-out forwards;
     }
-}
-// header link styling
 
-.header {
     &__link {
         color: rgba(25, 24, 37, 0.5019607843);
         text-decoration: none;
-        padding: 0.3rem 1rem;
-    }
-
-    &__close-btn {
-        display: unset;
-        background-color: variables.$transparent;
-        align-self: end;
-        svg {
-            height: 2rem;
-        }
-    }
-
-    .links__button {
-        font-size: 1rem;
-    }
-
-    &__link {
-        padding: 1rem 0rem;
+        padding: px-to-rem(16) 0px;
 
         &__top,
         &__bottom {
@@ -72,24 +56,44 @@
             width: 100%;
         }
     }
+
+    &__close-btn {
+        display: unset;
+        background-color: variables.$transparent;
+        align-self: end;
+
+        svg {
+            height: px-to-rem(32);
+        }
+    }
+
+    .links__button {
+        font-size: px-to-rem(16);
+
+        @include desktop {
+            font-size: px-to-rem(24);
+        }
+    }
 }
+
+// Navigation Drawer (Tablet Viewport Adjustment)
 
 @include tablet {
     .header {
         &__links {
             @include flex-col-start;
-            padding: 2rem;
+            padding: px-to-rem(32);
             z-index: 5;
             left: 0;
             top: 0;
             bottom: 0;
             width: 25%;
-            min-width: 12rem;
+            min-width: px-to-rem(192);
             animation: slideInLeft 0.3s ease-out forwards;
         }
 
         &__link {
-            padding: 1rem 0rem;
+            padding: px-to-rem(16) 0px;
 
             &__top {
                 @include flex-col;
@@ -100,12 +104,15 @@
     }
 }
 
-// Hide links
+// Visibility Modifier Class
+
 .header {
     &__links--none {
         display: none;
     }
 }
+
+// Inline Header Navigation Layout (Desktop Viewport)
 
 @include desktop {
     .header {
@@ -115,12 +122,16 @@
 
         &__close-btn {
             display: none;
+
+            svg {
+                height: px-to-rem(48);
+            }
         }
 
         &__link {
             color: variables.$link;
-            padding: 0.3rem 1rem;
-            font-size: 0.6rem;
+            padding: px-to-rem(7.2) px-to-rem(24);
+            font-size: px-to-rem(14.4);
             font-weight: bold;
 
             &__top,

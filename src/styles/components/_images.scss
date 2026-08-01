@@ -1,4 +1,7 @@
-@import '../abstract/mixins';
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+
+// Floating Badge & Icon Absolute Positioning Base
 
 .msg-icon,
 .friend-icon,
@@ -7,26 +10,28 @@
     z-index: 2;
 }
 
+// Hero Images & Overlay Badges (Mobile Viewport)
+
 @include mobile {
     .image-1,
     .image-2,
     .image-3 {
-        width: 8.7rem;
+        width: px-to-rem(139.2);
         align-self: center;
     }
 
     .image-2,
     .image-1 {
-        max-width: 18rem;
+        max-width: px-to-rem(288);
     }
 
     .image-1 {
-        margin-bottom: 1rem;
+        margin-bottom: px-to-rem(16);
     }
 
     .image-3 {
-        max-width: 11rem;
-        margin-right: 0.5rem;
+        max-width: px-to-rem(176);
+        margin-right: px-to-rem(8);
     }
 
     .msg-icon {
@@ -48,13 +53,15 @@
     }
 }
 
+// Hero Images & Overlay Badges (Tablet Viewport)
+
 @include tablet {
     .image-3,
     .image-2,
     .image-1 {
         width: auto;
         align-self: center;
-        padding: 1.7rem 1.5rem 0.5rem 0.5rem;
+        padding: px-to-rem(27.2) px-to-rem(24) px-to-rem(8) px-to-rem(8);
     }
 
     .msg-icon {
@@ -76,20 +83,29 @@
     }
 }
 
+// Hero Images & Overlay Badges (Desktop Viewport)
+
 @include desktop {
+    .image-1,
+    .image-2 {
+        max-width: px-to-rem(432);
+    }
+
     .image-3,
     .image-2,
     .image-1 {
         align-self: center;
-        padding: 1rem 0.8rem 1rem 0.8rem;
+        padding: px-to-rem(24) px-to-rem(19.2) px-to-rem(24) px-to-rem(19.2);
     }
 
     .image-2 {
-        padding-top: 0.5rem;
+        padding-top: px-to-rem(12);
     }
 
     .image-3 {
-        padding: 3rem 1.2rem 0 0.5rem;
+        padding: px-to-rem(72) px-to-rem(28.8) 0 px-to-rem(12);
+        max-width: px-to-rem(264);
+        margin-right: px-to-rem(12);
     }
 
     .msg-icon {
