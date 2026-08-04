@@ -3,7 +3,7 @@
 
 // Travel Point Sponsor Logos Component Structure
 
-.travel-point__logo {
+.travel-point__sponsers {
     @include flex-row;
     flex-wrap: wrap;
 }
@@ -11,7 +11,7 @@
 // Mobile Viewport Default Layout & Image Scaling
 
 @include mobile {
-    .travel-point__logo {
+    .travel-point__sponsers {
         margin: px-to-rem(54.4) 0;
 
         img {
@@ -24,7 +24,7 @@
 // Tablet Viewport Adjustments & Grid Constraints
 
 @include tablet {
-    .travel-point__logo {
+    .travel-point__sponsers {
         margin: px-to-rem(128) px-to-rem(80);
         max-width: 82%;
 
@@ -38,7 +38,7 @@
 // Desktop Viewport Layout & Alignment
 
 @include desktop {
-    .travel-point__logo {
+    .travel-point__sponsers {
         margin: px-to-rem(84.4) px-to-rem(13);
         justify-content: space-between;
 

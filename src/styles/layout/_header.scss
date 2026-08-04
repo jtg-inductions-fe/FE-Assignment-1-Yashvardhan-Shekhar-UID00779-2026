@@ -6,6 +6,11 @@
 .header {
     @include flex-row-between;
     reading-flow: flex-visual;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(1.5px);
+    // background-color: white;
+    z-index: 4;
 
     &__burger {
         button {

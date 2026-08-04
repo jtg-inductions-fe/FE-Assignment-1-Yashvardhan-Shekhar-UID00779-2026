@@ -25,8 +25,11 @@
         height: px-to-rem(850);
     }
 
-    &__rating {
-        font-size: px-to-rem(31.2);
+    .rating {
+        display: flex;
+        svg {
+            height: px-to-rem(30);
+        }
     }
 }
 
