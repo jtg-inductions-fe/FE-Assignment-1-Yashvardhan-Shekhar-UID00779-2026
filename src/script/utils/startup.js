@@ -135,7 +135,7 @@ function insertStats() {
 }
 
 // inserting cards data into the carousel
-function insertTestimonialData() {
+export function insertTestimonialData() {
     function insertOne(data) {
         const splideCards = document.querySelector('.splide__list');
         const card = document.createElement('li');
@@ -170,7 +170,7 @@ function insertTestimonialData() {
 }
 
 // insert footer data links
-function insertFooter() {
+export function insertFooter() {
     let max = 0;
     let str = '';
     Object.keys(footer).forEach((el) => {
@@ -208,8 +208,3 @@ function insertFooter() {
     ftr.style.gridTemplateColumns = `repeat(${column},1fr)`;
     ftr.style.gridTemplateRows = `repeat(${max + 1},1fr)`;
 }
-
-insertNavLinks();
-insertStats();
-insertTestimonialData();
-insertFooter();

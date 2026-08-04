@@ -1,4 +1,13 @@
-// toggle visibility of hamburger and sidebar menu
+import {
+    insertNavLinks,
+    insertStats,
+    insertTestimonialData,
+    insertFooter,
+} from './utils/startup';
+
+import handleStart from './utils/specialDeals';
+
+// functionality of hamburger
 const toggleHamburger = () => {
     const headerLinks = document.querySelector('.sidebar');
     headerLinks.classList.toggle('sidebar--none');
@@ -41,3 +50,10 @@ footerLinks.forEach((link) => {
         content.classList.toggle('links--hidden');
     });
 });
+
+insertNavLinks();
+insertStats();
+insertTestimonialData();
+insertFooter();
+
+handleStart();

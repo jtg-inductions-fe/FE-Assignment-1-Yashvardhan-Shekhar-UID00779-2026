@@ -240,9 +240,57 @@
                     alt="design"
                 />
             </footer>
+
+            <div class="modal-overlay hidden">
+                <div class="modal-card">
+                    <!-- Close Button -->
+                    <button class="modal-card__close" aria-label="Close modal">
+                        &times;
+                    </button>
+
+                    <!-- Header Section -->
+                    <div class="modal-card__header">
+                        <div class="modal-card__tag">
+                            <img
+                                class="modal-card__gift-icon"
+                                src="assets/icons/gift.svg"
+                                alt="gift-icon"
+                            />
+                            <span>SPECIAL DEALS</span>
+                        </div>
+                        <h2 class="modal-card__title">Spin & Win!</h2>
+                        <p class="modal-card__subtitle">
+                            Tap the center of the wheel to spin
+                        </p>
+                    </div>
+
+                    <!-- Wheel Section -->
+                    <div class="modal-card__wheel-container">
+                        <img
+                            class="modal-card__pointer"
+                            src="assets/icons/pointing.svg"
+                            alt="wheel-pointer"
+                        />
+
+                        <!-- for loading screen -->
+                        <div class="wheel wheel-loading">
+                            <span class="wheel-loading__text">Loading...</span>
+                        </div>
+
+                        <div class="winning-section">
+                            <!-- you won and Coupon Card inserted Dynamically-->
+                        </div>
+
+                        <!-- View All Deals Button -->
+                        <button class="view-deals-btn hidden">
+                            <span>View All Unlocked Deals</span>
+                            <span class="view-deals-btn__badge"> </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <script type="module" src="./src/script/startup.js"></script>
         <script type="module" src="./src/script/index.js"></script>
         <script type="module" src="./src/script/splide.min.js"></script>
     </body>
