@@ -5,8 +5,6 @@ import {
     insertFooter,
 } from './utils/startup';
 
-import handleStart from './utils/specialDeals';
-
 // functionality of hamburger
 const toggleHamburger = () => {
     const headerLinks = document.querySelector('.sidebar');
@@ -25,17 +23,26 @@ hamburgerBtn.addEventListener('click', () => {
 
 document.addEventListener('click', (e) => {
     // button or icon
-    if (e.target.matches('.sidebar__close-btn')) {
+    if (e.target.matches('.header__close-btn')) {
         toggleHamburger();
     }
 });
 
 document.addEventListener('keydown', (e) => {
-    if (
-        e.key === 'Escape' &&
-        !document.querySelector('.sidebar').classList.contains('sidebar--none')
-    ) {
-        toggleHamburger();
+    if (e.key === 'Escape') {
+        if (
+            !document
+                .querySelector('.header__links')
+                .classList.contains('header__links--none')
+        )
+            toggleHamburger();
+
+        if (
+            !document
+                .querySelector('.modal-overlay')
+                .classList.contains('hidden')
+        )
+            document.querySelector('.modal-card__close').click();
     }
 });
 
@@ -55,5 +62,3 @@ insertNavLinks();
 insertStats();
 insertTestimonialData();
 insertFooter();
-
-handleStart();

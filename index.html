@@ -244,7 +244,11 @@
             <div class="modal-overlay hidden">
                 <div class="modal-card">
                     <!-- Close Button -->
-                    <button class="modal-card__close" aria-label="Close modal">
+                    <button
+                        type="button"
+                        class="modal-card__close"
+                        aria-label="Close modal"
+                    >
                         &times;
                     </button>
 
@@ -256,7 +260,7 @@
                                 src="assets/icons/gift.svg"
                                 alt="gift-icon"
                             />
-                            <span>SPECIAL DEALS</span>
+                            <span class="modal-text-tag">SPECIAL DEALS</span>
                         </div>
                         <h2 class="modal-card__title">Spin & Win!</h2>
                         <p class="modal-card__subtitle">
@@ -273,8 +277,8 @@
                         />
 
                         <!-- for loading screen -->
-                        <div class="wheel wheel-loading">
-                            <span class="wheel-loading__text">Loading...</span>
+                        <div class="wheel wheel--loading">
+                            <span class="wheel--loading__text">Loading...</span>
                         </div>
 
                         <div class="winning-section">

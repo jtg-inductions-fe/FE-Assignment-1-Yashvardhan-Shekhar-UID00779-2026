@@ -1,23 +1,24 @@
 const DEALS_API_URL =
     'https://gist.githubusercontent.com/ameer-wajid-ali/1f29ebee4295cede36f8d74b45e576df/raw/122966c9a123861249f173911d8d93a76dc06d7a/';
-
 const MS_PER_DAY = 86_400_000;
 const DEFAULT_VALIDITY_DAYS = 7;
+// steps need to win coupon of ith index
 const STEP_NEEDED = [31.8, 29.2, 31, 30.1];
 
-function insertWonCard(parentElement, deal, invalid = false) {
+// inserts card of the deal into the given parent as a child
+function insertWonCard(parentElement, deal, remainingDays) {
     // create temp element
     const element = document.createElement('temp');
     parentElement.appendChild(element);
 
-    const str = `<div class="coupon-card ${invalid ? 'coupon-card--invalid' : ''}">
+    const str = `<div class="coupon-card ${remainingDays < 1 ? 'coupon-card--invalid' : ''}">
                     <div class="coupon-card__info">
                         <h4 class="coupon-card__title">${deal.label}</h4>
-                        <span class="coupon-card__expiry"> ${invalid ? `Deal expired` : `Expires in ${deal.validFor}d`} </span>
+                        <span class="coupon-card__expiry"> ${remainingDays < 1 ? `Deal expired` : `Expires in ${remainingDays}d`} </span>
                     </div>
                     <div class="coupon-card__action">
                         <code class="coupon-card__code">${deal.promoCode}</code>
-                        <button class="coupon-card__copy-btn" ${invalid ? `disabled` : ``} onClick="console.log('${deal.promoCode}');" aria-label="Copy code">
+                        <button class="coupon-card__copy-btn" ${remainingDays < 1 ? `disabled` : ``} aria-label="Copy code">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -41,6 +42,7 @@ function insertWonCard(parentElement, deal, invalid = false) {
     });
 }
 
+// get all deals from by API call if not available in local storage
 async function getAllDeals() {
     let data = null;
     try {
@@ -65,30 +67,33 @@ async function getAllDeals() {
     } catch (error) {
         // error message
         alert(error);
-    } finally {
-        // eslint-disable-next-line no-unsafe-finally
-        return data;
     }
+
+    return data;
 }
 
+// return the unlocked deals (deals won by user)
 function getUnlockedDeals() {
     return localStorage.getItem('unlockedDeals')
         ? JSON.parse(localStorage.getItem('unlockedDeals'))
         : [];
 }
 
+// return issue date array of the unlocked deals
 function getIssueDate() {
     return localStorage.getItem('issueDate')
         ? JSON.parse(localStorage.getItem('issueDate'))
         : [];
 }
 
+// after winning it handle changes in ui and in local storage
 function handleWonState(allDeals, index) {
     const winningSection = document.querySelector('.winning-section');
     winningSection.innerHTML = `<span class="winning-section__label">You won!</span>`;
-    insertWonCard(winningSection, allDeals[index]);
+    insertWonCard(winningSection, allDeals[index], allDeals[index].validFor);
 }
 
+// insert data into the section of all unlocked deals
 function insertUnlockedDeals(unlockedDeals, allDeals, issueDate) {
     const title = document.querySelector(
         'body > div > div.modal-overlay > div > div.modal-card__header > h2',
@@ -115,7 +120,10 @@ function insertUnlockedDeals(unlockedDeals, allDeals, issueDate) {
         insertWonCard(
             wheelContainer.firstElementChild,
             allDeals[deal],
-            Date.now() - issued > allDeals[deal].validFor * MS_PER_DAY,
+            Math.ceil(
+                (allDeals[deal].validFor * MS_PER_DAY - Date.now() + issued) /
+                    MS_PER_DAY,
+            ),
         );
     }
 
@@ -124,14 +132,20 @@ function insertUnlockedDeals(unlockedDeals, allDeals, issueDate) {
     goBackBtn.innerHTML = `<span>Go Back</span>`;
     goBackBtn.classList.add('view-deals-btn');
 
-    goBackBtn.addEventListener('click', () => {
+    const reset = () => {
         title.innerText = titleText;
         desc.innerText = descText;
         wheelContainer.innerHTML = wheelContainerInnerHTML;
         handleStart();
-    });
+    };
+
+    document
+        .querySelector('.modal-card__close')
+        .addEventListener('click', reset);
+    goBackBtn.addEventListener('click', reset);
 }
 
+// it handle the state of show deals btn and its badge number
 function handleShowDealsBtn(allDeals) {
     const unlockedDeals = getUnlockedDeals();
     const issueDate = getIssueDate();
@@ -152,12 +166,14 @@ function handleShowDealsBtn(allDeals) {
     }
 }
 
-// steps need to win coupon of ith index
+// it rotates the wheel and stops of selected prize
 function handleSpinRotation(result, btn, remainingDeals, allDeals) {
     let deg = 1;
     let step = STEP_NEEDED[result];
-    const wheelStyle = document.querySelector('.wheel-offers').style;
+    const wheelStyle = document.querySelector('.wheel--offers').style;
     const showUnlockedDealsBtn = document.querySelector('.view-deals-btn');
+    const closeBtn = document.querySelector('.modal-card__close');
+    closeBtn.disabled = true;
     showUnlockedDealsBtn.disabled = true;
     btn.disabled = true;
 
@@ -170,15 +186,20 @@ function handleSpinRotation(result, btn, remainingDeals, allDeals) {
         if (step < 0) {
             clearInterval(interval);
             handleWonState(allDeals, remainingDeals[result]);
-            btn.disabled = false;
             showUnlockedDealsBtn.disabled = false;
-            handleStart();
+            closeBtn.disabled = false;
+
+            setTimeout(() => {
+                btn.disabled = false;
+                handleStart();
+            }, 3000);
         }
     }, 20);
 }
 
+// spin btn functionality it call the rotation function and store result locally
 function handleSpinBtn(remainingDeals, allDeals) {
-    const btn = document.querySelector('.wheel-offers__spin-btn');
+    const btn = document.querySelector('.wheel--offers__spin-btn');
     btn.addEventListener('click', () => {
         const result = Math.floor(Math.random() * 4);
 
@@ -194,15 +215,14 @@ function handleSpinBtn(remainingDeals, allDeals) {
     });
 }
 
+// initial phase getting all the possible deals and rendering them on the wheel
 async function handleStart() {
-    document.querySelector('.modal-overlay').classList.remove('hidden');
-
     const allDeals = await getAllDeals();
     const unlockedDeals = getUnlockedDeals();
     const issueDate = getIssueDate();
     const remainingDeals = [];
 
-    for (let i = 0; i < 10; i++)
+    for (let i = 0; i < allDeals.length && remainingDeals.length < 4; i++)
         if (
             !(
                 unlockedDeals.includes(i) &&
@@ -215,6 +235,7 @@ async function handleStart() {
 
     let str = '';
 
+    // to handle no more deals available case as no wheel is there
     if (remainingDeals.length < 4) {
         str = ``;
 
@@ -232,33 +253,31 @@ async function handleStart() {
             'body > div > div.modal-overlay > div > div.modal-card__header > p',
         ).innerText = `No More Deals Available`;
     } else {
-        str = `<div class="wheel wheel-offers">
-                    <div class="wheel-offers__slice wheel-offers__slice--top-left">
+        str = `<div class="wheel wheel--offers">
+                    <div class="wheel--offers__slice wheel--offers__slice--top-left">
                         <span>${allDeals[remainingDeals[0]].label}</span>
                     </div>
-                    <div class="wheel-offers__slice wheel-offers__slice--top-right">
+                    <div class="wheel--offers__slice wheel--offers__slice--top-right">
                         <span>${allDeals[remainingDeals[1]].label}</span>
                     </div>
-                    <div class="wheel-offers__slice wheel-offers__slice--bottom-left">
+                    <div class="wheel--offers__slice wheel--offers__slice--bottom-left">
                         <span>${allDeals[remainingDeals[2]].label}</span>
                     </div>
-                    <div class="wheel-offers__slice wheel-offers__slice--bottom-right">
+                    <div class="wheel--offers__slice wheel--offers__slice--bottom-right">
                         <span>${allDeals[remainingDeals[3]].label}</span>
                     </div>
 
-                    <button class="wheel-offers__spin-btn">Spin</button>
+                    <button class="wheel--offers__spin-btn">Spin</button>
                 </div>`;
     }
 
     // for starting sate with loading screen
-    if (document.querySelector('.wheel-loading'))
-        document.querySelector('.wheel-loading').outerHTML = str;
+    if (document.querySelector('.wheel--loading'))
+        document.querySelector('.wheel--loading').outerHTML = str;
 
     // coming back from all deals section
-    if (document.querySelector('.wheel-offers'))
-        document.querySelector('.wheel-offers').outerHTML = str;
-
-    // to handle no more deals available case as no wheel is there
+    if (document.querySelector('.wheel--offers'))
+        document.querySelector('.wheel--offers').outerHTML = str;
 
     // get all the unlocked deals
     handleShowDealsBtn(allDeals);
@@ -266,15 +285,14 @@ async function handleStart() {
     if (remainingDeals.length >= 4) handleSpinBtn(remainingDeals, allDeals);
 }
 
-export default async function onPageLoad() {
-    const path = window.location.pathname;
-    if (path !== '/specialDeals') {
-        return;
-    }
+// event listener added on special deals btn
+export default function specialDealsBtnPressed() {
+    document.querySelector('.header__close-btn').click();
+    document.querySelector('.modal-overlay').classList.remove('hidden');
     handleStart();
-    document
-        .querySelector('.modal-card__close')
-        .addEventListener('click', () => {
-            window.location.pathname = '/';
-        });
+    const closeBtn = document.querySelector('.modal-card__close');
+    closeBtn.focus();
+    closeBtn.addEventListener('click', () => {
+        document.querySelector('.modal-overlay').classList.add('hidden');
+    });
 }

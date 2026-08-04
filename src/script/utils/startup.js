@@ -1,19 +1,25 @@
+import handleStart from './specialDeals';
+
 const links = [
     {
         name: 'Home',
-        path: '/home',
+        path: 'home',
+        isBtn: false,
     },
     {
         name: 'Discover',
-        path: '/discover',
+        path: 'discover',
+        isBtn: false,
     },
     {
         name: 'Special Deals',
-        path: '/specialDeals',
+        path: 'specialDeals',
+        isBtn: true,
     },
     {
         name: 'Contact',
-        path: '/contact',
+        path: 'contact',
+        isBtn: false,
     },
 ];
 
@@ -104,7 +110,9 @@ function insertNavLinks() {
                     </button> `;
 
     links.forEach((l) => {
-        str += `<a class="sidebar__link text-nav-link" href="${l.path}">${l.name}</a>`;
+        str += l.isBtn
+            ? `<a class="sidebar__link text-nav-link" onclick="event.preventDefault();" href id="${l.path}" >${l.name}</a>`
+            : `<a class="sidebar__link text-nav-link" href="/${l.path}">${l.name}</a>`;
     });
 
     str += ` </div>
@@ -165,8 +173,10 @@ export function insertTestimonialData() {
 
         card.outerHTML = str;
     }
-
     testimonialsData.forEach((d) => insertOne(d));
+    document
+        .getElementById('specialDeals')
+        .addEventListener('click', handleStart);
 }
 
 // insert footer data links

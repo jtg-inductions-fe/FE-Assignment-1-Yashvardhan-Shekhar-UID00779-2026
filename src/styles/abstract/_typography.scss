@@ -176,7 +176,8 @@
     }
 }
 
-button:hover {
+button:hover,
+a:hover {
     cursor: pointer;
 }
 
@@ -223,8 +224,7 @@ button:hover {
 }
 
 // modal typography
-.text-tag {
-    //   font-family: $font-family;
+.modal-text-tag {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 1.2px;

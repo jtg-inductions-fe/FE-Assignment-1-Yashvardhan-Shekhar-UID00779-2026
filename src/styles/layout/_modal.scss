@@ -56,7 +56,6 @@
         @include flex-col;
 
         .modal-card__tag {
-            @extend .text-tag;
             @include flex-row;
             gap: px-to-rem(6);
             margin-bottom: px-to-rem(8);
@@ -114,17 +113,17 @@
             height: px-to-rem(224);
             border-radius: 50%;
             box-shadow: 0 0 px-to-rem(50) px-to-rem(7) $color-shadow-black-25;
-        }
 
-        .wheel-loading {
-            @extend .text-loading;
-            background-color: $color-disabled-bg;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            &__text {
+            &--loading {
                 @extend .text-loading;
+                background-color: $color-disabled-bg;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &__text {
+                    @extend .text-loading;
+                }
             }
         }
     }
@@ -132,7 +131,7 @@
 
 // Interactive Wheel Component
 
-.wheel-offers {
+.wheel--offers {
     position: relative;
     width: px-to-rem(280);
     height: px-to-rem(280);
