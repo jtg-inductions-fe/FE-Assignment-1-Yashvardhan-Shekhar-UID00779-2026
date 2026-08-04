@@ -4,6 +4,10 @@
 
 // Base Button Component
 
+button:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 .button {
     padding: px-to-rem(14.4) px-to-rem(32);
     border-radius: px-to-rem(22.4);
