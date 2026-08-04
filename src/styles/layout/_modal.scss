@@ -90,16 +90,16 @@
             max-height: px-to-rem(300);
             padding-right: px-to-rem(2);
 
-            // Hide scrollbar for Chrome, Safari, and Opera
-            &::-webkit-scrollbar {
-                display: none;
-            }
-
             // Hide scrollbar for Firefox
             scrollbar-width: none;
 
             // Hide scrollbar for IE and Edge
             -ms-overflow-style: none;
+
+            // Hide scrollbar for Chrome, Safari, and Opera
+            &::-webkit-scrollbar {
+                display: none;
+            }
         }
 
         .modal-card__pointer {

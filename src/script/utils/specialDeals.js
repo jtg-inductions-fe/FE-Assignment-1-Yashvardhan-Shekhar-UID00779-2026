@@ -179,6 +179,9 @@ function handleSpinRotation(result, btn, remainingDeals, allDeals) {
 
     const interval = setInterval(() => {
         wheelStyle.transform = `rotate(${deg}deg)`;
+        document.querySelector(
+            'div.wheel.wheel--offers > button',
+        ).style.transform = `translate(-50%, -50%) rotate(-${deg}deg)`;
 
         deg = (step + deg) % 360;
         step = step - 0.1;
