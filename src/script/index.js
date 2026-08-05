@@ -1,22 +1,22 @@
 // functionality of hamburger
 const toggleHamburger = () => {
-    const headerLinks = document.querySelector('.header__links');
-    headerLinks.classList.toggle('header__links--none');
+    const headerLinks = document.querySelector('.sidebar');
+    headerLinks.classList.toggle('sidebar--none');
 
-    const headerBurger = document.querySelector('.header__burger');
-    headerBurger.classList.toggle('header__burger--none');
+    const headerBurger = document.querySelector('.hamburger');
+    headerBurger.classList.toggle('hamburger--none');
 };
 
-const hamburgerBtn = document.querySelector('.header__burger');
+const hamburgerBtn = document.querySelector('.hamburger');
 
 hamburgerBtn.addEventListener('click', () => {
     toggleHamburger();
-    document.querySelector('.header__close-btn').focus();
+    document.querySelector('.sidebar__close-btn').focus();
 });
 
 document.addEventListener('click', (e) => {
     // button or icon
-    if (e.target.matches('.header__close-btn') || e.target.matches('path')) {
+    if (e.target.matches('.sidebar__close-btn') || e.target.matches('path')) {
         toggleHamburger();
     }
 });
@@ -24,9 +24,7 @@ document.addEventListener('click', (e) => {
 document.addEventListener('keydown', (e) => {
     if (
         e.key === 'Escape' &&
-        !document
-            .querySelector('.header__links')
-            .classList.contains('header__links--none')
+        !document.querySelector('.sidebar').classList.contains('sidebar--none')
     ) {
         toggleHamburger();
     }
@@ -43,3 +41,18 @@ footerLinks.forEach((link) => {
         content.classList.toggle('invisible');
     });
 });
+
+// window.addEventListener('scroll', function () {
+//     const totalHeight =
+//         document.documentElement.scrollHeight - window.innerHeight;
+//     const currentScroll = window.scrollY;
+//     const scrollPercent = (currentScroll / totalHeight) * 100;
+
+//     if (scrollPercent >= 10) {
+//         document.querySelector('body > div > header').style.backgroundColor =
+//             'white';
+//     } else {
+//         document.querySelector('body > div > header').style.backgroundColor =
+//             'rgba(0, 0, 0, 0);';
+//     }
+// });

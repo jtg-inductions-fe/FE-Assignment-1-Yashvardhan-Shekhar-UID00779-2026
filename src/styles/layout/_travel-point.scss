@@ -13,7 +13,7 @@
         width: stretch;
     }
 
-    &__right {
+    &__stats {
         @include flex-col-between;
         margin-top: px-to-rem(44.8);
         height: px-to-rem(920);
@@ -35,7 +35,7 @@
             margin-left: px-to-rem(-57.6);
         }
 
-        &__right {
+        &__stats {
             height: px-to-rem(561.6);
             margin-top: px-to-rem(102.4);
         }
@@ -54,7 +54,7 @@
             margin: 0 0 0 px-to-rem(-110.4);
         }
 
-        &__right {
+        &__stats {
             align-items: start;
             height: px-to-rem(655.2);
             margin-top: px-to-rem(12);

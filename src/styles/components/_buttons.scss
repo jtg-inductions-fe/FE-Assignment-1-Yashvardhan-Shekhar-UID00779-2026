@@ -8,78 +8,48 @@
     padding: px-to-rem(14.4) px-to-rem(32);
     border-radius: px-to-rem(22.4);
     border: none;
+    width: stretch;
+    border-radius: px-to-rem(32);
+    @include flex-row;
 
     &:hover,
     &:focus-visible {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
-}
 
-// Header Navigation & Trigger Buttons (Mobile Default)
-.header {
-    &__button {
-        &--signup {
-            background-color: variables.$secondary-color;
-            color: variables.$primary-color;
-        }
-
-        &--login {
-            background-color: variables.$primary-color;
-        }
-    }
-
-    &__burger {
-        button {
-            padding: px-to-rem(14.4) px-to-rem(4.8);
-
-            @include desktop {
-                padding: px-to-rem(21.6) px-to-rem(7.2);
-            }
-        }
-    }
-
-    &__buttons {
-        display: none;
-    }
-
-    &__link__bottom {
-        .button {
-            width: auto;
-
-            @include mobile {
-                margin: 10px 0 0 0;
-            }
-        }
-    }
-}
-
-// Hero Section CTA Variants (Mobile Default)
-
-.button {
-    font-size: px-to-rem(16);
-    width: stretch;
-    border-radius: px-to-rem(32);
-
-    &--get-started {
+    &--secondary {
         background-color: variables.$secondary-color;
         color: variables.$primary-color;
-        padding: px-to-rem(24);
-        margin-top: px-to-rem(14.4);
     }
 
-    &--watch-demo {
-        @include flex-row;
+    &--primary {
         background-color: variables.$primary-color;
-        border: 1px solid variables.$lightgrey;
-        padding: px-to-rem(20.8);
-        margin-top: px-to-rem(27.2);
+    }
+}
 
-        span {
-            padding-left: px-to-rem(8);
+.button--border {
+    border: 1px solid variables.$lightgrey;
+}
 
-            @include desktop {
-                padding-left: px-to-rem(12);
-            }
+.buttons-container {
+    display: none;
+
+    @include mobile {
+        margin: px-to-rem(10) 0 0 0;
+    }
+
+    @include tablet {
+        padding: px-to-rem(14.4) px-to-rem(4.8);
+    }
+}
+
+.link__bottom {
+    .button {
+        width: auto;
+
+        @include mobile {
+            margin: px-to-rem(10) 0 0 0;
+            border: 1px solid variables.$lightgrey;
         }
     }
 }
@@ -87,52 +57,18 @@
 // Tablet Viewport Adjustments
 
 @include tablet {
+    .buttons-container {
+        display: flex;
+    }
     .button {
         padding: px-to-rem(14.4) px-to-rem(32);
         font-size: px-to-rem(11.2);
-    }
-
-    .header {
-        &__buttons {
-            display: unset;
-        }
-
-        &__burger {
-            button {
-                padding: px-to-rem(14.4) px-to-rem(4.8);
-            }
-        }
-    }
-
-    .hero__left-section {
-        &__buttons {
-            @include flex-row;
-        }
-    }
-
-    .button {
-        padding: px-to-rem(14.4) px-to-rem(32);
         width: unset;
+    }
 
-        &--get-started {
-            background-color: variables.$secondary-color;
-            color: variables.$primary-color;
-            padding: px-to-rem(16) px-to-rem(32);
-            border-radius: px-to-rem(32);
-            margin: 0;
-        }
-
-        &--watch-demo {
-            @include flex-row;
-            background-color: variables.$primary-color;
-            border: 1px solid #eeeeee;
-            padding: px-to-rem(11.2) px-to-rem(32);
-            margin: 0 0 0 px-to-rem(16);
-            border-radius: px-to-rem(32);
-
-            span {
-                padding-left: px-to-rem(8);
-            }
+    .hamburger {
+        button {
+            padding: px-to-rem(14.4) px-to-rem(4.8);
         }
     }
 }
@@ -148,40 +84,45 @@
 // Desktop Viewport Adjustments
 
 @include desktop {
-    .header__buttons {
-        display: unset;
+    .buttons-container {
+        display: flex;
     }
 
     .button {
         padding: px-to-rem(16.8) px-to-rem(33.6);
         border-radius: px-to-rem(33.6);
-        border: none;
         font-weight: 700;
         font-size: px-to-rem(13);
         line-height: 120%;
         width: unset;
+    }
+}
 
-        &--get-started {
-            background-color: variables.$secondary-color;
-            color: variables.$primary-color;
-            border-radius: px-to-rem(48);
-            margin: 0 px-to-rem(24) 0 0;
-            padding: px-to-rem(16.8) px-to-rem(33.6);
+.button--icon {
+    padding: px-to-rem(20.8);
+    margin-top: px-to-rem(27.2);
+
+    span {
+        padding-left: px-to-rem(8);
+    }
+
+    @include tablet {
+        padding: px-to-rem(11.2) px-to-rem(32);
+        margin: 0 0 0 px-to-rem(16);
+
+        span {
+            padding-left: px-to-rem(8);
         }
+    }
 
-        &--watch-demo {
-            display: inline-flex;
-            align-items: center;
-            border: 1px solid #eeeeee;
-            padding: px-to-rem(14.4) px-to-rem(16.8);
-            margin: 0;
-            width: px-to-rem(168);
-            justify-content: space-evenly;
-            border-radius: px-to-rem(48);
+    @include desktop {
+        padding: px-to-rem(14.4) px-to-rem(16.8);
+        margin: 0;
+        width: px-to-rem(168);
+        justify-content: space-evenly;
 
-            img {
-                height: px-to-rem(24);
-            }
+        img {
+            height: px-to-rem(24);
         }
     }
 }

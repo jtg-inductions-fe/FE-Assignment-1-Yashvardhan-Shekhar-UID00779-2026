@@ -17,7 +17,7 @@
 // Travel Point Cards Container & Card Sizing (Mobile Default)
 
 @include mobile {
-    .travel-point__right__cards {
+    .cards-container {
         width: 94.5%;
     }
 
@@ -30,7 +30,7 @@
 // Tablet Layout & Responsive Card Dimensions
 
 @include tablet {
-    .travel-point__right__cards {
+    .cards-container {
         @include flex-row-evenly;
         flex-wrap: wrap;
         height: px-to-rem(336);
@@ -48,7 +48,7 @@
 // Desktop Grid Layout & Precise Card Proportions
 
 @include desktop {
-    .travel-point__right__cards {
+    .cards-container {
         @include flex-row-between;
         flex-wrap: wrap;
         height: px-to-rem(348);

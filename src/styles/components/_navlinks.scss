@@ -24,38 +24,21 @@
 
 // Off-Canvas Navigation Drawer & Navigation Links (Mobile Default)
 
-.header {
-    &__links {
-        @include flex-col-between;
-        position: fixed;
-        padding: px-to-rem(16);
-        z-index: 5;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        height: 100dvh;
-        width: px-to-rem(192);
-        box-sizing: border-box;
-        box-shadow:
-            0 4px 8px 0 rgba(0, 0, 0, 0.2),
-            0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        background-color: variables.$primary-color;
-        animation: slideInRight 0.3s ease-out forwards;
-    }
-
-    &__link {
-        color: rgba(25, 24, 37, 0.5019607843);
-        text-decoration: none;
-        padding: px-to-rem(16) 0px;
-
-        &__top,
-        &__bottom {
-            @include flex-col;
-            justify-content: unset;
-            align-items: start;
-            width: 100%;
-        }
-    }
+.sidebar {
+    @include flex-col-between;
+    position: fixed;
+    padding: px-to-rem(16);
+    z-index: 5;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: px-to-rem(192);
+    box-sizing: border-box;
+    box-shadow:
+        0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: variables.$primary-color;
+    animation: slideInRight 0.3s ease-out forwards;
 
     &__close-btn {
         display: unset;
@@ -67,11 +50,45 @@
         }
     }
 
-    .links__button {
-        font-size: px-to-rem(16);
+    @include tablet {
+        @include flex-col-start;
+        padding: px-to-rem(32);
+        z-index: 5;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 25%;
+        min-width: px-to-rem(192);
+        animation: slideInLeft 0.3s ease-out forwards;
+    }
 
-        @include desktop {
-            font-size: px-to-rem(24);
+    &--none {
+        display: none;
+    }
+
+    @include desktop {
+        all: initial;
+        &--none {
+            display: unset;
+        }
+        &__close-btn {
+            display: none;
+        }
+    }
+}
+
+.sidebar {
+    &__link {
+        color: rgba(25, 24, 37, 0.5019607843);
+        text-decoration: none;
+        padding: px-to-rem(16) 0px;
+
+        &__links,
+        &__bottom {
+            @include flex-col;
+            justify-content: unset;
+            align-items: start;
+            width: 100%;
         }
     }
 }
@@ -79,23 +96,11 @@
 // Navigation Drawer (Tablet Viewport Adjustment)
 
 @include tablet {
-    .header {
-        &__links {
-            @include flex-col-start;
-            padding: px-to-rem(32);
-            z-index: 5;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 25%;
-            min-width: px-to-rem(192);
-            animation: slideInLeft 0.3s ease-out forwards;
-        }
-
+    .sidebar {
         &__link {
             padding: px-to-rem(16) 0px;
 
-            &__top {
+            &__links {
                 @include flex-col;
                 justify-content: unset;
                 align-items: start;
@@ -106,7 +111,7 @@
 
 // Visibility Modifier Class
 
-.header {
+.sidebar {
     &__links--none {
         display: none;
     }
@@ -115,26 +120,14 @@
 // Inline Header Navigation Layout (Desktop Viewport)
 
 @include desktop {
-    .header {
-        &__links {
-            all: initial;
-        }
-
-        &__close-btn {
-            display: none;
-
-            svg {
-                height: px-to-rem(48);
-            }
-        }
-
+    .sidebar {
         &__link {
             color: variables.$link;
             padding: px-to-rem(7.2) px-to-rem(24);
             font-size: px-to-rem(14.4);
             font-weight: bold;
 
-            &__top,
+            &__links,
             &__bottom {
                 all: initial;
             }
