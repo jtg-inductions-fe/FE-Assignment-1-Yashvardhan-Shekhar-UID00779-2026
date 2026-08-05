@@ -5,6 +5,21 @@ const DEFAULT_VALIDITY_DAYS = 7;
 // steps need to win coupon of ith index
 const STEP_NEEDED = [31.8, 29.2, 31, 30.1];
 
+function addCopyBtn(copyBtn, code) {
+    copyBtn.addEventListener('click', async () => {
+        await navigator.clipboard.writeText(code);
+        copyBtn.disabled = true;
+        const temp = copyBtn.innerHTML;
+
+        copyBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#f73657" d="M530.8 134.1C545.1 144.5 548.3 164.5 537.9 178.8L281.9 530.8C276.4 538.4 267.9 543.1 258.5 543.9C249.1 544.7 240 541.2 233.4 534.6L105.4 406.6C92.9 394.1 92.9 373.8 105.4 361.3C117.9 348.8 138.2 348.8 150.7 361.3L252.2 462.8L486.2 141.1C496.6 126.8 516.6 123.6 530.9 134z"/></svg>`;
+
+        setTimeout(() => {
+            copyBtn.innerHTML = temp;
+            copyBtn.disabled = false;
+        }, 1000);
+    });
+}
+
 // inserts card of the deal into the given parent as a child
 function insertWonCard(parentElement, deal, remainingDays) {
     // create temp element
@@ -27,29 +42,21 @@ function insertWonCard(parentElement, deal, remainingDays) {
                     </div>
                 </div>`;
     element.outerHTML = str;
-    const copyBtn =
-        parentElement.lastElementChild.lastElementChild.lastElementChild;
 
-    copyBtn.addEventListener('click', async () => {
-        await navigator.clipboard.writeText(deal.promoCode);
-        const temp = copyBtn.innerHTML;
-
-        copyBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#f73657" d="M530.8 134.1C545.1 144.5 548.3 164.5 537.9 178.8L281.9 530.8C276.4 538.4 267.9 543.1 258.5 543.9C249.1 544.7 240 541.2 233.4 534.6L105.4 406.6C92.9 394.1 92.9 373.8 105.4 361.3C117.9 348.8 138.2 348.8 150.7 361.3L252.2 462.8L486.2 141.1C496.6 126.8 516.6 123.6 530.9 134z"/></svg>`;
-
-        setTimeout(() => {
-            copyBtn.innerHTML = temp;
-        }, 1000);
-    });
+    addCopyBtn(
+        parentElement.lastElementChild.lastElementChild.lastElementChild,
+        deal.promoCode,
+    );
 }
 
 // get all deals from by API call if not available in local storage
-async function getAllDeals() {
+async function getAllDeals(isStart = false) {
     let data = null;
     try {
         data = localStorage.getItem('allDeals');
         data = JSON.parse(data);
 
-        if (!data) {
+        if (isStart || !data) {
             const response = await fetch(DEALS_API_URL);
 
             if (!response.ok) throw new Error('Network error');
@@ -191,6 +198,7 @@ function handleSpinRotation(result, btn, remainingDeals, allDeals) {
             handleWonState(allDeals, remainingDeals[result]);
             showUnlockedDealsBtn.disabled = false;
             closeBtn.disabled = false;
+            handleShowDealsBtn(allDeals);
 
             setTimeout(() => {
                 btn.disabled = false;
@@ -219,8 +227,8 @@ function handleSpinBtn(remainingDeals, allDeals) {
 }
 
 // initial phase getting all the possible deals and rendering them on the wheel
-async function handleStart() {
-    const allDeals = await getAllDeals();
+async function handleStart(isStart = false) {
+    const allDeals = await getAllDeals(isStart);
     const unlockedDeals = getUnlockedDeals();
     const issueDate = getIssueDate();
     const remainingDeals = [];
@@ -237,6 +245,10 @@ async function handleStart() {
             remainingDeals.push(i);
 
     let str = '';
+
+    // to remove the winning section when resetting
+    const wonSection = document.querySelector('div.winning-section');
+    if (isStart && wonSection) wonSection.innerHTML = '';
 
     // to handle no more deals available case as no wheel is there
     if (remainingDeals.length < 4) {
@@ -256,6 +268,20 @@ async function handleStart() {
             'body > div > div.modal-overlay > div > div.modal-card__header > p',
         ).innerText = `No More Deals Available`;
     } else {
+        document.querySelector(
+            'body > div > div.modal-overlay > div > div.modal-card__header > h2',
+        ).innerText = `Spin & Win!`;
+
+        document
+            .querySelector(
+                'body > div > div.modal-overlay > div > div.modal-card__wheel-container > img',
+            )
+            .classList.remove('hidden');
+
+        document.querySelector(
+            'body > div > div.modal-overlay > div > div.modal-card__header > p',
+        ).innerText = `Tap the center of the wheel to spin`;
+
         str = `<div class="wheel wheel--offers">
                     <div class="wheel--offers__slice wheel--offers__slice--top-left">
                         <span>${allDeals[remainingDeals[0]].label}</span>
@@ -274,6 +300,10 @@ async function handleStart() {
                 </div>`;
     }
 
+    const copyBtn = document.querySelector('div.coupon-card__action > button');
+    const code = document.querySelector('div.coupon-card__action > code');
+    if (copyBtn) addCopyBtn(copyBtn, code.innerText);
+
     // for starting sate with loading screen
     if (document.querySelector('.wheel--loading'))
         document.querySelector('.wheel--loading').outerHTML = str;
@@ -290,9 +320,11 @@ async function handleStart() {
 
 // event listener added on special deals btn
 export default function specialDealsBtnPressed() {
-    document.querySelector('.header__close-btn').click();
+    document.querySelector('.sidebar__close-btn').click();
     document.querySelector('.modal-overlay').classList.remove('hidden');
-    handleStart();
+
+    handleStart(true);
+
     const closeBtn = document.querySelector('.modal-card__close');
     closeBtn.focus();
     closeBtn.addEventListener('click', () => {

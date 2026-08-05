@@ -149,6 +149,7 @@
         justify-content: center;
         text-align: center;
         box-sizing: border-box;
+        overflow: hidden;
 
         &--top-left {
             background-color: $color-slice-pink;

@@ -22,8 +22,7 @@ hamburgerBtn.addEventListener('click', () => {
 });
 
 document.addEventListener('click', (e) => {
-    // button or icon
-    if (e.target.matches('.header__close-btn')) {
+    if (e.target.matches('.sidebar__close-btn')) {
         toggleHamburger();
     }
 });
@@ -32,8 +31,8 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         if (
             !document
-                .querySelector('.header__links')
-                .classList.contains('header__links--none')
+                .querySelector('.sidebar')
+                .classList.contains('sidebar--none')
         )
             toggleHamburger();
 
