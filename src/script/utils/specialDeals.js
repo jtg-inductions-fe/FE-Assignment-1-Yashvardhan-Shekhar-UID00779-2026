@@ -82,15 +82,8 @@ async function getAllDeals(isStart = false) {
 // return the unlocked deals (deals won by user)
 function getUnlockedDeals() {
     return localStorage.getItem('unlockedDeals')
-        ? JSON.parse(localStorage.getItem('unlockedDeals'))
-        : [];
-}
-
-// return issue date array of the unlocked deals
-function getIssueDate() {
-    return localStorage.getItem('issueDate')
-        ? JSON.parse(localStorage.getItem('issueDate'))
-        : [];
+        ? Object.entries(JSON.parse(localStorage.getItem('unlockedDeals')))
+        : new Map();
 }
 
 // after winning it handle changes in ui and in local storage
@@ -101,32 +94,25 @@ function handleWonState(allDeals, index) {
 }
 
 // insert data into the section of all unlocked deals
-function insertUnlockedDeals(unlockedDeals, allDeals, issueDate) {
-    const title = document.querySelector(
-        'body > div > div.modal-overlay > div > div.modal-card__header > h2',
-    );
+function insertUnlockedDeals(unlockedDeals, allDeals) {
+    const title = document.querySelector('div.modal-card__header > h2');
     const titleText = title.innerText;
     title.innerText = `Unlocked Deals`;
 
-    const desc = document.querySelector(
-        'body > div > div.modal-overlay > div > div.modal-card__header > p',
-    );
+    const desc = document.querySelector('div.modal-card__header > p');
     const descText = desc.innerText;
     desc.innerText = `All the deals you've unlocked yet!`;
 
     const wheelContainer = document.querySelector(
-        'body > div > div.modal-overlay > div > div.modal-card__wheel-container',
+        'div.modal-card__wheel-container',
     );
     const wheelContainerInnerHTML = wheelContainer.innerHTML;
     wheelContainer.innerHTML = `<div class="modal-card__cards"> </div>`;
 
-    for (let i = 0; i < unlockedDeals.length; i++) {
-        const deal = unlockedDeals[i];
-        const issued = issueDate[i];
-
+    for (const [deal, issued] of unlockedDeals) {
         insertWonCard(
             wheelContainer.firstElementChild,
-            allDeals[deal],
+            allDeals[parseInt(deal)],
             Math.ceil(
                 (allDeals[deal].validFor * MS_PER_DAY - Date.now() + issued) /
                     MS_PER_DAY,
@@ -154,28 +140,27 @@ function insertUnlockedDeals(unlockedDeals, allDeals, issueDate) {
 
 // it handle the state of show deals btn and its badge number
 function handleShowDealsBtn(allDeals) {
-    const unlockedDeals = getUnlockedDeals();
-    const issueDate = getIssueDate();
+    const unlockedDeals = new Map(getUnlockedDeals());
 
     const showUnlockedDealsBtn = document.querySelector('.view-deals-btn');
     showUnlockedDealsBtn.classList.remove('hidden');
 
-    if (unlockedDeals.length == 0) {
+    if (unlockedDeals.size == 0) {
         showUnlockedDealsBtn.disabled = true;
         showUnlockedDealsBtn.innerHTML = `<span>Spin To Unlock Deals </span>`;
     } else {
-        showUnlockedDealsBtn.innerHTML = `<span>View All Unlocked Deals</span> <span class="view-deals-btn__badge"> ${unlockedDeals.length} </span>`;
+        showUnlockedDealsBtn.innerHTML = `<span>View All Unlocked Deals</span> <span class="view-deals-btn__badge"> ${unlockedDeals.size} </span>`;
         showUnlockedDealsBtn.disabled = false;
 
         showUnlockedDealsBtn.onclick = () => {
-            insertUnlockedDeals(unlockedDeals, allDeals, issueDate);
+            insertUnlockedDeals(unlockedDeals, allDeals);
         };
     }
 }
 
 // it rotates the wheel and stops of selected prize
 function handleSpinRotation(result, btn, remainingDeals, allDeals) {
-    let deg = 1;
+    let deg = 0;
     let step = STEP_NEEDED[result];
     const wheelStyle = document.querySelector('.wheel--offers').style;
     const showUnlockedDealsBtn = document.querySelector('.view-deals-btn');
@@ -205,7 +190,7 @@ function handleSpinRotation(result, btn, remainingDeals, allDeals) {
                 handleStart();
             }, 3000);
         }
-    }, 20);
+    }, 15);
 }
 
 // spin btn functionality it call the rotation function and store result locally
@@ -217,34 +202,30 @@ function handleSpinBtn(remainingDeals, allDeals) {
         // rotate the wheel
         handleSpinRotation(result, btn, remainingDeals, allDeals);
 
-        const unlockedDeals = getUnlockedDeals();
-        const issueDate = getIssueDate();
-        unlockedDeals.unshift(remainingDeals[result]);
-        issueDate.unshift(Date.now());
-        localStorage.setItem('unlockedDeals', JSON.stringify(unlockedDeals));
-        localStorage.setItem('issueDate', JSON.stringify(issueDate));
+        const unlockedDeals = new Map(getUnlockedDeals());
+        unlockedDeals.set(String(remainingDeals[result]), Date.now());
+        localStorage.setItem(
+            'unlockedDeals',
+            JSON.stringify(Object.fromEntries(unlockedDeals)),
+        );
     });
 }
 
 // initial phase getting all the possible deals and rendering them on the wheel
 async function handleStart(isStart = false) {
     const allDeals = await getAllDeals(isStart);
-    const unlockedDeals = getUnlockedDeals();
-    const issueDate = getIssueDate();
+    const unlockedDeals = new Map(getUnlockedDeals());
     const remainingDeals = [];
 
     for (let i = 0; i < allDeals.length && remainingDeals.length < 4; i++)
         if (
             !(
-                unlockedDeals.includes(i) &&
-                // for expired deals
-                Date.now() - issueDate[unlockedDeals.indexOf(i)] <
+                unlockedDeals.has(String(i)) &&
+                Date.now() - unlockedDeals.get(String(i)) <
                     allDeals[i].validFor * MS_PER_DAY
             )
         )
             remainingDeals.push(i);
-
-    let str = '';
 
     // to remove the winning section when resetting
     const wonSection = document.querySelector('div.winning-section');
@@ -252,37 +233,32 @@ async function handleStart(isStart = false) {
 
     // to handle no more deals available case as no wheel is there
     if (remainingDeals.length < 4) {
-        str = ``;
-
-        document.querySelector(
-            'body > div > div.modal-overlay > div > div.modal-card__header > h2',
-        ).innerText = `Come Back later`;
+        document.querySelector('div.modal-card__header > h2').innerText =
+            `Come Back later`;
 
         document
-            .querySelector(
-                'body > div > div.modal-overlay > div > div.modal-card__wheel-container > img',
-            )
+            .querySelector('div.modal-card__wheel-container > img')
             .classList.add('hidden');
 
-        document.querySelector(
-            'body > div > div.modal-overlay > div > div.modal-card__header > p',
-        ).innerText = `No More Deals Available`;
+        // to hide both wheel-offer and wheel--loading
+        document
+            .querySelector('div.modal-card__wheel-container > div')
+            .classList.add('hidden');
+
+        document.querySelector('div.modal-card__header > p').innerText =
+            `No More Deals Available`;
     } else {
-        document.querySelector(
-            'body > div > div.modal-overlay > div > div.modal-card__header > h2',
-        ).innerText = `Spin & Win!`;
+        document.querySelector('div.modal-card__header > h2').innerText =
+            `Spin & Win!`;
 
         document
-            .querySelector(
-                'body > div > div.modal-overlay > div > div.modal-card__wheel-container > img',
-            )
+            .querySelector('div.modal-card__wheel-container > img')
             .classList.remove('hidden');
 
-        document.querySelector(
-            'body > div > div.modal-overlay > div > div.modal-card__header > p',
-        ).innerText = `Tap the center of the wheel to spin`;
+        document.querySelector('div.modal-card__header > p').innerText =
+            `Tap the center of the wheel to spin`;
 
-        str = `<div class="wheel wheel--offers">
+        const str = `<div class="wheel wheel--offers">
                     <div class="wheel--offers__slice wheel--offers__slice--top-left">
                         <span>${allDeals[remainingDeals[0]].label}</span>
                     </div>
@@ -298,19 +274,34 @@ async function handleStart(isStart = false) {
 
                     <button class="wheel--offers__spin-btn">Spin</button>
                 </div>`;
+
+        // for starting sate with loading screen
+        if (document.querySelector('.wheel--loading'))
+            document.querySelector('.wheel--loading').outerHTML = str;
+
+        // coming back from all deals section
+        const wheelOffer = document.querySelector('.wheel--offers');
+
+        if (wheelOffer) {
+            const transformVal = wheelOffer.style.transform;
+
+            const match = transformVal.match(/rotate\(([-\d.]+)deg\)/);
+            const degree = match ? parseFloat(match[1]) : 0;
+
+            wheelOffer.outerHTML = str;
+
+            const newWheel = document.querySelector('.wheel--offers');
+            const newButton = document.querySelector(
+                'div.wheel.wheel--offers > button',
+            );
+            newWheel.style.transform = transformVal;
+            newButton.style.transform = `translate(-50%, -50%) rotate(${-degree}deg)`;
+        }
     }
 
     const copyBtn = document.querySelector('div.coupon-card__action > button');
     const code = document.querySelector('div.coupon-card__action > code');
     if (copyBtn) addCopyBtn(copyBtn, code.innerText);
-
-    // for starting sate with loading screen
-    if (document.querySelector('.wheel--loading'))
-        document.querySelector('.wheel--loading').outerHTML = str;
-
-    // coming back from all deals section
-    if (document.querySelector('.wheel--offers'))
-        document.querySelector('.wheel--offers').outerHTML = str;
 
     // get all the unlocked deals
     handleShowDealsBtn(allDeals);
@@ -322,7 +313,6 @@ async function handleStart(isStart = false) {
 export default function specialDealsBtnPressed() {
     document.querySelector('.sidebar__close-btn').click();
     document.querySelector('.modal-overlay').classList.remove('hidden');
-
     handleStart(true);
 
     const closeBtn = document.querySelector('.modal-card__close');
