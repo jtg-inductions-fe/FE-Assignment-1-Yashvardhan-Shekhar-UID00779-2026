@@ -17,11 +17,9 @@
     background-color: transparent;
     top: 0;
     z-index: 4;
-
     animation: change-background linear both;
     animation-timeline: scroll();
     animation-range: 8% 10%;
-
     margin: 0 px-to-rem(-9.6);
     padding: 0 px-to-rem(9.6);
 
@@ -31,8 +29,8 @@
     }
 
     @include desktop {
-        margin: 0 px-to-rem(-110.4);
-        padding: 0 px-to-rem(110.4);
+        margin: 0 px-to-rem(-105.5);
+        padding: 0 px-to-rem(105.5);
     }
 
     .hamburger {

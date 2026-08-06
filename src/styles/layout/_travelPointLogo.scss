@@ -5,6 +5,7 @@
 
 .travel-point__sponsers {
     @include flex-row;
+
     flex-wrap: wrap;
 }
 

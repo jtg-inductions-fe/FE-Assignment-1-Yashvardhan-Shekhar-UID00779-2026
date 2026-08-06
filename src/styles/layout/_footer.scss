@@ -14,7 +14,7 @@
     }
 }
 
-.invisible {
+.links--hidden {
     display: none !important;
 }
 
@@ -70,10 +70,12 @@
         &--accordion {
             @include flex-col-between;
             align-items: unset;
+
             margin-top: px-to-rem(32);
 
             .links__heading {
                 @include flex-row-between;
+
                 margin: px-to-rem(48) 0 px-to-rem(20.8) 0;
 
                 button {
@@ -85,8 +87,9 @@
 
             .links__content {
                 @include flex-col-evenly;
-                gap: px-to-rem(6.4);
                 align-items: start;
+
+                gap: px-to-rem(6.4);
 
                 a {
                     padding: px-to-rem(8) px-to-rem(16);

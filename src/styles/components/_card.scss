@@ -7,6 +7,7 @@
 .card {
     border: 1px solid $lightgrey;
     @include flex-col-evenly;
+
     border-radius: px-to-rem(24);
 
     @include desktop {
@@ -33,6 +34,7 @@
     .cards-container {
         @include flex-row-evenly;
         flex-wrap: wrap;
+
         height: px-to-rem(336);
     }
 
@@ -51,6 +53,7 @@
     .cards-container {
         @include flex-row-between;
         flex-wrap: wrap;
+
         height: px-to-rem(348);
     }
 

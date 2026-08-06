@@ -11,8 +11,9 @@
     }
 
     &__image-section__box {
-        width: inherit;
         @include flex-row;
+
+        width: inherit;
         background-image: url('/assets/images/layer.svg');
         background-repeat: no-repeat;
         background-size: contain;
@@ -44,6 +45,7 @@
 
     &__info-section {
         @include flex-col-between;
+
         margin-top: px-to-rem(44.8);
         height: px-to-rem(475.2);
 
@@ -56,14 +58,8 @@
                     margin-top: px-to-rem(14.4);
                 }
 
-                @include tablet {
-                    // padding: px-to-rem(16) px-to-rem(32);
-                    // margin: 0;
-                }
-
                 @include desktop {
                     margin: 0 px-to-rem(24) 0 0;
-                    // padding: px-to-rem(16.8) px-to-rem(33.6);
                 }
             }
         }
@@ -80,9 +76,10 @@
     }
 
     &__info-section__tag {
+        @include flex-row-around;
+
         color: #f85e9f;
         background-color: rgba(255, 255, 255, 0.092);
-        @include flex-row-around;
         width: px-to-rem(184);
         font-size: px-to-rem(14.4);
         font-weight: 600;
@@ -111,6 +108,7 @@
 
         &__image-section {
             @include flex-col;
+
             width: auto;
             height: auto;
 
@@ -128,8 +126,9 @@
             margin-top: px-to-rem(73.6);
 
             &__buttons {
-                width: auto;
                 @include flex-row;
+
+                width: auto;
             }
 
             &__tag {
@@ -148,6 +147,7 @@
 @include desktop {
     .hero {
         @include flex-row;
+
         align-items: normal;
         margin-top: px-to-rem(81.6);
         position: relative;
@@ -160,9 +160,10 @@
 
         &__image-section {
             &__box {
+                @include flex-row;
+
                 width: px-to-rem(775.2);
                 padding-top: 0;
-                @include flex-row;
                 background-image: url('/assets/images/layer.svg');
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -170,31 +171,35 @@
             }
 
             &__images-left {
-                margin-top: px-to-rem(48);
                 @include flex-col-evenly;
+
+                margin-top: px-to-rem(48);
             }
         }
 
         &__info-section {
-            max-width: none;
             @include flex-col-between;
+
+            max-width: none;
             align-items: start;
             margin: px-to-rem(74.4) 0 0 px-to-rem(12);
             height: px-to-rem(564);
 
             &__tag {
+                @include flex-row-around;
+
                 padding: px-to-rem(14.4) px-to-rem(28.8);
                 color: $pink;
                 background-color: rgba(255, 255, 255, 0.092);
-                @include flex-row-around;
                 width: px-to-rem(168);
                 border-radius: px-to-rem(48);
                 font-size: px-to-rem(14.4);
             }
 
             &__buttons {
-                margin-top: px-to-rem(24);
                 @include flex-row-start;
+
+                margin-top: px-to-rem(24);
             }
         }
     }

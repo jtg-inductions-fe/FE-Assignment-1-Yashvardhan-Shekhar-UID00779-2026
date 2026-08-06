@@ -10,6 +10,7 @@
 
     &__slide {
         @include flex-col-evenly;
+
         justify-content: space-between;
     }
 

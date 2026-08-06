@@ -6,6 +6,7 @@
 
 .travel-point {
     @include flex-col;
+
     margin-top: px-to-rem(123.2);
 
     &__image {
@@ -15,12 +16,13 @@
 
     &__stats {
         @include flex-col-between;
+
         margin-top: px-to-rem(44.8);
         height: px-to-rem(920);
+    }
 
-        &__discount {
-            display: none;
-        }
+    &__discount {
+        display: none;
     }
 }
 
@@ -29,6 +31,7 @@
 @include tablet {
     .travel-point {
         @include flex-col;
+
         margin-top: px-to-rem(144);
 
         &__image {
@@ -47,6 +50,7 @@
 @include desktop {
     .travel-point {
         @include flex-row;
+
         margin-top: px-to-rem(121.2);
         align-items: unset;
 
@@ -59,13 +63,13 @@
             height: px-to-rem(655.2);
             margin-top: px-to-rem(12);
             position: relative;
+        }
 
-            &__discount {
-                display: unset;
-                position: absolute;
-                top: px-to-rem(233);
-                padding-left: px-to-rem(300);
-            }
+        &__discount {
+            display: unset;
+            position: absolute;
+            top: px-to-rem(233);
+            padding-left: px-to-rem(300);
         }
     }
 }

@@ -26,13 +26,14 @@
 
 .sidebar {
     @include flex-col-between;
-    position: fixed;
+
     padding: px-to-rem(16);
+    width: px-to-rem(192);
+    position: fixed;
     z-index: 5;
     right: 0;
     top: 0;
     bottom: 0;
-    width: px-to-rem(192);
     box-sizing: border-box;
     box-shadow:
         0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -52,6 +53,7 @@
 
     @include tablet {
         @include flex-col-start;
+
         padding: px-to-rem(32);
         z-index: 5;
         left: 0;
@@ -83,7 +85,7 @@
         text-decoration: none;
         padding: px-to-rem(16) 0px;
 
-        &__links,
+        &-container,
         &__bottom {
             @include flex-col;
             justify-content: unset;
@@ -100,7 +102,7 @@
         &__link {
             padding: px-to-rem(16) 0px;
 
-            &__links {
+            &-container {
                 @include flex-col;
                 justify-content: unset;
                 align-items: start;
@@ -112,7 +114,7 @@
 // Visibility Modifier Class
 
 .sidebar {
-    &__links--none {
+    &-container--none {
         display: none;
     }
 }
@@ -127,7 +129,7 @@
             font-size: px-to-rem(14.4);
             font-weight: bold;
 
-            &__links,
+            &-container,
             &__bottom {
                 all: initial;
             }

@@ -1,4 +1,4 @@
-// functionality of hamburger
+// toggle visibility of hamburger and sidebar menu
 const toggleHamburger = () => {
     const headerLinks = document.querySelector('.sidebar');
     headerLinks.classList.toggle('sidebar--none');
@@ -16,7 +16,7 @@ hamburgerBtn.addEventListener('click', () => {
 
 document.addEventListener('click', (e) => {
     // button or icon
-    if (e.target.matches('.sidebar__close-btn') || e.target.matches('path')) {
+    if (e.target.matches('.sidebar__close-btn')) {
         toggleHamburger();
     }
 });
@@ -35,24 +35,9 @@ footerLinks.forEach((link) => {
     link.addEventListener('click', () => {
         const icon = link.children[0].children[1].children[0];
         const content = link.children[1];
-        icon.style.transform = content.classList.contains('invisible')
+        icon.style.transform = content.classList.contains('links--hidden')
             ? 'rotate(180deg)'
             : 'rotate(0deg)';
-        content.classList.toggle('invisible');
+        content.classList.toggle('links--hidden');
     });
 });
-
-// window.addEventListener('scroll', function () {
-//     const totalHeight =
-//         document.documentElement.scrollHeight - window.innerHeight;
-//     const currentScroll = window.scrollY;
-//     const scrollPercent = (currentScroll / totalHeight) * 100;
-
-//     if (scrollPercent >= 10) {
-//         document.querySelector('body > div > header').style.backgroundColor =
-//             'white';
-//     } else {
-//         document.querySelector('body > div > header').style.backgroundColor =
-//             'rgba(0, 0, 0, 0);';
-//     }
-// });
