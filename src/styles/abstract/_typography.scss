@@ -1,34 +1,40 @@
 @use '../abstract/functions' as *;
 @use './variables' as *;
 @use './mixins' as *;
+@use '../abstract/functions' as *;
+@use './variables' as *;
+@use './mixins' as *;
 
 // Primary Sans-serif Display Font (Regular & Bold variants)
 @font-face {
     font-family: 'Circular-Std';
     src:
-        url('assets/fonts/CircularStd-Book.woff2') format('woff2'),
-        url('assets/fonts/CircularStd-Book.woff') format('woff');
+        url('/assets/fonts/CircularStd-Book.woff2') format('woff2'),
+        url('/assets/fonts/CircularStd-Book.woff') format('woff');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Circular-Std';
     src:
-        url('assets/fonts/CircularStd-Bold.woff2') format('woff2'),
-        url('assets/fonts/CircularStd-Bold.woff') format('woff');
+        url('/assets/fonts/CircularStd-Bold.woff2') format('woff2'),
+        url('/assets/fonts/CircularStd-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 
 // Secondary UI / Footer Body Font
 @font-face {
     font-family: 'Inter';
     src:
-        url('assets/fonts/Inter-Regular.woff2') format('woff2'),
-        url('assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
+        url('/assets/fonts/Inter-Regular.woff2') format('woff2'),
+        url('/assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 // Hero Section Primary Title (H1)
