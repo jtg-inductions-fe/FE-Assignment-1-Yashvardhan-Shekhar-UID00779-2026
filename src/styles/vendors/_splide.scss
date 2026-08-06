@@ -1,0 +1,131 @@
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
+@use '@splidejs/splide/css/skyblue';
+
+// Splide Carousel Global Overrides & Styling
+
+.splide {
+    width: 100%; // Prevents container overflow
+
+    &__slide {
+        @include flex-col-evenly;
+
+        justify-content: space-between;
+    }
+
+    &__arrow {
+        border: 1px solid $lightgrey;
+        border-radius: 50%;
+        background-color: $primary-color;
+        top: 43.95%;
+        padding: 8px;
+        height: 100px;
+        width: 100px;
+
+        svg {
+            fill: rgba(25, 24, 37, 1);
+            height: 16px;
+            width: 16px;
+        }
+
+        &:hover {
+            background-color: $secondary-color;
+
+            svg {
+                fill: $primary-color !important;
+            }
+        }
+    }
+
+    &__pagination {
+        &__page {
+            padding: px-to-rem(10);
+        }
+
+        li button.is-active {
+            transform: unset;
+            background: $pink;
+        }
+    }
+}
+
+// Splide Carousel Layout (Mobile Viewport)
+
+@include mobile {
+    .splide {
+        &__pagination {
+            top: 110%;
+        }
+
+        &__slide {
+            height: px-to-rem(432);
+        }
+
+        &__arrow {
+            top: 17.75%;
+            height: 70px;
+            width: 70px;
+        }
+    }
+}
+
+// Splide Carousel Layout (Tablet Viewport)
+
+@include tablet {
+    .splide {
+        &__pagination {
+            top: 105.6%;
+        }
+
+        &__slide {
+            height: 43.5dvw;
+
+            p {
+                margin: 0 px-to-rem(208);
+            }
+        }
+
+        &__arrow {
+            top: 43.95%;
+
+            &--next {
+                right: px-to-rem(65.6);
+            }
+
+            &--prev {
+                left: px-to-rem(65.6);
+            }
+        }
+    }
+}
+
+// Splide Carousel Layout (Desktop Viewport)
+
+@include desktop {
+    .splide {
+        &__pagination {
+            top: 105.6%;
+        }
+
+        &__slide {
+            height: px-to-rem(412.8);
+
+            p {
+                margin: 0 px-to-rem(192);
+            }
+        }
+
+        &__arrow {
+            top: 44%;
+
+            &--next {
+                right: px-to-rem(48);
+            }
+
+            &--prev {
+                left: px-to-rem(48);
+            }
+        }
+    }
+}

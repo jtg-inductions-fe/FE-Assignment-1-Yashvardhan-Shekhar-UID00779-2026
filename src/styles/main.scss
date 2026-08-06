@@ -1,1 +1,17 @@
-// TODO: Add styles as per the requirement
+@use 'base/reset';
+@use 'abstract/variables';
+@use 'abstract/typography';
+@use 'base/base';
+@use 'layout/header';
+@use 'components/buttons';
+@use 'components/navlinks';
+@use 'components/hamburger';
+@use 'layout/hero-section';
+@use 'components/images';
+@use 'components/card';
+@use 'layout/travel-point';
+@use 'layout/travelPointLogo';
+@use 'layout/testimonials';
+@use 'vendors/splide';
+@use 'layout/footer';
+@use 'layout/modal';

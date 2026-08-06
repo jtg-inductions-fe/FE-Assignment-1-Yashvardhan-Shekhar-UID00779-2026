@@ -1,0 +1,39 @@
+// base.scss
+
+@use '../abstract/functions' as *;
+@import '../abstract/mixins';
+
+// Global Document Shell & Full-Bleed Gradient Background
+
+html {
+    background-image: radial-gradient(
+        circle at 15% 7%,
+        rgba(255, 115, 72, 0.34) 0.1%,
+        rgb(255, 255, 255) 15%
+    );
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+// Main Centered Layout Container
+
+// Mobile Default
+.container {
+    margin: px-to-rem(28.8) px-to-rem(9.6);
+}
+
+// Tablet Viewport Layout Adjustment
+@include tablet {
+    .container {
+        margin: px-to-rem(20.8) px-to-rem(57.6);
+    }
+}
+
+// Desktop Viewport Layout Adjustment
+@include desktop {
+    .container {
+        // to make total width 1440px
+        max-width: px-to-rem(1229);
+        margin: px-to-rem(57.6) auto;
+    }
+}

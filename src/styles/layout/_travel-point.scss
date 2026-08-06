@@ -1,0 +1,75 @@
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
+
+// Travel Point Section Component (Mobile Viewport Default)
+
+.travel-point {
+    @include flex-col;
+
+    margin-top: px-to-rem(123.2);
+
+    &__image {
+        margin: 0 0 0 px-to-rem(-9.6);
+        width: stretch;
+    }
+
+    &__stats {
+        @include flex-col-between;
+
+        margin-top: px-to-rem(44.8);
+        height: px-to-rem(920);
+    }
+
+    &__discount {
+        display: none;
+    }
+}
+
+// Travel Point Section Layout (Tablet Viewport)
+
+@include tablet {
+    .travel-point {
+        @include flex-col;
+
+        margin-top: px-to-rem(144);
+
+        &__image {
+            margin-left: px-to-rem(-57.6);
+        }
+
+        &__stats {
+            height: px-to-rem(561.6);
+            margin-top: px-to-rem(102.4);
+        }
+    }
+}
+
+// Travel Point Section Layout (Desktop Viewport)
+
+@include desktop {
+    .travel-point {
+        @include flex-row;
+
+        margin-top: px-to-rem(121.2);
+        align-items: unset;
+
+        &__image {
+            margin: 0 0 0 px-to-rem(-110.4);
+        }
+
+        &__stats {
+            align-items: start;
+            height: px-to-rem(655.2);
+            margin-top: px-to-rem(12);
+            position: relative;
+        }
+
+        &__discount {
+            display: unset;
+            position: absolute;
+            top: px-to-rem(233);
+            padding-left: px-to-rem(300);
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import '../abstract/mixins';
+
+@include desktop {
+    .hamburger {
+        display: none;
+    }
+}
+
+@include tablet {
+    .hamburger {
+        order: -1;
+    }
+}
+
+.hamburger--none {
+    visibility: hidden;
+}

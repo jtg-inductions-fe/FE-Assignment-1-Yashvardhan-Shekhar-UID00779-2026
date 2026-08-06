@@ -1,0 +1,71 @@
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
+
+// Testimonials Section Component (Mobile Viewport Default)
+
+.testimonials {
+    position: relative;
+    @include flex-col-between;
+
+    margin: px-to-rem(112) 0;
+    height: px-to-rem(576);
+
+    h5 span {
+        color: $orange;
+    }
+
+    // Background graphic positioning and display defaults
+    &__background {
+        position: absolute;
+        top: px-to-rem(-352);
+        width: 98vw;
+        display: none;
+        object-fit: cover;
+        object-position: center;
+        height: px-to-rem(850);
+    }
+
+    .rating {
+        display: flex;
+        svg {
+            height: px-to-rem(30);
+        }
+    }
+}
+
+// Testimonials Section Layout (Tablet Viewport)
+
+@include tablet {
+    .testimonials {
+        margin: px-to-rem(48) 0;
+        height: px-to-rem(592);
+
+        &__background {
+            display: unset;
+            top: px-to-rem(-74);
+        }
+    }
+}
+
+// Testimonials Section Layout (Desktop Viewport)
+
+@include desktop {
+    .testimonials {
+        margin: px-to-rem(132) 0 px-to-rem(168) 0;
+        height: px-to-rem(566.4);
+
+        &__background {
+            display: unset;
+            top: 0;
+            width: 118%;
+            object-fit: cover;
+            object-position: center;
+            height: 850px;
+        }
+
+        &__rating {
+            font-size: px-to-rem(46.8);
+        }
+    }
+}

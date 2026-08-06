@@ -1,12 +1,301 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Explore the World - Travel Portal</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg" />
         <link rel="stylesheet" href="src/styles/main.scss" />
     </head>
     <body>
+        <div class="container">
+            <header class="header">
+                <div class="header__logo">
+                    <a href="/">
+                        <img src="/assets/icons/logo.svg" alt="logo"
+                    /></a>
+                </div>
+                <nav class="sidebar sidebar--none"></nav>
+                <div class="hamburger">
+                    <button type="button">
+                        <img src="/assets/icons/burger.svg" alt="hamburger" />
+                    </button>
+                </div>
+                <div class="buttons-container">
+                    <button
+                        class="button button--primary text-button"
+                        type="button"
+                    >
+                        Log In
+                    </button>
+                    <button
+                        class="button button--secondary text-button"
+                        type="button"
+                    >
+                        Sign Up
+                    </button>
+                </div>
+            </header>
+
+            <main class="hero">
+                <img
+                    class="hero__triangle"
+                    src="assets/icons/triangles.svg"
+                    alt="triangles"
+                />
+                <div class="hero__info-section">
+                    <div class="hero__info-section__tag">
+                        Explore the world!
+                        <img src="assets/icons/work.svg" alt="work" />
+                    </div>
+                    <h1 class="text-hero-heading heading">
+                        Travel <span>top destination</span> of the world
+                    </h1>
+                    <p class="description text-body">
+                        We always make our customer happy by providing <br />
+                        as many choices as possible
+                    </p>
+                    <div class="hero__info-section__buttons">
+                        <button
+                            type="button"
+                            class="button button--secondary text-button"
+                        >
+                            Get Started
+                        </button>
+                        <button
+                            type="button"
+                            class="button button--primary text-button button--border button--icon"
+                        >
+                            <img
+                                src="assets/icons/play-circle.svg"
+                                alt="play-circle"
+                            />
+                            <span>Watch Demo</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero__image-section">
+                    <div class="hero__image-section__box">
+                        <div class="hero__image-section__images-left">
+                            <img
+                                class="image-1"
+                                src="assets/images/Rectangle 1.webp"
+                                alt="Traveler exploring"
+                            />
+                            <img
+                                class="msg-icon"
+                                src="assets/icons/message.svg"
+                                alt="plane"
+                            />
+                            <img
+                                class="friend-icon"
+                                src="assets/icons/friends.svg"
+                                alt="friend"
+                            />
+                            <img
+                                class="location-icon"
+                                src="assets/icons/location.svg"
+                                alt="location"
+                            />
+                            <img
+                                class="image-2"
+                                src="assets/images/Rectangle 2.webp"
+                                alt="Scenic view"
+                            />
+                        </div>
+                        <img
+                            class="image-3"
+                            src="assets/images/Rectangle 3.webp"
+                            alt="Destination card"
+                        />
+                    </div>
+                </div>
+            </main>
+
+            <section class="travel-point__sponsers">
+                <img src="assets/logo/tripadvisor.webp" alt="tripadvisor" />
+                <img src="assets/logo/expedia.webp" alt="expedia" />
+                <img src="assets/logo/booking.webp" alt="booking" />
+                <img src="assets/logo/airbnb.webp" alt="airbnb" />
+                <img src="assets/logo/rbitz.webp" alt="rbitz" />
+            </section>
+
+            <section class="travel-point">
+                <img
+                    class="travel-point__image"
+                    src="assets/images/discount-price.webp"
+                    alt="discount-price-image"
+                />
+                <div class="travel-point__stats">
+                    <img
+                        class="travel-point__discount"
+                        src="assets/icons/offer.svg"
+                        alt="discount"
+                    />
+                    <div class="text-tag">Travel point</div>
+                    <h3 class="text-heading">
+                        We helping you find your dream location
+                    </h3>
+                    <p class="text-body">
+                        Contrary to popular belief, Lorem Ipsum is not simply
+                        random text. It has roots in a piece of classical Latin
+                        literature from 45 BC.
+                    </p>
+                    <div class="cards-container">
+                        <!-- Data will be inserted dynamically -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonials">
+                <img
+                    class="testimonials__background"
+                    src="assets/images/pink-gradient.svg"
+                    alt=""
+                />
+                <div class="text-tag">Testimonials</div>
+                <h3 class="text-heading">Trust Our Clients</h3>
+                <div class="splide" aria-label="Basic Structure Example">
+                    <div class="splide__arrows">
+                        <button
+                            type="button"
+                            class="splide__arrow splide__arrow--prev"
+                            aria-label="previous card button"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"
+                            >
+                                <path
+                                    d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z"
+                                />
+                            </svg>
+                        </button>
+                        <button
+                            type="button"
+                            class="splide__arrow splide__arrow--next"
+                            aria-label="next card button"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 640"
+                            >
+                                <path
+                                    d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <!-- Inserted Data Dynamically -->
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="footer__info">
+                    <div class="bar">
+                        <span>
+                            <a href="/">
+                                <img src="/assets/icons/logo.svg" alt="logo"
+                            /></a>
+                        </span>
+                        <h5 class="text-testimonial-name">Travlog</h5>
+                    </div>
+                    <p class="description description--mgt text-body">
+                        Contrary to popular belief, Lorem Ipsum is not simply
+                        random text. It has roots in a piece of classical Latin
+                        literature from 45 BC
+                    </p>
+                    <div class="footer__social-links">
+                        <a href="https://facebook.com/" class="text-footer-link"
+                            ><img
+                                src="assets/icons/facebook.svg"
+                                alt="facebook"
+                        /></a>
+                        <a href="https://x.com/" class="text-footer-link"
+                            ><img src="assets/icons/twitter.svg" alt="twitter"
+                        /></a>
+                        <a
+                            href="https://instagram.com/"
+                            class="text-footer-link"
+                            ><img
+                                src="assets/icons/instagram.svg"
+                                alt="instagram"
+                        /></a>
+                    </div>
+                </div>
+                <div class="footer__right footer__right--accordion"></div>
+                <div class="footer__right footer__right--grid"></div>
+                <img
+                    class="footer__design-dots"
+                    src="assets/icons/Graphic_Elements.svg"
+                    alt="dots"
+                />
+                <img
+                    class="footer__design-spirals"
+                    src="assets/icons/design.svg"
+                    alt="design"
+                />
+            </footer>
+
+            <div class="modal-overlay hidden">
+                <div class="modal-card">
+                    <!-- Close Button -->
+                    <button
+                        type="button"
+                        class="modal-card__close"
+                        aria-label="Close modal"
+                    >
+                        &times;
+                    </button>
+
+                    <!-- Header Section -->
+                    <div class="modal-card__header">
+                        <div class="modal-card__tag">
+                            <img
+                                class="modal-card__gift-icon"
+                                src="assets/icons/gift.svg"
+                                alt="gift-icon"
+                            />
+                            <span class="modal-text-tag">SPECIAL DEALS</span>
+                        </div>
+                        <h2 class="modal-card__title">Spin & Win!</h2>
+                        <p class="modal-card__subtitle">
+                            Tap the center of the wheel to spin
+                        </p>
+                    </div>
+
+                    <!-- Wheel Section -->
+                    <div class="modal-card__wheel-container">
+                        <img
+                            class="modal-card__pointer"
+                            src="assets/icons/pointing.svg"
+                            alt="wheel-pointer"
+                        />
+
+                        <!-- for loading screen -->
+                        <div class="wheel wheel--loading">
+                            <span class="wheel--loading__text">Loading...</span>
+                        </div>
+
+                        <div class="winning-section">
+                            <!-- you won and Coupon Card inserted Dynamically-->
+                        </div>
+
+                        <!-- View All Deals Button -->
+                        <button class="view-deals-btn hidden">
+                            <span>View All Unlocked Deals</span>
+                            <span class="view-deals-btn__badge"> </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script type="module" src="./src/script/index.js"></script>
+        <script type="module" src="./src/script/splide.min.js"></script>
     </body>
 </html>
