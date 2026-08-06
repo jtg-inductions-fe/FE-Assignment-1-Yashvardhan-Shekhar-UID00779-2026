@@ -58,6 +58,10 @@
                     margin-top: px-to-rem(14.4);
                 }
 
+                @include tablet {
+                    padding: px-to-rem(14.4) px-to-rem(32);
+                }
+
                 @include desktop {
                     margin: 0 px-to-rem(24) 0 0;
                 }
@@ -73,6 +77,7 @@
         justify-content: center;
         padding-top: px-to-rem(38.4);
         gap: px-to-rem(16);
+        margin-top: px-to-rem(7);
     }
 
     &__info-section__tag {
@@ -102,8 +107,8 @@
 
         &__triangle {
             visibility: unset;
-            left: px-to-rem(36.8);
-            top: px-to-rem(1267.2);
+            left: px-to-rem(-19.8);
+            top: px-to-rem(1134.2);
         }
 
         &__image-section {
@@ -114,8 +119,8 @@
 
             &__box {
                 width: 85%;
-                margin-top: px-to-rem(52.8);
-                padding-top: px-to-rem(46.4);
+                margin-top: px-to-rem(43.2);
+                padding-top: px-to-rem(36.8);
                 gap: 0;
             }
         }
@@ -127,7 +132,6 @@
 
             &__buttons {
                 @include flex-row;
-
                 width: auto;
             }
 
@@ -149,8 +153,12 @@
         @include flex-row;
 
         align-items: normal;
-        margin-top: px-to-rem(81.6);
+        margin-top: px-to-rem(79.7);
         position: relative;
+
+        .heading {
+            padding: 0;
+        }
 
         &__triangle {
             visibility: unset;
@@ -164,6 +172,7 @@
 
                 width: px-to-rem(775.2);
                 padding-top: 0;
+                margin-top: 0;
                 background-image: url('/assets/images/layer.svg');
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -198,7 +207,7 @@
 
             &__buttons {
                 @include flex-row-start;
-
+                padding: unset;
                 margin-top: px-to-rem(24);
             }
         }

@@ -5,6 +5,11 @@ import {
     insertFooter,
 } from './utils/startup';
 
+insertNavLinks();
+insertStats();
+insertTestimonialData();
+insertFooter();
+
 // functionality of hamburger
 const toggleHamburger = () => {
     const headerLinks = document.querySelector('.sidebar');
@@ -44,24 +49,3 @@ document.addEventListener('keydown', (e) => {
             document.querySelector('.modal-card__close').click();
     }
 });
-
-const footerLinks = document.querySelectorAll('.footer__links__container');
-footerLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-        const icon = link.children[0].children[1].children[0];
-        const content = link.children[1];
-        icon.style.transform = content.classList.contains('links--hidden')
-            ? 'rotate(180deg)'
-            : 'rotate(0deg)';
-        content.classList.toggle('links--hidden');
-    });
-});
-
-// const tabletQuery = window.matchMedia('(min-width: 430px)');
-// tabletQuery.onchange(toggleHamburger);
-// console.log(tabletQuery);
-
-insertNavLinks();
-insertStats();
-insertTestimonialData();
-insertFooter();

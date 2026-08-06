@@ -6,11 +6,11 @@
 @use 'components/buttons';
 @use 'components/navlinks';
 @use 'components/hamburger';
-@use 'layout/hero-section';
+@use 'layout/hero';
 @use 'components/images';
 @use 'components/card';
 @use 'layout/travel-point';
-@use 'layout/travelPointLogo';
+@use 'layout/_travelPointSponsors';
 @use 'layout/testimonials';
 @use 'vendors/splide';
 @use 'layout/footer';

@@ -87,14 +87,16 @@
         }
 
         &__arrow {
-            top: 43.95%;
+            top: 43.15%;
+            height: px-to-rem(100);
+            width: px-to-rem(100);
 
             &--next {
-                right: px-to-rem(65.6);
+                right: px-to-rem(3.2);
             }
 
             &--prev {
-                left: px-to-rem(65.6);
+                left: px-to-rem(3.2);
             }
         }
     }

@@ -46,10 +46,6 @@
     &__social-links {
         margin-top: px-to-rem(32);
 
-        @include desktop {
-            margin-top: px-to-rem(107.2);
-        }
-
         a {
             margin-right: px-to-rem(25.6);
             height: fit-content;
@@ -101,10 +97,6 @@
     .description {
         margin-top: px-to-rem(23.2);
         text-align: start;
-
-        @include desktop {
-            margin-top: px-to-rem(34.8);
-        }
     }
 }
 
@@ -114,9 +106,13 @@
     .footer {
         margin: px-to-rem(305.6) px-to-rem(8) px-to-rem(16) px-to-rem(8);
 
+        &__social-links {
+            margin-top: px-to-rem(56);
+        }
+
         &__right {
             &--grid {
-                margin-top: px-to-rem(84);
+                margin-top: px-to-rem(64.8);
                 display: grid;
                 gap: px-to-rem(22.4);
 
@@ -147,10 +143,19 @@
         @include flex-row;
         align-items: start;
 
+        &__social-links {
+            margin-top: px-to-rem(107.2);
+        }
+
+        .description {
+            margin-top: px-to-rem(34.8);
+        }
+
         &__right {
             &--grid {
                 display: grid;
                 gap: px-to-rem(24);
+                margin-top: 0;
             }
 
             &--accordion {

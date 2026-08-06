@@ -8,7 +8,7 @@
     position: relative;
     @include flex-col-between;
 
-    margin: px-to-rem(112) 0;
+    margin: px-to-rem(102.4) 0;
     height: px-to-rem(576);
 
     h5 span {
@@ -38,7 +38,7 @@
 
 @include tablet {
     .testimonials {
-        margin: px-to-rem(48) 0;
+        margin: px-to-rem(64) 0;
         height: px-to-rem(592);
 
         &__background {
@@ -52,7 +52,7 @@
 
 @include desktop {
     .testimonials {
-        margin: px-to-rem(132) 0 px-to-rem(168) 0;
+        margin: px-to-rem(116) 0 px-to-rem(168) 0;
         height: px-to-rem(566.4);
 
         &__background {

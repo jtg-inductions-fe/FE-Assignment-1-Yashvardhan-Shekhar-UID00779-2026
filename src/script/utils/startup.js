@@ -122,6 +122,10 @@ export function insertNavLinks() {
             </div>
             `;
     div.innerHTML = str;
+
+    document
+        .getElementById('specialDeals')
+        .addEventListener('click', handleStart);
 }
 
 // inserting travel point card stats
@@ -174,9 +178,6 @@ export function insertTestimonialData() {
         card.outerHTML = str;
     }
     testimonialsData.forEach((d) => insertOne(d));
-    document
-        .getElementById('specialDeals')
-        .addEventListener('click', handleStart);
 }
 
 // insert footer data links
@@ -217,4 +218,16 @@ export function insertFooter() {
     ftr.innerHTML = str;
     ftr.style.gridTemplateColumns = `repeat(${column},1fr)`;
     ftr.style.gridTemplateRows = `repeat(${max + 1},1fr)`;
+
+    const footerLinks = document.querySelectorAll('.footer__links__container');
+    footerLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            const icon = link.children[0].children[1].children[0];
+            const content = link.children[1];
+            icon.style.transform = content.classList.contains('links--hidden')
+                ? 'rotate(180deg)'
+                : 'rotate(0deg)';
+            content.classList.toggle('links--hidden');
+        });
+    });
 }

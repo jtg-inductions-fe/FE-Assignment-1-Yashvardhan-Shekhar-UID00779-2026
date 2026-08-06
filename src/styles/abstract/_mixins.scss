@@ -66,14 +66,14 @@
 
 // Breakpoint or mobile screens
 @mixin mobile {
-    @media (max-width: variables.$mobile) {
-        @content;
-    }
+    @content;
+    // @media (max-width: variables.$mobile) {
+    // }
 }
 
 // Breakpoint for Tablet screens
 @mixin tablet {
-    @media (min-width: variables.$mobile) and (max-width: variables.$tablet) {
+    @media (min-width: variables.$mobile) {
         @content;
     }
 }
