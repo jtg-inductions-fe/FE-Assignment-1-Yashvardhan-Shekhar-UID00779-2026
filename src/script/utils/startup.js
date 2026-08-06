@@ -1,19 +1,25 @@
+import handleStart from './specialDeals';
+
 const links = [
     {
         name: 'Home',
-        path: '/home',
+        path: 'home',
+        isBtn: false,
     },
     {
         name: 'Discover',
-        path: '/discover',
+        path: 'discover',
+        isBtn: false,
     },
     {
         name: 'Special Deals',
-        path: '/specialDeals',
+        path: 'specialDeals',
+        isBtn: true,
     },
     {
         name: 'Contact',
-        path: '/contact',
+        path: 'contact',
+        isBtn: false,
     },
 ];
 
@@ -39,35 +45,35 @@ const stats = [
 const testimonialsData = [
     {
         name: 'Paul Greyrat',
-        image: 'assets/images/avatar.png',
+        image: 'assets/images/avatar.webp',
         tag: 'Travel',
         comment: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.`,
         rating: 4,
     },
     {
         name: 'Zenith Marchrol',
-        image: 'assets/images/avatar.png',
+        image: 'assets/images/avatar.webp',
         tag: 'Travel',
         comment: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.`,
         rating: 2,
     },
     {
         name: 'Ojha Gehi',
-        image: 'assets/images/avatar.png',
+        image: 'assets/images/avatar.webp',
         tag: 'Enthusiast',
         comment: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.`,
         rating: 4,
     },
     {
         name: 'Amon Greyrat',
-        image: 'assets/images/avatar.png',
+        image: 'assets/images/avatar.webp',
         tag: 'Enthusiast',
         comment: `Contrary to popular belief, Lorem Ipsum is not simply random text.`,
         rating: 1,
     },
     {
         name: 'Earl Hall',
-        image: 'assets/images/avatar.png',
+        image: 'assets/images/avatar.webp',
         tag: 'Enthusiast',
         comment: `Contrary to popular belief, It has roots in a piece of classical Latin literature from 45 BC.`,
         rating: 5,
@@ -95,16 +101,18 @@ const footer = {
 };
 
 // insert nav links into HTML
-function insertNavLinks() {
+export function insertNavLinks() {
     const div = document.querySelector('.sidebar');
 
     let str = ` <div class="sidebar__link-container"> 
                     <button type="button" class="sidebar__close-btn" aria-label="Close sidebar"> 
-                        <svg class="sidebar__close-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z"/></svg> 
+                        &times;
                     </button> `;
 
     links.forEach((l) => {
-        str += `<a class="sidebar__link text-nav-link" href="${l.path}">${l.name}</a>`;
+        str += l.isBtn
+            ? `<a class="sidebar__link text-nav-link" onclick="event.preventDefault();" href id="${l.path}" >${l.name}</a>`
+            : `<a class="sidebar__link text-nav-link" href="/${l.path}">${l.name}</a>`;
     });
 
     str += ` </div>
@@ -117,7 +125,7 @@ function insertNavLinks() {
 }
 
 // inserting travel point card stats
-function insertStats() {
+export function insertStats() {
     const travelPoint = document.querySelector('.cards-container');
     let str = '';
 
@@ -135,7 +143,7 @@ function insertStats() {
 }
 
 // inserting cards data into the carousel
-function insertTestimonialData() {
+export function insertTestimonialData() {
     function insertOne(data) {
         const splideCards = document.querySelector('.splide__list');
         const card = document.createElement('li');
@@ -165,12 +173,14 @@ function insertTestimonialData() {
 
         card.outerHTML = str;
     }
-
     testimonialsData.forEach((d) => insertOne(d));
+    document
+        .getElementById('specialDeals')
+        .addEventListener('click', handleStart);
 }
 
 // insert footer data links
-function insertFooter() {
+export function insertFooter() {
     let max = 0;
     let str = '';
     Object.keys(footer).forEach((el) => {
@@ -208,8 +218,3 @@ function insertFooter() {
     ftr.style.gridTemplateColumns = `repeat(${column},1fr)`;
     ftr.style.gridTemplateRows = `repeat(${max + 1},1fr)`;
 }
-
-insertNavLinks();
-insertStats();
-insertTestimonialData();
-insertFooter();

@@ -176,7 +176,8 @@
     }
 }
 
-button:hover {
+button:hover,
+a:hover {
     cursor: pointer;
 }
 
@@ -220,4 +221,77 @@ button:hover {
     @include desktop {
         font-size: px-to-rem(28.8);
     }
+}
+
+// modal typography
+.modal-text-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: $color-accent;
+}
+
+.text-title {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: $color-text-title;
+}
+
+.text-subtitle {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: $color-text-subtitle;
+}
+
+.text-loading {
+    font-size: 13px;
+    font-weight: 600;
+    color: $color-text-loading;
+}
+
+.text-slice {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.text-spin-btn {
+    font-size: 15px;
+    font-weight: 700;
+    color: $color-pink-accent;
+}
+
+.text-win-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: $color-text-title;
+}
+
+.text-coupon-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: $color-text-title;
+    text-align: start;
+}
+
+.text-coupon-expiry {
+    font-size: 12px;
+    font-weight: 500;
+    color: $color-text-subtle;
+}
+
+.text-code {
+    font-size: 12px;
+    font-weight: 700;
+    color: $color-text-title;
+    letter-spacing: 0.5px;
+}
+
+.text-btn {
+    font-size: 14px;
+    font-weight: 700;
+    color: $color-text-title;
 }

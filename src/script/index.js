@@ -1,4 +1,11 @@
-// toggle visibility of hamburger and sidebar menu
+import {
+    insertNavLinks,
+    insertStats,
+    insertTestimonialData,
+    insertFooter,
+} from './utils/startup';
+
+// functionality of hamburger
 const toggleHamburger = () => {
     const headerLinks = document.querySelector('.sidebar');
     headerLinks.classList.toggle('sidebar--none');
@@ -15,18 +22,26 @@ hamburgerBtn.addEventListener('click', () => {
 });
 
 document.addEventListener('click', (e) => {
-    // button or icon
     if (e.target.matches('.sidebar__close-btn')) {
         toggleHamburger();
     }
 });
 
 document.addEventListener('keydown', (e) => {
-    if (
-        e.key === 'Escape' &&
-        !document.querySelector('.sidebar').classList.contains('sidebar--none')
-    ) {
-        toggleHamburger();
+    if (e.key === 'Escape') {
+        if (
+            !document
+                .querySelector('.sidebar')
+                .classList.contains('sidebar--none')
+        )
+            toggleHamburger();
+
+        if (
+            !document
+                .querySelector('.modal-overlay')
+                .classList.contains('hidden')
+        )
+            document.querySelector('.modal-card__close').click();
     }
 });
 
@@ -41,3 +56,12 @@ footerLinks.forEach((link) => {
         content.classList.toggle('links--hidden');
     });
 });
+
+// const tabletQuery = window.matchMedia('(min-width: 430px)');
+// tabletQuery.onchange(toggleHamburger);
+// console.log(tabletQuery);
+
+insertNavLinks();
+insertStats();
+insertTestimonialData();
+insertFooter();

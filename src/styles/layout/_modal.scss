@@ -1,0 +1,361 @@
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+@use '../abstract/typography' as *;
+@use '../abstract/variables' as *;
+
+// Modal Overlay & Container Structure
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 7;
+    background: $color-overlay-bg;
+    @include flex-row;
+
+    @include mobile {
+        align-items: flex-end;
+    }
+}
+
+.modal-card {
+    position: relative;
+    width: stretch;
+    width: px-to-rem(308.8);
+    max-width: px-to-rem(430);
+    background-color: $primary-color;
+    border-top-left-radius: px-to-rem(28);
+    border-top-right-radius: px-to-rem(28);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: px-to-rem(24.8);
+    box-shadow: 0 px-to-rem(-10) px-to-rem(25) $color-shadow-black-15;
+    text-align: center;
+    overflow: hidden;
+
+    @include tablet {
+        border-radius: px-to-rem(28);
+    }
+
+    @include desktop {
+        border-radius: px-to-rem(28);
+    }
+
+    &__close {
+        position: absolute;
+        top: px-to-rem(8);
+        right: px-to-rem(15.2);
+        background: transparent;
+        border: none;
+        font-size: px-to-rem(25.6);
+        color: $color-text-loading;
+        cursor: pointer;
+        padding: px-to-rem(4);
+    }
+
+    &__header {
+        @include flex-col;
+
+        .modal-card__tag {
+            @include flex-row;
+            gap: px-to-rem(6);
+            margin-bottom: px-to-rem(8);
+
+            .modal-card__gift-icon {
+                width: px-to-rem(14);
+                height: px-to-rem(14);
+                fill: currentColor;
+            }
+
+            span {
+                line-height: 0;
+            }
+        }
+
+        .modal-card__title {
+            @extend .text-title;
+            margin: 0 0 px-to-rem(6) 0;
+        }
+
+        .modal-card__subtitle {
+            @extend .text-subtitle;
+        }
+    }
+
+    &__wheel-container {
+        position: relative;
+        @include flex-col;
+
+        .modal-card__cards {
+            overflow-y: auto;
+            max-height: px-to-rem(300);
+            padding-right: px-to-rem(2);
+
+            // Hide scrollbar for Firefox
+            scrollbar-width: none;
+
+            // Hide scrollbar for IE and Edge
+            -ms-overflow-style: none;
+
+            // Hide scrollbar for Chrome, Safari, and Opera
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        .modal-card__pointer {
+            padding-left: px-to-rem(1.6);
+            z-index: 1;
+            margin: px-to-rem(16) 0 px-to-rem(-4.8) 0;
+        }
+
+        .wheel {
+            width: px-to-rem(224);
+            height: px-to-rem(224);
+            border-radius: 50%;
+            box-shadow: 0 0 px-to-rem(50) px-to-rem(7) $color-shadow-black-25;
+
+            &--loading {
+                @extend .text-loading;
+                background-color: $color-disabled-bg;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &__text {
+                    @extend .text-loading;
+                }
+            }
+        }
+    }
+}
+
+// Interactive Wheel Component
+
+.wheel--offers {
+    position: relative;
+    width: px-to-rem(280);
+    height: px-to-rem(280);
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: px-to-rem(3.2);
+
+    &__slice {
+        @extend .text-slice;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        &--top-left {
+            background-color: $color-slice-pink;
+            color: $primary-color;
+            border-top-left-radius: 100%;
+            border-top: px-to-rem(3.2) solid $primary-color;
+            border-left: px-to-rem(3.2) solid $primary-color;
+            padding: px-to-rem(8) 0 0 px-to-rem(8);
+
+            span {
+                transform: rotate(-45deg);
+            }
+        }
+
+        &--top-right {
+            background-color: $color-slice-purple;
+            color: $primary-color;
+            border-top-right-radius: 100%;
+            border-top: px-to-rem(3.2) solid $primary-color;
+            border-right: px-to-rem(3.2) solid $primary-color;
+            padding: px-to-rem(8) px-to-rem(8) 0 0;
+
+            span {
+                transform: rotate(45deg);
+            }
+        }
+
+        &--bottom-left {
+            background-color: $color-slice-cyan;
+            color: $primary-color;
+            border-bottom-left-radius: 100%;
+            border-bottom: px-to-rem(3.2) solid $primary-color;
+            border-left: px-to-rem(3.2) solid $primary-color;
+            padding: 0 0 px-to-rem(8) px-to-rem(8);
+
+            span {
+                transform: rotate(-135deg);
+            }
+        }
+
+        &--bottom-right {
+            background-color: $color-slice-yellow;
+            color: $color-text-title;
+            border-bottom-right-radius: 100%;
+            border-right: px-to-rem(3.2) solid $primary-color;
+            border-bottom: px-to-rem(3.2) solid $primary-color;
+            padding: 0 px-to-rem(8) px-to-rem(8) 0;
+
+            span {
+                transform: rotate(135deg);
+            }
+        }
+    }
+
+    &__spin-btn {
+        @extend .text-spin-btn;
+        position: absolute;
+        @include flex-row;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: px-to-rem(64);
+        height: px-to-rem(64);
+        border-radius: 50%;
+        background-color: $primary-color;
+        border: px-to-rem(4) solid $color-slice-pink;
+        cursor: pointer;
+        box-shadow: 0 px-to-rem(2) px-to-rem(14) 0 $color-wheel-pink-shadow;
+        z-index: 1;
+        padding: 0;
+    }
+}
+
+// Winning / Coupon Display Section
+
+.winning-section {
+    width: 100%;
+    margin-top: px-to-rem(16);
+    box-sizing: border-box;
+
+    &__label {
+        @extend .text-win-label;
+    }
+}
+
+.coupon-card {
+    width: stretch;
+    @include flex-row-between;
+    border-radius: px-to-rem(16);
+    padding: px-to-rem(18) px-to-rem(16);
+    margin-top: px-to-rem(15);
+    border: px-to-rem(1) solid $color-coupon-border;
+    background: linear-gradient(
+        90deg,
+        $color-coupon-bg-start 0%,
+        $color-coupon-bg-end 100%
+    );
+
+    &--invalid {
+        border-color: $color-border-disabled;
+        background: $color-disabled-bg;
+
+        .coupon-card__expiry {
+            color: $color-text-disabled !important;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: px-to-rem(3);
+    }
+
+    &__title {
+        @extend .text-coupon-title;
+        margin: 0;
+    }
+
+    &__expiry {
+        @extend .text-coupon-expiry;
+
+        &:disabled {
+            color: $color-text-disabled;
+        }
+    }
+
+    &__action {
+        display: flex;
+        align-items: center;
+        gap: px-to-rem(10);
+    }
+
+    &__code {
+        @extend .text-code;
+        background-color: $primary-color;
+        padding: px-to-rem(6) px-to-rem(12);
+        border-radius: px-to-rem(8);
+    }
+
+    &__copy-btn {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: px-to-rem(18);
+            height: px-to-rem(18);
+            color: $color-slice-pink;
+        }
+
+        &:disabled {
+            svg {
+                color: $color-icon-disabled;
+            }
+        }
+    }
+}
+
+// Action Buttons & Global State Utilities
+
+.view-deals-btn {
+    width: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: px-to-rem(8);
+    background-color: $primary-color;
+    border: px-to-rem(1) solid $smoke-white;
+    border-radius: px-to-rem(30);
+    padding: px-to-rem(14) px-to-rem(20);
+    cursor: pointer;
+    margin-top: px-to-rem(19.2);
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+
+    span {
+        @extend .text-btn;
+    }
+
+    &__badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: px-to-rem(20);
+        height: px-to-rem(20);
+        background-color: $color-slice-purple;
+        color: $primary-color !important;
+        font-size: px-to-rem(12);
+        font-weight: 700;
+        border-radius: 50%;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+.disable {
+    background-color: $color-disabled-bg;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}

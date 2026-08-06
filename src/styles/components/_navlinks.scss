@@ -45,10 +45,7 @@
         display: unset;
         background-color: variables.$transparent;
         align-self: end;
-
-        svg {
-            height: px-to-rem(32);
-        }
+        font-size: px-to-rem(32);
     }
 
     @include tablet {
@@ -133,10 +130,9 @@
             &__bottom {
                 all: initial;
             }
-
-            &s--none {
-                display: unset;
-            }
+        }
+        &__links--none {
+            display: unset;
         }
     }
 }
