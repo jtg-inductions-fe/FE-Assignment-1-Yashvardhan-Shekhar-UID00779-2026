@@ -57,6 +57,10 @@ footerLinks.forEach((link) => {
     });
 });
 
+// const tabletQuery = window.matchMedia('(min-width: 430px)');
+// tabletQuery.onchange(toggleHamburger);
+// console.log(tabletQuery);
+
 insertNavLinks();
 insertStats();
 insertTestimonialData();
