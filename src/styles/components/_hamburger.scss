@@ -1,17 +1,17 @@
 @import '../abstract/mixins';
 
 @include desktop {
-    .header__burger {
+    .hamburger {
         display: none;
     }
 }
 
 @include tablet {
-    .header__burger {
+    .hamburger {
         order: -1;
     }
 }
 
-.header__burger--none {
+.hamburger--none {
     visibility: hidden;
 }

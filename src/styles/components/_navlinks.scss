@@ -1,5 +1,8 @@
+@use '../abstract/functions' as *;
 @use '../abstract/mixins' as *;
 @use '../abstract/variables';
+
+// Header Drawer Slide-in Animations
 
 @keyframes slideInRight {
     0% {
@@ -19,52 +22,67 @@
     }
 }
 
-// for mobile
-.header {
-    &__links {
-        @include flex-col-between;
-        position: fixed;
-        padding: 1rem;
-        z-index: 5;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        height: 100dvh;
-        width: 12rem;
-        box-sizing: border-box;
-        box-shadow:
-            0 4px 8px 0 rgba(0, 0, 0, 0.2),
-            0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        background-color: variables.$primary-color;
-        animation: slideInRight 0.3s ease-out forwards;
-    }
-}
-// header link styling
+// Off-Canvas Navigation Drawer & Navigation Links (Mobile Default)
 
-.header {
-    &__link {
-        color: rgba(25, 24, 37, 0.5019607843);
-        text-decoration: none;
-        padding: 0.3rem 1rem;
-    }
+.sidebar {
+    @include flex-col-between;
+
+    padding: px-to-rem(16);
+    width: px-to-rem(192);
+    position: fixed;
+    z-index: 5;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    box-shadow:
+        0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: variables.$primary-color;
+    animation: slideInRight 0.3s ease-out forwards;
 
     &__close-btn {
         display: unset;
         background-color: variables.$transparent;
         align-self: end;
-        svg {
-            height: 2rem;
+        font-size: px-to-rem(32);
+    }
+
+    @include tablet {
+        @include flex-col-start;
+
+        padding: px-to-rem(32);
+        z-index: 5;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 25%;
+        min-width: px-to-rem(192);
+        animation: slideInLeft 0.3s ease-out forwards;
+    }
+
+    &--none {
+        display: none;
+    }
+
+    @include desktop {
+        all: initial;
+        &--none {
+            display: unset;
+        }
+        &__close-btn {
+            display: none;
         }
     }
+}
 
-    .links__button {
-        font-size: 1rem;
-    }
-
+.sidebar {
     &__link {
-        padding: 1rem 0rem;
+        color: rgba(25, 24, 37, 0.5019607843);
+        text-decoration: none;
+        padding: px-to-rem(16) 0px;
 
-        &__top,
+        &-container,
         &__bottom {
             @include flex-col;
             justify-content: unset;
@@ -74,24 +92,14 @@
     }
 }
 
+// Navigation Drawer (Tablet Viewport Adjustment)
+
 @include tablet {
-    .header {
-        &__links {
-            @include flex-col-start;
-            padding: 2rem;
-            z-index: 5;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 25%;
-            min-width: 12rem;
-            animation: slideInLeft 0.3s ease-out forwards;
-        }
-
+    .sidebar {
         &__link {
-            padding: 1rem 0rem;
+            padding: px-to-rem(16) 0px;
 
-            &__top {
+            &-container {
                 @include flex-col;
                 justify-content: unset;
                 align-items: start;
@@ -100,37 +108,31 @@
     }
 }
 
-// Hide links
-.header {
-    &__links--none {
+// Visibility Modifier Class
+
+.sidebar {
+    &-container--none {
         display: none;
     }
 }
 
+// Inline Header Navigation Layout (Desktop Viewport)
+
 @include desktop {
-    .header {
-        &__links {
-            all: initial;
-        }
-
-        &__close-btn {
-            display: none;
-        }
-
+    .sidebar {
         &__link {
             color: variables.$link;
-            padding: 0.3rem 1rem;
-            font-size: 0.6rem;
+            padding: px-to-rem(7.2) px-to-rem(24);
+            font-size: px-to-rem(14.4);
             font-weight: bold;
 
-            &__top,
+            &-container,
             &__bottom {
                 all: initial;
             }
-
-            &s--none {
-                display: unset;
-            }
+        }
+        &__links--none {
+            display: unset;
         }
     }
 }

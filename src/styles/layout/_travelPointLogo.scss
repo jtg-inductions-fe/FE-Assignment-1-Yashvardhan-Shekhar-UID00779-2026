@@ -1,34 +1,50 @@
-@import '../abstract/mixins';
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
 
-.travel-point__logo {
+// Travel Point Sponsor Logos Component Structure
+
+.travel-point__sponsers {
     @include flex-row;
+
     flex-wrap: wrap;
 }
 
+// Mobile Viewport Default Layout & Image Scaling
+
 @include mobile {
-    .travel-point__logo {
-        margin: 3.4rem 0;
+    .travel-point__sponsers {
+        margin: px-to-rem(54.4) 0;
+
         img {
-            height: 1.3rem;
-            margin: 0.8rem 0.3rem;
+            height: px-to-rem(20.8);
+            margin: px-to-rem(12.8) px-to-rem(4.8);
         }
     }
 }
 
+// Tablet Viewport Adjustments & Grid Constraints
+
 @include tablet {
-    .travel-point__logo {
-        margin: 8rem 5rem;
+    .travel-point__sponsers {
+        margin: px-to-rem(128) px-to-rem(80);
         max-width: 82%;
 
         img {
-            height: 2rem;
-            padding: 0.8rem 1rem;
+            height: px-to-rem(32);
+            padding: px-to-rem(12.8) px-to-rem(16);
         }
     }
 }
+
+// Desktop Viewport Layout & Alignment
+
 @include desktop {
-    .travel-point__logo {
-        margin: 4.6rem 1rem;
+    .travel-point__sponsers {
+        margin: px-to-rem(84.4) px-to-rem(13);
         justify-content: space-between;
+
+        img {
+            margin: px-to-rem(19.2) px-to-rem(7.2);
+        }
     }
 }

@@ -1,6 +1,8 @@
+@use '../abstract/functions' as *;
 @use './variables' as *;
 @use './mixins' as *;
 
+// Primary Sans-serif Display Font (Regular & Bold variants)
 @font-face {
     font-family: 'Circular-Std';
     src:
@@ -19,6 +21,7 @@
     font-style: normal;
 }
 
+// Secondary UI / Footer Body Font
 @font-face {
     font-family: 'Inter';
     src:
@@ -28,35 +31,37 @@
     font-style: normal;
 }
 
-// Hero Main Heading (H1)
+// Hero Section Primary Title (H1)
+// Centered on mobile/tablet screens and aligns left for desktop layouts.
 .text-hero-heading {
-    font-size: 2.7rem;
+    font-size: px-to-rem(43.2);
     font-weight: 700;
     line-height: 125%;
     text-align: center;
 
     @include tablet {
-        font-size: 3.5rem;
+        font-size: px-to-rem(56);
     }
 
     @include desktop {
+        font-size: px-to-rem(64.8);
         text-align: start;
     }
 }
 
-// Section Headings (H3)
-.text-section-heading {
-    font-size: 2rem;
+// Main Section Titles (H3)
+.text-heading {
+    font-size: px-to-rem(32);
     font-weight: 700;
     line-height: 110%;
     text-align: center;
 
     @include tablet {
-        font-size: 2.6rem;
+        font-size: px-to-rem(41.6);
     }
 
     @include desktop {
-        font-size: 1.75rem;
+        font-size: px-to-rem(42);
         text-align: start;
     }
 }
@@ -67,118 +72,123 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    font-size: 0.9rem;
+    font-size: px-to-rem(14.4);
 
     @include tablet {
-        font-size: 1.5rem;
+        font-size: px-to-rem(24);
     }
 
     @include desktop {
-        font-size: 1rem;
+        font-size: px-to-rem(24);
     }
 }
 
-// Standard Body Paragraphs
+// Standard Body Paragraph Scale
 .text-body {
-    font-size: 1rem;
+    font-size: px-to-rem(16);
     font-weight: 400;
     line-height: 160%;
     color: $grey;
     text-align: center;
 
     @include tablet {
-        font-size: 1.1rem;
+        font-size: px-to-rem(17.6);
     }
 
     @include desktop {
-        font-size: 0.82rem;
+        font-size: px-to-rem(19.68);
         text-align: start;
     }
 }
 
-// Carousel Testimonial Paragraph Body Text
+// Carousel & Testimonial Specific Body Text
 .text-body-carousel {
-    font-size: 1rem;
+    font-size: px-to-rem(16);
     font-weight: 400;
     line-height: 160%;
     color: $grey;
     text-align: center;
 
     @include tablet {
-        font-size: 1.4rem;
+        font-size: px-to-rem(22.4);
     }
 
     @include desktop {
-        font-size: 1rem;
+        font-size: px-to-rem(24);
     }
 }
 
-// Stat Card Numbers
+// Stat Card Metrics & Numerical Counters
 .text-stat-number {
     color: $orange;
-    font-size: 2rem;
+    font-size: px-to-rem(32);
     font-weight: 900;
 
     @include desktop {
-        font-size: 1.4rem;
+        font-size: px-to-rem(33.6);
     }
 }
 
-// Stat Card Labels
+// Stat Card Subtitles & Descriptive Labels
 .text-stat-label {
-    font-size: 0.8rem;
+    font-size: px-to-rem(12.8);
     font-weight: 400;
     color: $grey;
-}
-
-// Testimonial Names (H5)
-.text-testimonial-name {
-    font-size: 1.55rem;
-    font-weight: 900;
 
     @include desktop {
-        font-size: 1.05rem;
+        font-size: px-to-rem(19.2);
     }
 }
 
-// Subheadings / Grid Section Titles (H6)
+// Testimonial Author Names (H5)
+.text-testimonial-name {
+    font-size: px-to-rem(24.8);
+    font-weight: 900;
+
+    @include desktop {
+        font-size: px-to-rem(25.2);
+    }
+}
+
+// Subheadings and Feature Card Titles (H6)
 .text-subheading {
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: px-to-rem(19.2);
     line-height: 120%;
 
     @include desktop {
-        font-size: 0.9rem;
+        font-size: px-to-rem(21.6);
     }
 }
 
-// Button Labels
+// Action Buttons & CTA Typography
 .text-button {
-    font-size: 1rem;
+    font-size: px-to-rem(16);
     font-weight: 700;
     line-height: 120%;
 
     @include tablet {
-        font-size: 0.7rem;
+        font-size: px-to-rem(11.2);
     }
 
     @include desktop {
-        font-size: 13px;
+        font-size: px-to-rem(13);
     }
 }
 
-button:hover {
+button:hover,
+a:hover {
     cursor: pointer;
 }
 
-// Navigation Links & Links
+// Global Header Navigation Links
 .text-nav-link {
-    font-size: 1.2rem;
+    font-size: px-to-rem(19.2);
     color: $link;
     text-decoration: none;
 
     @include desktop {
-        font-size: 0.6rem;
+        font-size: px-to-rem(14.4);
         font-weight: 700;
     }
 
@@ -187,12 +197,12 @@ button:hover {
     }
 }
 
-// Footer Links
+// Footer Navigation & Legal Links
 .text-footer-link {
     font-family: 'Inter', 'Circular-Std', sans-serif, Arial;
     color: $link;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: px-to-rem(19.2);
     font-weight: 400;
 
     &:hover {
@@ -200,15 +210,88 @@ button:hover {
     }
 
     @include desktop {
-        font-size: 0.8rem;
+        font-size: px-to-rem(19.2);
     }
 }
 
-// Star Rating Icon Scale
+// Star Rating Visual Sizing
 .text-rating-stars {
-    font-size: 1.95rem;
+    font-size: px-to-rem(31.2);
 
     @include desktop {
-        font-size: 1.2rem;
+        font-size: px-to-rem(28.8);
     }
+}
+
+// modal typography
+.modal-text-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: $color-accent;
+}
+
+.text-title {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: $color-text-title;
+}
+
+.text-subtitle {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: $color-text-subtitle;
+}
+
+.text-loading {
+    font-size: 13px;
+    font-weight: 600;
+    color: $color-text-loading;
+}
+
+.text-slice {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.text-spin-btn {
+    font-size: 15px;
+    font-weight: 700;
+    color: $color-pink-accent;
+}
+
+.text-win-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: $color-text-title;
+}
+
+.text-coupon-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: $color-text-title;
+    text-align: start;
+}
+
+.text-coupon-expiry {
+    font-size: 12px;
+    font-weight: 500;
+    color: $color-text-subtle;
+}
+
+.text-code {
+    font-size: 12px;
+    font-weight: 700;
+    color: $color-text-title;
+    letter-spacing: 0.5px;
+}
+
+.text-btn {
+    font-size: 14px;
+    font-weight: 700;
+    color: $color-text-title;
 }

@@ -1,63 +1,75 @@
-@import '../abstract/mixins';
-@import '../abstract/variables';
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
+
+// Travel Point Section Component (Mobile Viewport Default)
 
 .travel-point {
     @include flex-col;
-    margin-top: 7.7rem;
+
+    margin-top: px-to-rem(123.2);
 
     &__image {
-        margin: 0 0 0 -0.6rem;
+        margin: 0 0 0 px-to-rem(-9.6);
         width: stretch;
     }
 
-    &__right {
+    &__stats {
         @include flex-col-between;
-        margin-top: 2.8rem;
-        height: 57.5rem;
 
-        &__discount {
-            display: none;
-        }
+        margin-top: px-to-rem(44.8);
+        height: px-to-rem(920);
+    }
+
+    &__discount {
+        display: none;
     }
 }
+
+// Travel Point Section Layout (Tablet Viewport)
 
 @include tablet {
     .travel-point {
         @include flex-col;
-        margin-top: 9rem;
+
+        margin-top: px-to-rem(144);
 
         &__image {
-            margin-left: -3.6rem;
+            margin-left: px-to-rem(-57.6);
         }
 
-        &__right {
-            height: 35.1rem;
-            margin-top: 6.4rem;
+        &__stats {
+            height: px-to-rem(561.6);
+            margin-top: px-to-rem(102.4);
         }
     }
 }
 
+// Travel Point Section Layout (Desktop Viewport)
+
 @include desktop {
     .travel-point {
         @include flex-row;
-        margin-top: 5.8rem;
+
+        margin-top: px-to-rem(121.2);
         align-items: unset;
 
         &__image {
-            margin: 0 0 0 -4.6rem;
+            margin: 0 0 0 px-to-rem(-110.4);
         }
 
-        &__right {
+        &__stats {
             align-items: start;
-            height: 27.3rem;
-            margin-top: 0.5rem;
+            height: px-to-rem(655.2);
+            margin-top: px-to-rem(12);
+            position: relative;
+        }
 
-            &__discount {
-                display: unset;
-                position: absolute;
-                right: 0;
-                top: 62.2rem;
-            }
+        &__discount {
+            display: unset;
+            position: absolute;
+            top: px-to-rem(233);
+            padding-left: px-to-rem(300);
         }
     }
 }

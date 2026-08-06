@@ -1,158 +1,127 @@
+@use '../abstract/functions' as *;
 @use '../abstract/variables';
 @use '../abstract/mixins' as *;
 
+// Base Button Component
+
 .button {
-    padding: 0.9rem 2rem;
-    border-radius: 1.4rem;
+    padding: px-to-rem(14.4) px-to-rem(32);
     border: none;
-}
-
-// Header buttons
-.header {
-    &__button {
-        &--signup {
-            background-color: variables.$secondary-color;
-            color: variables.$primary-color;
-        }
-
-        &--login {
-            background-color: variables.$primary-color;
-        }
-    }
-}
-
-// for mobile
-.header {
-    &__burger {
-        button {
-            padding: 0.9rem 0.3rem;
-        }
-    }
-
-    &__buttons {
-        display: none;
-    }
-
-    &__link__bottom {
-        .button {
-            width: auto;
-        }
-    }
-}
-
-// hero section get started
-.button {
-    font-size: 1rem;
     width: stretch;
-    border-radius: 2rem;
+    border-radius: px-to-rem(32);
+    @include flex-row;
 
-    &--get-started {
+    &:hover,
+    &:focus-visible {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    &--secondary {
         background-color: variables.$secondary-color;
         color: variables.$primary-color;
-        padding: 1.5rem;
-        margin-top: 0.9rem;
     }
 
-    &--watch-demo {
-        @include flex-row;
+    &--primary {
         background-color: variables.$primary-color;
-        border: 1px solid variables.$lightgrey;
-        padding: 1.3rem;
-        margin-top: 1.7rem;
-        span {
-            padding-left: 0.5rem;
+    }
+}
+
+.button--border {
+    border: 1px solid variables.$lightgrey;
+}
+
+.buttons-container {
+    display: none;
+
+    @include mobile {
+        margin: px-to-rem(10) 0 0 0;
+    }
+
+    @include tablet {
+        padding: px-to-rem(14.4) px-to-rem(4.8);
+    }
+}
+
+.link__bottom {
+    .button {
+        width: auto;
+
+        @include mobile {
+            margin: px-to-rem(10) 0 0 0;
+            border: 1px solid variables.$lightgrey;
         }
     }
 }
+
+// Tablet Viewport Adjustments
 
 @include tablet {
+    .buttons-container {
+        display: flex;
+    }
     .button {
-        padding: 0.9rem 2rem;
-        font-size: 0.7rem;
-    }
-
-    .header {
-        &__buttons {
-            display: unset;
-        }
-        &__burger {
-            button {
-                padding: 0.9rem 0.3rem;
-            }
-        }
-    }
-    // hero section get started
-    .hero__left-section {
-        &__buttons {
-            @include flex-row;
-        }
-    }
-
-    .button {
-        padding: 0.9rem 2rem;
+        padding: px-to-rem(14.4) px-to-rem(32);
+        font-size: px-to-rem(11.2);
         width: unset;
+    }
 
-        &--get-started {
-            background-color: variables.$secondary-color;
-            color: variables.$primary-color;
-            padding: 1rem 2rem;
-            border-radius: 2rem;
-            margin: 0;
-        }
-
-        &--watch-demo {
-            @include flex-row;
-            background-color: variables.$primary-color;
-            border: 1px solid #eeeeee;
-            padding: 0.7rem 2rem;
-            margin: 0 0 0 1rem;
-            border-radius: 2rem;
-            span {
-                padding-left: 0.5rem;
-            }
+    .hamburger {
+        button {
+            padding: px-to-rem(14.4) px-to-rem(4.8);
         }
     }
 }
 
-// for tablet + desktop
+// Non-Mobile Visibility Helpers
+
 @media screen and (min-width: 431px) {
     .links__button {
         display: none;
     }
 }
 
+// Desktop Viewport Adjustments
+
 @include desktop {
-    .header__buttons {
-        display: unset;
+    .buttons-container {
+        display: flex;
     }
+
     .button {
-        padding: 0.7rem 1.4rem;
-        border-radius: 1.4rem;
-        border: none;
+        padding: px-to-rem(16.8) px-to-rem(33.6);
+        border-radius: px-to-rem(33.6);
         font-weight: 700;
-        font-size: 13px;
+        font-size: px-to-rem(13);
         line-height: 120%;
         width: unset;
+    }
+}
 
-        &--get-started {
-            background-color: variables.$secondary-color;
-            color: variables.$primary-color;
-            border-radius: 2rem;
-            margin: 0 1rem 0 0;
+.button--icon {
+    padding: px-to-rem(20.8);
+    margin-top: px-to-rem(27.2);
+
+    span {
+        padding-left: px-to-rem(8);
+    }
+
+    @include tablet {
+        padding: px-to-rem(11.2) px-to-rem(32);
+        margin: 0 0 0 px-to-rem(16);
+
+        span {
+            padding-left: px-to-rem(8);
         }
+    }
 
-        // hero section get started
-        &--watch-demo {
-            display: inline-flex;
-            align-items: center;
-            border: 1px solid #eeeeee;
-            padding: 0.6rem 0.7rem;
-            margin: 0;
-            width: 7rem;
-            justify-content: space-evenly;
-            img {
-                height: 1rem;
-            }
+    @include desktop {
+        padding: px-to-rem(14.4) px-to-rem(16.8);
+        margin: 0;
+        width: px-to-rem(168);
+        justify-content: space-evenly;
+
+        img {
+            height: px-to-rem(24);
         }
     }
 }

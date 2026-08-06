@@ -1,5 +1,8 @@
-@import '../abstract/mixins';
-@import '../abstract/variables';
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
+
+// Footer Layout Helpers & Structural Utilities
 
 .bar {
     @include flex-row-start;
@@ -11,83 +14,117 @@
     }
 }
 
+.links--hidden {
+    display: none !important;
+}
+
+// Footer Main Component (Mobile Default)
+
 .footer {
     position: relative;
-    margin: 13.6rem 1rem 1rem 1.2rem;
+    margin: px-to-rem(217.6) px-to-rem(16) px-to-rem(16) px-to-rem(19.2);
 
     h5 {
-        margin-left: 1rem;
+        margin-left: px-to-rem(16);
+
+        @include desktop {
+            margin-left: px-to-rem(24);
+        }
     }
 
     a {
         font-family: Inter, Circular-Std, sans-serif, Arial;
     }
 
+    // Background accent elements hidden on smaller viewports
     &__design-spirals,
     &__design-dots {
         display: none;
     }
 
+    // Social Icon Links Group
     &__social-links {
-        margin-top: 2rem;
+        margin-top: px-to-rem(32);
+
+        @include desktop {
+            margin-top: px-to-rem(107.2);
+        }
+
         a {
-            margin-right: 1.6rem;
+            margin-right: px-to-rem(25.6);
             height: fit-content;
             display: inline-block;
+
+            @include desktop {
+                margin-right: px-to-rem(38.4);
+            }
         }
     }
+
+    // Footer Navigation Controls (Accordion view for mobile)
     &__right {
         &--grid {
             display: none;
         }
+
         &--accordion {
             @include flex-col-between;
             align-items: unset;
-            margin-top: 2rem;
+
+            margin-top: px-to-rem(32);
 
             .links__heading {
                 @include flex-row-between;
-                margin: 3rem 0 1.3rem 0;
+
+                margin: px-to-rem(48) 0 px-to-rem(20.8) 0;
+
                 button {
-                    padding: 0.2rem;
+                    padding: px-to-rem(3.2);
                     border-radius: 50%;
                     background-color: $primary-color;
                 }
             }
+
             .links__content {
                 @include flex-col-evenly;
-                gap: 0.4rem;
                 align-items: start;
+
+                gap: px-to-rem(6.4);
+
                 a {
-                    padding: 0.5rem 1rem;
+                    padding: px-to-rem(8) px-to-rem(16);
                 }
             }
         }
     }
+
     .description {
-        margin-top: 1.45rem;
+        margin-top: px-to-rem(23.2);
         text-align: start;
+
+        @include desktop {
+            margin-top: px-to-rem(34.8);
+        }
     }
 }
 
-.invisible {
-    display: none !important;
-}
+// Tablet Viewport Adjustments (Switches from Accordion to Grid)
 
 @include tablet {
     .footer {
-        margin: 19.1rem 0.5rem 1rem 0.5rem;
+        margin: px-to-rem(305.6) px-to-rem(8) px-to-rem(16) px-to-rem(8);
 
         &__right {
             &--grid {
-                margin-top: 4rem;
+                margin-top: px-to-rem(84);
                 display: grid;
-                gap: 1.4rem;
+                gap: px-to-rem(22.4);
 
                 h6 {
                     margin: 0;
                 }
             }
+
             &--accordion {
                 display: none;
             }
@@ -96,45 +133,47 @@
         &__design-spirals {
             display: unset;
             position: absolute;
-            bottom: 3.6rem;
-            right: -4rem;
+            bottom: px-to-rem(57.6);
+            right: px-to-rem(-64);
         }
     }
 }
 
+// Desktop Viewport Adjustments & Decorative Background Overlays
+
 @include desktop {
     .footer {
-        margin: 14.3rem 0 0 1rem;
+        margin: px-to-rem(343.2) 0 0 px-to-rem(24);
         @include flex-row;
         align-items: start;
 
         &__right {
             &--grid {
                 display: grid;
-                gap: 1rem;
+                gap: px-to-rem(24);
             }
+
             &--accordion {
                 display: none;
             }
         }
 
-        &__left {
-            width: 42rem;
-            margin-right: 1rem;
+        &__info {
+            width: px-to-rem(1008);
+            margin-right: px-to-rem(24);
         }
 
         &__design-spirals {
             display: unset;
             position: absolute;
-            bottom: -3rem;
-            right: -4.5rem;
+            right: px-to-rem(-108);
         }
 
         &__design-dots {
             display: unset;
             position: absolute;
-            left: -1.1rem;
-            top: -5.4rem;
+            left: px-to-rem(-26.4);
+            top: px-to-rem(-129.6);
             opacity: 0.1;
         }
     }

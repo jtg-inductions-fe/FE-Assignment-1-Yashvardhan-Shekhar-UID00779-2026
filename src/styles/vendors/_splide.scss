@@ -1,34 +1,46 @@
+@use '../abstract/functions' as *;
 @use '../abstract/mixins' as *;
 @use '../abstract/variables' as *;
-@import '@splidejs/splide/css/skyblue';
+@use '@splidejs/splide/css/skyblue';
+
+// Splide Carousel Global Overrides & Styling
 
 .splide {
-    width: 100%; // to prevent overflow
+    width: 100%; // Prevents container overflow
 
     &__slide {
         @include flex-col-evenly;
+
         justify-content: space-between;
     }
 
     &__arrow {
-        padding: 2rem;
         border: 1px solid $lightgrey;
-        border-radius: 2rem;
+        border-radius: 50%;
         background-color: $primary-color;
-        i {
-            color: $grey;
+        top: 43.95%;
+        padding: 8px;
+        height: 100px;
+        width: 100px;
+
+        svg {
+            fill: rgba(25, 24, 37, 1);
+            height: 16px;
+            width: 16px;
+        }
+
+        &:hover {
+            background-color: $secondary-color;
+
+            svg {
+                fill: $primary-color !important;
+            }
         }
     }
 
-    &__arrow:hover {
-        background-color: $secondary-color;
-        i {
-            color: $primary-color;
-        }
-    }
     &__pagination {
         &__page {
-            padding: 10px;
+            padding: px-to-rem(10);
         }
 
         li button.is-active {
@@ -38,6 +50,8 @@
     }
 }
 
+// Splide Carousel Layout (Mobile Viewport)
+
 @include mobile {
     .splide {
         &__pagination {
@@ -45,14 +59,18 @@
         }
 
         &__slide {
-            height: 27rem;
+            height: px-to-rem(432);
         }
 
         &__arrow {
             top: 17.75%;
+            height: 70px;
+            width: 70px;
         }
     }
 }
+
+// Splide Carousel Layout (Tablet Viewport)
 
 @include tablet {
     .splide {
@@ -62,25 +80,28 @@
 
         &__slide {
             height: 43.5dvw;
+
             p {
-                margin: 0 13rem;
+                margin: 0 px-to-rem(208);
             }
         }
 
         &__arrow {
             top: 43.95%;
-            padding: 2.8rem;
-            border-radius: 50%;
 
             &--next {
-                right: 4.1rem;
+                right: px-to-rem(65.6);
             }
+
             &--prev {
-                left: 4.1rem;
+                left: px-to-rem(65.6);
             }
         }
     }
 }
+
+// Splide Carousel Layout (Desktop Viewport)
+
 @include desktop {
     .splide {
         &__pagination {
@@ -88,9 +109,10 @@
         }
 
         &__slide {
-            height: 17.2rem;
+            height: px-to-rem(412.8);
+
             p {
-                margin: 0 8rem;
+                margin: 0 px-to-rem(192);
             }
         }
 
@@ -98,10 +120,11 @@
             top: 44%;
 
             &--next {
-                right: 2rem;
+                right: px-to-rem(48);
             }
+
             &--prev {
-                left: 2rem;
+                left: px-to-rem(48);
             }
         }
     }
