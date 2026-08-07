@@ -136,3 +136,27 @@
         }
     }
 }
+
+dialog {
+    all: unset; // Strip default browser borders, padding, background, and rendering
+    display: block; // Act as a standard <div> container
+    box-sizing: border-box;
+
+    // Override top-layer positioning when open
+    &[open] {
+        position: static; // Or relative/absolute - flows like a standard div instead of fixed overlay
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        background: transparent;
+        border: none;
+    }
+
+    // Hide the default dark overlay completely
+    &::backdrop {
+        display: none;
+        background: transparent;
+    }
+}

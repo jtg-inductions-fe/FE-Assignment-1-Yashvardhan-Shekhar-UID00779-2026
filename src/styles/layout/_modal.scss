@@ -11,9 +11,10 @@
     z-index: 7;
     background: $color-overlay-bg;
     @include flex-row;
+    align-items: flex-end;
 
-    @include mobile {
-        align-items: flex-end;
+    @include tablet {
+        align-items: center;
     }
 }
 

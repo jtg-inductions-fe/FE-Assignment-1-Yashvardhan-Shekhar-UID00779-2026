@@ -4,17 +4,26 @@ import {
     insertTestimonialData,
     insertFooter,
 } from './utils/startup';
+import { createFocusTrap } from 'focus-trap';
 
 insertNavLinks();
 insertStats();
 insertTestimonialData();
 insertFooter();
 
+// for focus trap for sidebar
+const sidebarTrap = createFocusTrap('.sidebar');
+
 // functionality of hamburger
 const toggleHamburger = () => {
     const headerLinks = document.querySelector('.sidebar');
     headerLinks.classList.toggle('sidebar--none');
 
+    if (headerLinks.classList.contains('sidebar--none')) {
+        sidebarTrap.deactivate();
+    } else {
+        sidebarTrap.activate();
+    }
     const headerBurger = document.querySelector('.hamburger');
     headerBurger.classList.toggle('hamburger--none');
 };

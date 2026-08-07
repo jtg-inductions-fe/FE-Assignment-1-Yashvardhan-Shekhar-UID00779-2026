@@ -1,3 +1,6 @@
+import { createFocusTrap } from 'focus-trap';
+const specialDealsTrap = createFocusTrap('.modal-card');
+
 const DEALS_API_URL =
     'https://gist.githubusercontent.com/ameer-wajid-ali/1f29ebee4295cede36f8d74b45e576df/raw/122966c9a123861249f173911d8d93a76dc06d7a/';
 const MS_PER_DAY = 86_400_000;
@@ -309,15 +312,16 @@ async function handleStart(isStart = false) {
     if (remainingDeals.length >= 4) handleSpinBtn(remainingDeals, allDeals);
 }
 
-// event listener added on special deals btn
+// event listener added on special deals btnimport { createFocusTrap } from 'focus-trap';
 export default function specialDealsBtnPressed() {
     document.querySelector('.sidebar__close-btn').click();
     document.querySelector('.modal-overlay').classList.remove('hidden');
     handleStart(true);
-
+    specialDealsTrap.activate();
     const closeBtn = document.querySelector('.modal-card__close');
     closeBtn.focus();
     closeBtn.addEventListener('click', () => {
+        specialDealsTrap.deactivate();
         document.querySelector('.modal-overlay').classList.add('hidden');
     });
 }

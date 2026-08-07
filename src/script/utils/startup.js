@@ -187,7 +187,7 @@ export function insertFooter() {
     Object.keys(footer).forEach((el) => {
         if (Object.values(footer[el]).length > 0) {
             max = Math.max(Object.values(footer[el]).length, max);
-            str += ` <div class="footer__links__container" > <div class="links__heading"> <h6 class="text-subheading">${el} </h6> <button> <img src="assets/icons/arrow-circle.svg" alt="arrow-down" /> </button> </div> <div class="links__content links--hidden">`;
+            str += ` <div class="footer__links-container" > <div class="links__heading"> <h6 class="text-subheading">${el} </h6> <button> <img src="assets/icons/arrow-circle.svg" alt="arrow-down" /> </button> </div> <div class="links__content links--hidden">`;
             Object.keys(footer[el]).forEach((val) => {
                 str += ` <a href="${footer[el][val]}" class="text-footer-link" > ${val} </a>`;
             });
@@ -219,7 +219,7 @@ export function insertFooter() {
     ftr.style.gridTemplateColumns = `repeat(${column},1fr)`;
     ftr.style.gridTemplateRows = `repeat(${max + 1},1fr)`;
 
-    const footerLinks = document.querySelectorAll('.footer__links__container');
+    const footerLinks = document.querySelectorAll('.footer__links-container');
     footerLinks.forEach((link) => {
         link.addEventListener('click', () => {
             const icon = link.children[0].children[1].children[0];
