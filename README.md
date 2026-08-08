@@ -86,52 +86,6 @@ FE-ASSIGNMENT-1/
 * **Wheel Physics & Animation:** Rotational degree calculation and CSS keyframe physics for acceleration, deceleration, and winning slice deceleration.
 * **Deals State Management:** Dynamic prize assignment, expiration timer logic, "Copy Code" clipboard feedback, and recycling of invalid/expired deals back into the pool.
 
-
-
----
-
-## Work Breakdown Structure (WBS)
-
-The development lifecycle was organized into seven distinct structural milestones:
-
-### 1. Exploration & Architecture
-
-* Configured CSS reset, SCSS 7-1 folder structure, dynamic `px-to-rem` functions, and responsive mixins.
-* Implemented strict BEM conventions across all component and layout files.
-
-### 2. Header Section
-
-* Designed header layout, logo placement, navlinks, and action buttons for login/signup.
-* Implemented hamburger open/close toggle functionality for mobile viewports.
-* Styled mobile, tablet, and desktop layouts with background left-gradient accents.
-
-### 3. Hero Section
-
-* Constructed heading, subtext, and CTA buttons on the left column with image compositions on the right.
-* Applied background decorative vector arrows and adjusted multi-breakpoint responsive layouts.
-
-### 4. Travel Point Section
-
-* Added company logo strip and hero stats card components.
-* Responsive styling for stat cards and promotional discount badge elements on desktop.
-
-### 5. Testimonials Section
-
-* Explored Splide.js slider capabilities and built customized carousel card templates.
-* Dynamically rendered card components (avatar, details, dynamic star ratings, comment body) and custom slide background imagery.
-
-### 6. Footer Section
-
-* Built left-column branding (logo, description, social links) and right-column navigation blocks.
-* Implemented mobile accordion controls for expandable link lists.
-* Refined multi-column grid responsiveness across tablet and desktop screens.
-
-### 7. Special Deals Modal & Wheel Mechanics
-
-* Designed and built Skeleton UI states for modal loading, offer page deals, and win state views.
-* Rendered wheel slices, labels, prize icons, and the "Spin & Win" interaction trigger.
-* Implemented wheel rotation physics, deceleration keyframe state handling, deal navigation buttons, copy-to-clipboard utility, state-driven expired deal recycling, and local storage hooks.
-
 ---
 
 ## Getting Started
@@ -139,30 +93,36 @@ The development lifecycle was organized into seven distinct structural milestone
 ### Prerequisites
 
 Ensure you have [Node.js](https://nodejs.org/) installed on your development machine.
-
 ### Installation & Setup
 
+Follow these steps to set up and run the project locally:
+
 1. **Clone the repository:**
-```bash
-git clone https://github.com/jtg-inductions-fe/FE-Assignment-1-Yashvardhan-Shekhar-UID00779-2026/tree/develop
-cd FE-Assignment-1-Yashvardhan-Shekhar-UID00779-2026
+   ```bash
+   # Clone the specific development branch and Navigate into the project directory
+   git clonetps://github.com/tg-inductions-fe/FE-Assignment-1-Yashvardhan-Shekhar-UID00779-2026.git
+   cd FE-Assignment-1-Yashvardhan-Shekhar-UID00779-2026
+   
+   ```
 
-```
+2. **Set up the correct Node.js version:**
+   This project uses an `.nvmrc` file to enforce the required Node.js environment. Run the following commands to switch versions:
+   ```bash
+   # Detect and switch to the project's required Node version
+   nvm use
+   # Note: If the version isn't installed locally, run 'nvm install' first, then 'nvm use'.
+   ```
 
+3. **Install project dependencies:**
+   The `.npmrc` file ensures strict, consistent dependency resolution. Do not delete or modify it. Simply run:
+   ```bash
+   npm install
+   ```
 
-2. **Install project dependencies:**
-```bash
-npm install
+4. **Compile SCSS & Run Development Server:**
+   ```bash
+   npm run dev
+   ```
 
-```
-
-
-3. **Compile SCSS / Run Development Server:**
-```bash
-npm run dev
-
-```
-
-
-4. **View in Browser:**
-Launch `http://localhost:3000/`.
+5. **View in Browser:**
+   Open your browser and navigate to [http://localhost:3000/](http://localhost:3000/).
